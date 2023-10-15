@@ -1,1 +1,1 @@
-# AppBooking
+# AppBookingHostel
