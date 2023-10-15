@@ -1,0 +1,22 @@
+
+J
+java:S1604("(Make this anonymous inner class a lambda(Ñİ¼Öúÿÿÿÿ8¶£Æì°1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡õÁÍ8º£Æì°1
+y	java:S116"XRename this field "btn_login_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†¿¼…ûÿÿÿÿ8ï£Æì°1
+k	java:S116"ORename this field "Otp1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹8ï£Æì°1
+k	java:S116"ORename this field "Otp2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹8ï£Æì°1
+k	java:S116"ORename this field "Otp3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹8ï£Æì°1
+k	java:S116"ORename this field "Otp4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹8ğ£Æì°1
+k	java:S116"ORename this field "Otp5" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹8ğ£Æì°1
+k	java:S116"ORename this field "Otp6" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹8ğ£Æì°1
+n	java:S116"RRename this field "some_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨š¾³8ğ£Æì°1
+s	java:S116"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹8ğ£Æì°1
+^
+java:S1659"ADeclare "Otp2" and all following declarations on a separate line.(çÌ©¹8ü£Æì°1
+C
+java:S1659"&Declare "resetOtp" on a separate line.(¨š¾³8ı£Æì°1
+j
+java:S1659"HDeclare "phoneNumber" and all following declarations on a separate line.(Ù„İ‹ûÿÿÿÿ8ı£Æì°1
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¨Œşÿÿÿÿ8Öë¨š±1
+o	java:S100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(——ùÿÿÿÿ8™¤Æì°1

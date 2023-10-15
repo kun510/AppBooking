@@ -1,0 +1,13 @@
+
+D
+java:S1604*"(Make this anonymous inner class a lambda(­×­8¦¾€š±1
+E
+java:S16043"(Make this anonymous inner class a lambda(¨ŠÀë8§¾€š±1
+K
+java:S1604§"(Make this anonymous inner class a lambda(¥íîŸÿÿÿÿÿ8§¾€š±1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡õÁÍ8ª¾€š±1
+s	java:S116"WRename this field "btn_register" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áçû¡8Î¾€š±1
+s	java:S116#"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹8Ï¾€š±1
+]
+java:S1659"ADeclare "pass" and all following declarations on a separate line.(¹¼÷8Õ¾€š±1
+o	java:S100V"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(——ùÿÿÿÿ8õ¾€š±1

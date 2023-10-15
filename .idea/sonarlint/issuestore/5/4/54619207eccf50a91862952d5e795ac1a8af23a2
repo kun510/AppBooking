@@ -1,0 +1,8 @@
+
+N
+java:S1153A"1Directly append the argument of String.valueOf().(“ñÖÎ8šûó²1
+N
+java:S1153B"1Directly append the argument of String.valueOf().(Üé¹ç8“¨‚ô²1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â¼¹ôûÿÿÿÿ8úÏøó²1
+k
+java:S1659-"IDeclare "numberPeople" and all following declarations on a separate line.(Âì’Âùÿÿÿÿ8›Ğøó²1

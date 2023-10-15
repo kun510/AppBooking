@@ -1,0 +1,11 @@
+
+J
+java:S1604%"(Make this anonymous inner class a lambda(Ó´Ÿøÿÿÿÿ8î¶¬ö°1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡õÁÍ8õ¶¬ö°1
+u	java:S116"TRename this field "btn_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ÷Úçüÿÿÿÿ8½¸¬ö°1
+D
+java:S1659""Declare "pass" on a separate line.(Õëøÿÿÿÿ8ë¸¬ö°1
+o
+java:S3776."RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(ÜÜâŞ8•¹ö°1
+X	java:S125L"<This block of commented-out lines of code should be removed.(“Ò‰¶8»¨¼š±1
+X	java:S125P"<This block of commented-out lines of code should be removed.(“Ò‰¶8À¨¼š±1

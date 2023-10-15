@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
+            android:id="@+id/imgRoom"
             android:background="@drawable/boderhot"
             android:src="@drawable/detail"
             android:clipToOutline="true"
@@ -25,6 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:id="@+id/addRoom"
             android:alpha="0.7"
             android:textStyle="bold"
             android:textColor="@color/den"
@@ -32,22 +34,23 @@
             android:textSize="22sp"
             android:layout_width="170dp"
             android:layout_height="wrap_content"/>
-       <LinearLayout
-           android:layout_marginTop="10dp"
-           android:orientation="horizontal"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
-           <ImageView
-               android:src="@drawable/breakfast"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"/>
-           <TextView
-               android:layout_marginLeft="10dp"
-               android:textColor="@color/xamne"
-               android:text="@string/item_refundable"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"/>
-       </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/breakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/areaRoom"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/xamne"
+                android:text="@string/item_refundable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
         <LinearLayout
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
@@ -58,6 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:id="@+id/descriptionRoom"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/xamne"
                 android:text="@string/item_grocery"
@@ -74,6 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:id="@+id/numberRoom"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/xamne"
                 android:text="@string/item_wifi"
@@ -90,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:id="@+id/status"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/xamne"
                 android:text="@string/item_airconditioner"
@@ -106,6 +112,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:id="@+id/numberPeople"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/xamne"
                 android:text="@string/item_bath"
@@ -124,6 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
+                    android:id="@+id/priceRoom"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:alpha="0.7"

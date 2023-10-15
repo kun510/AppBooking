@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mauchu"
-    android:fitsSystemWindows="false"
-    tools:context=".view.home.Home">
+    android:fitsSystemWindows="false">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -90,6 +89,7 @@
             android:id="@+id/linearLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
             android:paddingTop="20dp"
             android:paddingLeft="10dp"
             android:orientation="vertical"
@@ -104,10 +104,19 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <androidx.recyclerview.widget.RecyclerView
+                android:layout_gravity="center"
                 android:id="@+id/recyclerPlaces"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" />
+            <ProgressBar
+                android:layout_gravity="center"
+                android:id="@+id/progressBar"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                 />
         </LinearLayout>
         <LinearLayout
             android:paddingLeft="10dp"
@@ -122,6 +131,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+            <ProgressBar
+                android:layout_gravity="center"
+                android:id="@+id/progressBarHot"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
         </LinearLayout>
 
     </LinearLayout>

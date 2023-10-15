@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingTop="2dp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="300dp"
+   android:layout_marginRight="10dp"
+    android:layout_height="200dp"
     android:background="@color/white">
 
     <FrameLayout
@@ -12,8 +13,9 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:layout_width="180dp"
-            android:layout_height="108dp"
+            android:id="@+id/imgRoomNear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/boderimg"
             android:clipToOutline="true"
             android:outlineProvider="background"
@@ -21,7 +23,8 @@
             android:src="@drawable/canhonear" />
 
         <TextView
-            android:id="@+id/txtNear"
+            android:textColor="@color/white"
+            android:id="@+id/txtRoomNear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -40,6 +43,8 @@
             android:orientation="horizontal">
 
             <TextView
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
                 android:id="@+id/numberStar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,5 +60,4 @@
         </LinearLayout>
     </FrameLayout>
 
-
-</FrameLayout>
+</LinearLayout>

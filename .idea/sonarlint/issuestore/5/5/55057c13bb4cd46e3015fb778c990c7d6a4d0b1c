@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(―χ‹ούÿÿÿÿ
+Q
+java:S1874"/Remove this use of "Handler"; it is deprecated.(§ηµόÿÿÿÿ8Ο΄θ°1
+^
+java:S1612"AReplace this lambda with method reference 'this::loadNextScreen'.(ΫΠ―8ήήθ°1

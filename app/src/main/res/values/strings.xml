@@ -1,5 +1,13 @@
 <resources>
-    <string name="app_name">HostelKun</string>
+    <string name="app_name">HostelAppDoanCuoiNam</string>
+    <string name="chaomung">Chào mừng các bạn đến với HostelApp</string>
+    <string name="phonecheck">Nhập số điện thoại của bạn để tiếp tục đến HostelApp chúc các bạn có một trãi nghiệm tốt nhất!</string>
+    <string name="phonehint">Nhập số điện thoại </string>
+    <string name="tieptuc">Tiếp Tục</string>
+    <string name="maOTP">Hãy nhập mã đã gửi về số điện thoại: </string>
+    <string name="CODEOTP">Mã OTP</string>
+    <string name="Enteryour">Enter your phone number to get started</string>
+
     <string name="intro2">We provide the best quality accommodation</string>
     <string name="intro2nho">Airy, Spacious, Fully Equipped, Very Clean</string>
     <string name="intro3">Schedule when you want\n to check the room</string>
@@ -12,6 +20,9 @@
     <string name="btnsignup">REGISTER</string>
     <string name="welcom">Welcome to Kun Hostel App</string>
     <string name="btnlogin">LOGIN</string>
+    <string name="loginIsSuccessful">Login Successful</string>
+    <string name="loginIsUserExist">User Exist</string>
+    <string name="loginIsFail">Otp Fail</string>
     <string name="quenmk">Forgot password?</string>
     <string name="maotp">Mã OTP</string>
     <string name="nhapotp">Hãy nhập mã đã gửi về điện thoại</string>
@@ -79,7 +90,14 @@
     <string name="_21_tien_son_near">21 Tien Son</string>
     <string name="diachihot">179 Le Loi</string>
     <string name="kmhot">4.1 km away from you</string>
-    <string name="statusHot">There are  spacious and airy rooms</string>
+    <string name="statusHot">hostel</string>
     <string name="priceHot">$ 120</string>
+    <string name="nhaplai">Nhập Lại Mật Khẩu</string>
+    <string name="nhapdaydu">Nhập Đầy Đủ Thông Tin</string>
+    <string name="nhapformat">Format Password Strong</string>
+    <string name="nhaplaiphone">Nhập Lại số điện thoại</string>
+    <string name="resetOtp">Gửi Lại Otp</string>
+    <string name="diendaydu">Điền đầy đủ các Ô</string>
+
 
 </resources>

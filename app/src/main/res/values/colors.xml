@@ -7,6 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="mauchusearch">#999999</color>
+    <color name="maunensearch">#393939</color>
+    <color name="nau">#611515</color>
+    <color name="clr_otp_bg">#535288</color>
+    <color name="clr_otp_btn_yellow">#F8CD06</color>
+    <color name="clr_white_text">#FFFFFF</color>
+    <color name="clr_grey_text">#D3D3D3</color>
+    <color name="clr_grey_text_transparent">#80D3D3D3</color>
+<!--    -&#45;&#45;-->
+
     <color name="btn_xanh">#1B9C85</color>
     <color name="btn_xanhnhat">#86CEC1</color>
     <color name="stard_vang">#FFD600</color>
