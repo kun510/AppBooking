@@ -7,12 +7,14 @@
     android:background="@color/white"
     android:fitsSystemWindows="true">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/intro1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         android:layout_marginTop="90dp"
-        android:src="@mipmap/intro2"
+        app:lottie_rawRes="@raw/intro2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,10 +82,10 @@
         android:id="@+id/btn_intro"
         android:layout_width="277dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/radius_btn"
         android:text="@string/btn_tieptuc"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

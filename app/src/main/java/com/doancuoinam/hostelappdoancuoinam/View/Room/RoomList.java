@@ -2,6 +2,7 @@ package com.doancuoinam.hostelappdoancuoinam.View.Room;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -16,7 +17,6 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
-import com.doancuoinam.hostelappdoancuoinam.Model.Request.SearchRequest;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
@@ -46,9 +46,32 @@ public class RoomList extends AppCompatActivity {
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(true);
-            SpannableString spannableString = new SpannableString(receivedText);
-            spannableString.setSpan(new ForegroundColorSpan(Color.BLACK), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            getSupportActionBar().setTitle(spannableString);
+            if(receivedText.isEmpty()&&receivedTextType.isEmpty()&&receivedTextGuests.isEmpty()){
+                SpannableString spannableString = new SpannableString(receivedTextPrice);
+                spannableString.setSpan(new ForegroundColorSpan(Color.BLACK), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                getSupportActionBar().setTitle(spannableString);
+            }
+            else if(receivedText.isEmpty()&&receivedTextType.isEmpty()&&receivedTextPrice.isEmpty()){
+                SpannableString spannableString = new SpannableString(receivedTextGuests);
+                spannableString.setSpan(new ForegroundColorSpan(Color.BLACK), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                getSupportActionBar().setTitle(spannableString);
+            }
+            else if(receivedText.isEmpty()&&receivedTextPrice.isEmpty()&&receivedTextGuests.isEmpty()){
+                SpannableString spannableString = new SpannableString(receivedTextType);
+                spannableString.setSpan(new ForegroundColorSpan(Color.BLACK), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                getSupportActionBar().setTitle(spannableString);
+            }
+           else if(receivedTextType.isEmpty()&&receivedTextType.isEmpty()&&receivedTextGuests.isEmpty()){
+                SpannableString spannableString = new SpannableString(receivedText);
+                spannableString.setSpan(new ForegroundColorSpan(Color.BLACK), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                getSupportActionBar().setTitle(spannableString);
+            }
+           else {
+                SpannableString spannableString = new SpannableString(receivedText);
+                spannableString.setSpan(new ForegroundColorSpan(Color.BLACK), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                getSupportActionBar().setTitle(spannableString);
+            }
+
         }
         toolbar.setNavigationIcon(R.drawable.backdetail);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -58,12 +81,11 @@ public class RoomList extends AppCompatActivity {
             }
         });
         recyclerView = findViewById(R.id.recyclerRoomDetail);
+        recyclerView.setLayoutManager(new LinearLayoutManager(RoomList.this,RecyclerView.VERTICAL, false));
         roomAdapter = new RoomAdapter();
         recyclerView.setAdapter(roomAdapter);
         showProgressBar();
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
-        SearchRequest searchRequest = new SearchRequest(receivedText, receivedTextPrice
-                ,receivedTextGuests, receivedTextPrice,receivedTextType);
         Call<List<Room>> call = apiService.getAllRoomsSearch(receivedText, receivedTextPrice
                 ,receivedTextGuests, receivedTextPrice,receivedTextType);
         call.enqueue(new Callback<List<Room>>() {
@@ -72,6 +94,7 @@ public class RoomList extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     List<Room> rooms = response.body();
                     roomAdapter.setRoomsList(rooms);
+
                 } else {
                     Toast.makeText(RoomList.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }

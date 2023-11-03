@@ -3,15 +3,16 @@ package com.doancuoinam.hostelappdoancuoinam.View.Room;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.R;
-import com.doancuoinam.hostelappdoancuoinam.View.Fragment.Home.HomeAdapterHot;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -33,6 +34,16 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
     public void onBindViewHolder(@NonNull RoomAdapter.RoomViewHolder holder, int position) {
         Room room = rooms.get(position);
         holder.bind(room);
+        holder.btn_selectRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int clickedPosition = holder.getBindingAdapterPosition();
+                if (clickedPosition != RecyclerView.NO_POSITION) {
+                    String message = "Nút được nhấn ở vị trí: " + clickedPosition;
+                    Toast.makeText(v.getContext(), message, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     @Override
@@ -43,6 +54,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
     public class RoomViewHolder extends RecyclerView.ViewHolder {
         ImageView imgRoom;
         TextView priceRoom,numberPeople,status,numberRoom,descriptionRoom,areaRoom,addrRoom;
+        Button btn_selectRoom;
         public RoomViewHolder(@NonNull View itemView) {
             super(itemView);
             imgRoom = itemView.findViewById(R.id.imgRoom);
@@ -53,6 +65,7 @@ public class RoomAdapter extends RecyclerView.Adapter<RoomAdapter.RoomViewHolder
             descriptionRoom = itemView.findViewById(R.id.descriptionRoom);
             areaRoom = itemView.findViewById(R.id.areaRoom);
             addrRoom = itemView.findViewById(R.id.addRoom);
+            btn_selectRoom = itemView.findViewById(R.id.btn_selectRoom);
         }
         void bind(Room room) {
             String imageUrl = room.getImg();

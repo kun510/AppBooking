@@ -3,9 +3,11 @@
     android:layout_width="wrap_content"
     android:orientation="vertical"
     android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
     android:background="@drawable/boderimg">
 
-    <FrameLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
@@ -17,8 +19,9 @@
             android:scaleType="centerCrop"
             android:layout_width="358dp"
             android:layout_height="184dp"/>
-    </FrameLayout>
+    </androidx.cardview.widget.CardView>
     <LinearLayout
+        android:background="@drawable/boderhot"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
@@ -153,7 +156,7 @@
                 android:layout_marginRight="10dp"
                 android:text="@string/btn_select"
                 android:background="@drawable/radius_btn"
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_selectRoom"
                 android:layout_width="180dp"
                 android:layout_height="60dp" />
         </LinearLayout>

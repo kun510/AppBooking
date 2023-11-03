@@ -21,6 +21,9 @@
     <string name="welcom">Welcome to Kun Hostel App</string>
     <string name="btnlogin">LOGIN</string>
     <string name="loginIsSuccessful">Login Successful</string>
+    <string name="RegisterIsSuccessful">Register Successful</string>
+    <string name="VerificationFailed">Verification failed</string>
+    <string name="VerificationSuccessful">Verification Successful</string>
     <string name="loginIsUserExist">User Exist</string>
     <string name="loginIsFail">Otp Fail</string>
     <string name="quenmk">Forgot password?</string>
@@ -78,6 +81,7 @@
     <string name="Terms">Terms and conditions</string>
     <string name="welcome_to_kun_hostel_app">Welcome to Kun Hostel App</string>
     <string name="enter_your_password">Enter your password</string>
+    <string name="enter_your_name">Enter your Name</string>
     <string name="enter_your_number_phone">Enter your number phone</string>
     <string name="do_you_already_have_an_account">Do you already have an account?</string>
     <string name="m_otp">Mã OTP</string>
@@ -98,6 +102,10 @@
     <string name="nhaplaiphone">Nhập Lại số điện thoại</string>
     <string name="resetOtp">Gửi Lại Otp</string>
     <string name="diendaydu">Điền đầy đủ các Ô</string>
+    <string name="LogError">Log Error</string>
+    <string name="title_activity_register_compose">RegisterCompose</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_test">Test</string>
 
 
 </resources>

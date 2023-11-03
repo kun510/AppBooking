@@ -3,7 +3,6 @@ package com.doancuoinam.hostelappdoancuoinam.Service;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.Model.Request.LoginRequest;
 import com.doancuoinam.hostelappdoancuoinam.Model.Request.RegisterRequest;
-import com.doancuoinam.hostelappdoancuoinam.Model.Request.SearchRequest;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.Response;
 
 import java.util.List;

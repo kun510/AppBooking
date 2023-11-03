@@ -75,6 +75,7 @@ public class Register extends AppCompatActivity {
                     btn_register.setVisibility(View.VISIBLE);
                     return;
                 }
+
                 Intent intent = new Intent(Register.this, OtpRegister.class);
                 intent.putExtra("numberphone",numberPhone);
                 intent.putExtra("verificationId",mVerificationId);

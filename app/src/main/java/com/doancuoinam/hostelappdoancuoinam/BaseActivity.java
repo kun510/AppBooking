@@ -20,13 +20,14 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.menu);
         final Fragment homeFragment = new HomeFragment();
         final Fragment searchFragment = new Search();
         final Fragment NotificationFragment = new Notifications();
 
 
         loadFragment(homeFragment);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.menu);
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

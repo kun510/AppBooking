@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,13 +20,30 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:theme="@style/Theme.Design.NoActionBar"
-            android:name=".View.Account.OtpRegister"
-            android:exported="false" />
+            android:name=".compose.Test"
+            android:exported="false"
+            android:label="@string/title_activity_test"
+            android:theme="@style/Theme.HostelAppDoanCuoiNam" />
         <activity
-            android:theme="@style/Theme.Design.NoActionBar"
+            android:name=".compose.account.OtpRegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.HostelAppDoanCuoiNam" />
+        <activity
+            android:name=".compose.account.RegisterCompose"
+            android:exported="true"
+            android:label="@string/title_activity_register_compose"
+            android:theme="@style/Theme.HostelAppDoanCuoiNam">
+
+        </activity>
+        <activity
+            android:name=".View.Account.OtpRegister"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
             android:name=".View.Room.RoomList"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".View.Intro.ScreenIntro4"
             android:exported="false"
@@ -43,7 +59,7 @@
         <activity
             android:name=".View.Intro.ScreenIntro1"
             android:exported="true"
-            android:theme="@style/Theme.Design.NoActionBar">
+            android:theme="@style/Theme.Design.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -80,7 +96,9 @@
         <activity
             android:name=".test.LoaddingHome"
             android:exported="true"
-            android:theme="@style/Theme.Design.NoActionBar" />
+            android:theme="@style/Theme.Design.NoActionBar" >
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
