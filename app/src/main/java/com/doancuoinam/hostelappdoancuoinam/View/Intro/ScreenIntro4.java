@@ -1,4 +1,4 @@
-package com.doancuoinam.hostelappdoancuoinam.View.Intro;
+package com.doancuoinam.hostelappdoancuoinam.view.intro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.doancuoinam.hostelappdoancuoinam.R;
-import com.doancuoinam.hostelappdoancuoinam.View.Account.Register;
+import com.doancuoinam.hostelappdoancuoinam.view.account.Register;
 
 public class ScreenIntro4 extends AppCompatActivity {
     ImageView intro1,intro2,intro3;

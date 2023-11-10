@@ -7,6 +7,7 @@
     <color name="aa">#64CCC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="xammmm">#CACACA</color>
     <color name="white">#FFFFFFFF</color>
     <color name="whitexam">#F5F5F5</color>
     <color name="mauchusearch">#999999</color>
@@ -23,7 +24,7 @@
     <color name="btn_xanhnhat">#86CEC1</color>
     <color name="stard_vang">#FFD600</color>
     <color name="red">#FA2F22</color>
-    <color name="white_xam">#F5F5F5</color>
+    <color name="white_xam">#F5F5F5F5</color>
     <color name="hong">#FFC7A7</color>
     <color name="camnhat">#FFD579</color>
     <color name="xam">#D9D9D9</color>

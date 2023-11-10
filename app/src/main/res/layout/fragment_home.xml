@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mauchu"
+    android:background="@color/whitexam"
     android:fitsSystemWindows="false">
     <LinearLayout
         android:orientation="vertical"
@@ -20,9 +20,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
             <TextView
+                android:layout_marginStart="10dp"
                 android:paddingLeft="10dp"
                 android:id="@+id/location"
-                android:layout_width="380dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:letterSpacing="-0.02"
@@ -31,11 +32,17 @@
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:textSize="17sp"/>
-            <ImageView
-                android:layout_gravity="right"
-                android:src="@drawable/caretdown"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/location1"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:letterSpacing="-0.02"
+                android:text="@string/danang"
+                android:textColor="@color/xamne"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="17sp"/>
         </LinearLayout>
 
         <View
@@ -124,9 +131,18 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:fontFamily="monospace"
+                android:text="@string/placesHot"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_weight="9.7"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="5dp"
                 android:id="@+id/recyclerHot"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"

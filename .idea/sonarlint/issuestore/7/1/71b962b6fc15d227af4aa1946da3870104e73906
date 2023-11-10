@@ -1,7 +1,0 @@
-
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àæÏ¦ùÿÿÿÿ8½Ñı¬1
-J
-java:S1604"(Make this anonymous inner class a lambda(õßØµüÿÿÿÿ8‚½Ñı¬1
-m
-java:S1874"KRemove this use of "setOnNavigationItemSelectedListener"; it is deprecated.(õßØµüÿÿÿÿ8ª½Ñı¬1
-C	java:S131#""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8«½Ñı¬1

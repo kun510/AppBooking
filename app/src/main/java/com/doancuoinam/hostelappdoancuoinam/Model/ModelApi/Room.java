@@ -10,10 +10,30 @@ public class Room {
     private String  numberOfStars;
     private String  numberRoom;
     private String status;
-    private String utilityBills;
+    private int electricBill;
+    private int waterBill;
     private String  price;
     private String  people;
     private String type;
+    private Boarding_host boardingHostel;
+
+    private Users users;
+
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
+    }
+
+    public Boarding_host getBoardingHostel() {
+        return boardingHostel;
+    }
+
+    public void setBoardingHostel(Boarding_host boardingHostel) {
+        this.boardingHostel = boardingHostel;
+    }
 
     public int getId() {
         return id;
@@ -79,12 +99,20 @@ public class Room {
         this.status = status;
     }
 
-    public String getUtilityBills() {
-        return utilityBills;
+    public int getElectricBill() {
+        return electricBill;
     }
 
-    public void setUtilityBills(String utilityBills) {
-        this.utilityBills = utilityBills;
+    public void setElectricBill(int electricBill) {
+        this.electricBill = electricBill;
+    }
+
+    public int getWaterBill() {
+        return waterBill;
+    }
+
+    public void setWaterBill(int waterBill) {
+        this.waterBill = waterBill;
     }
 
     public String getPrice() {

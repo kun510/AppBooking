@@ -1,4 +1,4 @@
-package com.doancuoinam.hostelappdoancuoinam.View.Fragment;
+package com.doancuoinam.hostelappdoancuoinam.view.fragment;
 
 import android.os.Bundle;
 

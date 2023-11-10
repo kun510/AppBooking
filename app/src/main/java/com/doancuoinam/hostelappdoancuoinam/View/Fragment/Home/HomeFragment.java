@@ -1,5 +1,11 @@
-package com.doancuoinam.hostelappdoancuoinam.View.Fragment.Home;
+package com.doancuoinam.hostelappdoancuoinam.view.fragment.home;
 
+
+
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -20,6 +26,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import android.Manifest;
+
+
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Boarding_host;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
@@ -44,6 +53,10 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        //lay id
+//        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+//        long userId = sharedPreferences.getLong("userId", 0);
+//        Toast.makeText(getActivity(), "User ID: " + userId, Toast.LENGTH_SHORT).show();
         recyclerView = view.findViewById(R.id.recyclerPlaces);
         progressBar = view.findViewById(R.id.progressBar);
         progressBarHot = view.findViewById(R.id.progressBarHot);
@@ -52,7 +65,6 @@ public class HomeFragment extends Fragment {
                 || ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
         } else {
-            // Nếu đã có quyền, lấy vị trí và hiển thị nó
             getLocationAndDisplay();
         }
 
@@ -64,14 +76,17 @@ public class HomeFragment extends Fragment {
         homeAdapterHot = new HomeAdapterHot();
         recyclerHot.setAdapter(homeAdapterHot);
         showProgressBar();
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        String Area = sharedPreferences.getString("selectedItem", "");
+        location.setText(Area);
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
-        Call<List<Room>> call = apiService.getAllRooms();
+        Call<List<Boarding_host>> call = apiService.getAllBoarding(Area);
 
-        call.enqueue(new Callback<List<Room>>() {
+        call.enqueue(new Callback<List<Boarding_host>>() {
             @Override
-            public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
+            public void onResponse(Call<List<Boarding_host>> call, Response<List<Boarding_host>> response) {
                 if (response.isSuccessful()) {
-                    List<Room> rooms = response.body();
+                    List<Boarding_host> rooms = response.body();
                     roomAdapter.setRooms(rooms);
                 } else {
                     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
@@ -80,9 +95,9 @@ public class HomeFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<List<Room>> call, Throwable t) {
+            public void onFailure(Call<List<Boarding_host>> call, Throwable t) {
                 Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
-                Log.e("TAG", "onFailureRoomaaaaa: " + t.getMessage());
+                Log.e("TAG", "onFailureListRoom: " + t.getMessage());
                 progressBar.setVisibility(View.GONE);
             }
         });
@@ -102,7 +117,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onFailure(Call<List<Room>> call, Throwable t) {
                 Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
-                Log.e("TAG", "onFailureRoomaaaaa: " + t.getMessage());
+                Log.e("TAG", "onFailureListRoomHot: " + t.getMessage());
                 progressBarHot.setVisibility(View.GONE);
             }
         });

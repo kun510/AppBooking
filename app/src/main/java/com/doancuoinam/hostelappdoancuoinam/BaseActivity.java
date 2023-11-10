@@ -6,12 +6,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.doancuoinam.hostelappdoancuoinam.View.Fragment.Home.HomeFragment;
-import com.doancuoinam.hostelappdoancuoinam.View.Fragment.Notifications;
-import com.doancuoinam.hostelappdoancuoinam.View.Fragment.Search.Search;
+import com.doancuoinam.hostelappdoancuoinam.view.fragment.home.HomeFragment;
+import com.doancuoinam.hostelappdoancuoinam.view.fragment.Notifications;
+import com.doancuoinam.hostelappdoancuoinam.view.fragment.message.Message;
+import com.doancuoinam.hostelappdoancuoinam.view.fragment.profile.Profile;
+import com.doancuoinam.hostelappdoancuoinam.view.fragment.search.Search;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BaseActivity extends AppCompatActivity {
@@ -21,10 +24,12 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
         BottomNavigationView bottomNavigationView = findViewById(R.id.menu);
+
         final Fragment homeFragment = new HomeFragment();
         final Fragment searchFragment = new Search();
         final Fragment NotificationFragment = new Notifications();
-
+        final Fragment Message = new Message();
+        final Fragment Profile = new Profile();
 
         loadFragment(homeFragment);
 
@@ -42,6 +47,12 @@ public class BaseActivity extends AppCompatActivity {
                     case R.id.menu_notification:
                         selectedFragment = NotificationFragment;
                         break;
+                    case R.id.menu_mess:
+                        selectedFragment = Message;
+                        break;
+                    case R.id.menu_user:
+                        selectedFragment = Profile;
+                        break;
                 }
                 loadFragment(selectedFragment);
                 return true;
@@ -54,5 +65,8 @@ public class BaseActivity extends AppCompatActivity {
         transaction.replace(R.id.fragment_container, fragment);
         transaction.commit();
     }
-
+    public long getUserId() {
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        return sharedPreferences.getLong("userId", 0);
+    }
 }

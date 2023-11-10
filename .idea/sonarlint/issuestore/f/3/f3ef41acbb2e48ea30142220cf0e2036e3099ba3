@@ -1,0 +1,12 @@
+
+r
+java:S1192‡"OUse already-defined constant 'ChannelID' instead of duplicating its value here.(•ú±×ıÿÿÿÿ8Á»¿Ğº1
+J
+java:S16041"(Make this anonymous inner class a lambda(Ó´Ÿøÿÿÿÿ8Â»¿Ğº1
+{	java:S115("ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(é¼•„şÿÿÿÿ8÷»¿Ğº1
+u	java:S116'"TRename this field "btn_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ÷Úçüÿÿÿÿ8÷»¿Ğº1
+D
+java:S1659%""Declare "pass" on a separate line.(Õëøÿÿÿÿ8€¼¿Ğº1
+X	java:S125a"<This block of commented-out lines of code should be removed.(“Ò‰¶8™¼¿Ğº1
+X	java:S125|"<This block of commented-out lines of code should be removed.(“Ò‰¶8¼¿Ğº1
+X	java:S125"<This block of commented-out lines of code should be removed.(ÆĞä±8¼¿Ğº1

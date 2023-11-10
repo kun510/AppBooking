@@ -1,4 +1,4 @@
-package com.doancuoinam.hostelappdoancuoinam.View.Intro;
+package com.doancuoinam.hostelappdoancuoinam.view.intro;
 
 import androidx.appcompat.app.AppCompatActivity;
 

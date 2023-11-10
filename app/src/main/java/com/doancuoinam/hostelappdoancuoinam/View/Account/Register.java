@@ -1,4 +1,4 @@
-package com.doancuoinam.hostelappdoancuoinam.View.Account;
+package com.doancuoinam.hostelappdoancuoinam.view.account;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

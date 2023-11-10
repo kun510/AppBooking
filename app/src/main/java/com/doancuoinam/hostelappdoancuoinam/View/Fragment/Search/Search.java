@@ -1,4 +1,4 @@
-package com.doancuoinam.hostelappdoancuoinam.View.Fragment.Search;
+package com.doancuoinam.hostelappdoancuoinam.view.fragment.search;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.doancuoinam.hostelappdoancuoinam.R;
-import com.doancuoinam.hostelappdoancuoinam.View.Room.RoomList;
+import com.doancuoinam.hostelappdoancuoinam.view.room.roomListSearch.RoomListSearch;
 
 public class Search extends Fragment {
     Button btn_select;
@@ -34,7 +34,7 @@ public class Search extends Fragment {
         btn_select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), RoomList.class);
+                Intent intent = new Intent(getActivity(), RoomListSearch.class);
                 String area = edtArea.getText().toString();
                 String type = edtType.getText().toString();
                 String guests = edtGuests.getText().toString();

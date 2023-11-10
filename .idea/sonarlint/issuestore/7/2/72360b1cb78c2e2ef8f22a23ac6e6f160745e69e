@@ -1,0 +1,17 @@
+
+n
+java:S1192E"LDefine a constant instead of duplicating this literal "isFavourite" 4 times.(·¦ ‡úÿÿÿÿ8Îµˆïº1
+E
+java:S1604:"(Make this anonymous inner class a lambda(ù¶ëÇ8Ïµˆïº1
+E
+java:S1604U"(Make this anonymous inner class a lambda(Ì‹ç8µ‰ïº1
+J
+java:S1604H"(Make this anonymous inner class a lambda(‚ûßÄúÿÿÿÿ8Ïµˆïº1
+O
+java:S1153¦"1Directly append the argument of String.valueOf().(“ñÖÎ8­¢ÿîº1
+O
+java:S1153§"1Directly append the argument of String.valueOf().(Üé¹ç8Ğµˆïº1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(èÅÑÍ8­¢ÿîº1
+{	java:S116‹"YRename this field "btn_selectRoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ‹¬öşÿÿÿÿ8—¶ˆïº1
+g
+java:S1659Š"IDeclare "numberPeople" and all following declarations on a separate line.(˜ãÈ–8™¶ˆïº1

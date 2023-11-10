@@ -54,4 +54,6 @@
 <!--    text-->
     <dimen name="size12sp">12sp</dimen>
     <dimen name="size10sp">10sp</dimen>
+    <dimen name="size18sp">18sp</dimen>
+    <dimen name="size20sp">20sp</dimen>
 </resources>
