@@ -1,23 +1,0 @@
-
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ñ²Ñ«ıÿÿÿÿ
-	java:S116"^Rename this field "confirmation_status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ªöóúÿÿÿÿ8Åñ¨º1
-x	java:S116"WRename this field "token_device" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñéœÅüÿÿÿÿ8Åñ¨º1
-H
-java:S1068"&Remove this unused "id" private field.(şÓî«şÿÿÿÿ8Èä¨º1
-F
-java:S1068")Remove this unused "phone" private field.(À†½´8Èä¨º1
-N
-java:S1068",Remove this unused "password" private field.(œãë­úÿÿÿÿ8Èä¨º1
-M
-java:S1068"+Remove this unused "address" private field.(÷§ùÿÿÿÿ8Éä¨º1
-K
-java:S1068")Remove this unused "email" private field.(ª«Õìùÿÿÿÿ8Éä¨º1
-I
-java:S1068	"'Remove this unused "img" private field.(Ÿ¯Ğùÿÿÿÿ8Éä¨º1
-E
-java:S1068
-"(Remove this unused "name" private field.(Ë¥¼8ä½‘¨º1
-Y
-java:S1068"7Remove this unused "confirmation_status" private field.(±ªöóúÿÿÿÿ8Éä¨º1
-R
-java:S1068"0Remove this unused "token_device" private field.(ñéœÅüÿÿÿÿ8Éä¨º1
