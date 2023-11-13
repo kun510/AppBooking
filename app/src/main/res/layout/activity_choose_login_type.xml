@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".test.ChooseLoginType">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cùng Bắt Đầu Nào"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:layout_marginLeft="9dp"/>
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập để xem những ưu đãi lên đến 50%, dễ
+dàng quản lý các đặt phòng hiện tại của bạn, và nhiều hơn thế nữa..."
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        />
+    <LinearLayout
+        android:id="@+id/Login_Gg"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:text="Tiếp tục bằng tài khoản Google"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Login_Fb"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/blue"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:text="Tiếp tục bằng tài khoản FaceBook"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Login_SMS"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/smartphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:text="Tiếp tục bằng số điện thoại"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Login_Normal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#0C5087"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/userlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:text="Tiếp tục đăng ký tài khoản"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qua việc đăng nhập hoặc tạo tài khoản, bạn đồng ý với các Điều Khoản và Điều Kiện cũng như Chính Sách An toàn và bảo mật của chúng tôi"
+            />
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:text="Bạn đã có tài khoản vui lòng "
+                android:textAlignment="center"
+                android:layout_marginLeft="10dp"
+                android:textSize="17dp"
+                />
+
+            <TextView
+                android:id="@+id/cotkr"
+                android:layout_width="91dp"
+                android:layout_height="wrap_content"
+                android:text="Tại đây?"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

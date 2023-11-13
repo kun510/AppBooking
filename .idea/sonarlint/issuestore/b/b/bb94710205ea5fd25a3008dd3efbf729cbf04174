@@ -1,0 +1,11 @@
+
+E
+java:S1604)"(Make this anonymous inner class a lambda(ÆÊ®î8”åÅÀ»1
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(÷¯Èš8”åÅÀ»1
+S
+java:S1153U"1Directly append the argument of String.valueOf().(ëó–”ùÿÿÿÿ8Èô¦Â»1
+S
+java:S1153V"1Directly append the argument of String.valueOf().(©•Ëşÿÿÿÿ8×ô¦Â»1
+r	java:S116="VRename this field "btn_manager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¼“Ù8¦åÅÀ»1
+f
+java:S1659<"IDeclare "numberPeople" and all following declarations on a separate line.(˜ãÈ–8¦åÅÀ»1
