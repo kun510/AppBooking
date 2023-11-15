@@ -21,17 +21,24 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.doancuoinam.hostelappdoancuoinam.BaseActivity;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ImgRoom;
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationMessaging;
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
+import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseAll;
+import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseToken;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.view.account.Login;
 import com.doancuoinam.hostelappdoancuoinam.view.map.GeocodingTask;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -41,24 +48,31 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.protobuf.Api;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.HttpException;
 import retrofit2.Response;
+
 
 public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallback {
     RecyclerView recyclerView;
     AdapterOverview adapterOverview;
     ProgressBar progressBar;
     ImageView imgRoomMain;
-    String addressRoom,idRoom,numberStar,area;
+    String addressRoom,idRoom,numberStar,area,idHost;
     TextView numberStarRoom;
     Toolbar toolbar;
     MapView mMapView;
+    Button btn_rent;
     public static final String MAPVIEW_BUNDLE_KEY = "MapViewBundleKey";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +83,7 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
         recyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL, false));
         adapterOverview = new AdapterOverview();
         recyclerView.setAdapter(adapterOverview);
+        NotificationRentLogDevice();
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
         showProgressBar();
         Call<List<ImgRoom>> call = apiService.getImgInRoom(Long.parseLong(idRoom));
@@ -105,6 +120,105 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
 
         mMapView.getMapAsync((OnMapReadyCallback) this);
     }
+    private void NotificationRentLogDevice(){
+        btn_rent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ApiService apiService = ApiClient.getClient().create(ApiService.class);
+                Intent intent = getIntent();
+                idHost = intent.getStringExtra("idHost");
+                Call<ResponseToken> call = apiService.getToken(Long.parseLong(idHost));
+                call.enqueue(new Callback<ResponseToken>() {
+                    @Override
+                    public void onResponse(Call<ResponseToken> call, Response<ResponseToken> response) {
+                        if (response.isSuccessful()) {
+                            ResponseToken responseData = response.body();
+                            if (responseData != null) {
+                                Rent();
+                                String token = responseData.getToken();
+                                String title = "Rented Room";
+                                String body = "User Rented Your Room";
+                                String img = "image_url";
+                                Map<String, String> data = new HashMap<>();
+                                data.put("key1", "value1");
+                                data.put("key2", "value2");
+                                NotificationRent(token, title, body, img, data);
+                                Log.d("TAG", "Token: " + token);
+                               Intent intent = new Intent(OverviewRoom.this, BaseActivity.class);
+                               startActivity(intent);
+                            }
+                        } else {
+                            Log.d("TAG", "onResponseToken: " + response.body());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<ResponseToken> call, Throwable t) {
+                        Log.e("TAG", "onFailureToke: " + t.getMessage());
+                    }
+                });
+            }
+        });
+    }
+    private void NotificationRent(String token,String title,String body,String img,Map<String,String> data){
+        ApiService apiService = ApiClient.getClient().create(ApiService.class);
+        NotificationMessaging notificationMessaging = new NotificationMessaging(token,title,body,img,data);
+        Call<ResponseAll> call = apiService.sendNotification(notificationMessaging);
+        call.enqueue(new Callback<ResponseAll>() {
+            @Override
+            public void onResponse(Call<ResponseAll> call, Response<ResponseAll> response) {
+//                ResponseAll responseAll = response.body();
+//                Toast.makeText(OverviewRoom.this,"" + responseAll, Toast.LENGTH_SHORT).show();
+                if (response.isSuccessful()) {
+                    ResponseAll responseAll = response.body();
+                    Toast.makeText(OverviewRoom.this, "" + responseAll, Toast.LENGTH_SHORT).show();
+                    Log.e("TAG", "onResponse Noti: " + responseAll.getMessage());
+                } else {
+                    Log.e("TAG", "onResponse Notielse: " + response.code());
+                    Log.e("TAG", "onResponse Notifition: " + response.errorBody());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseAll> call, Throwable t) {
+                Toast.makeText(OverviewRoom.this, "Lỗi kết nối mạng hoặc máy chủ không phản hồi", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+    private void Rent(){
+        Intent intent = getIntent();
+        idRoom = intent.getStringExtra("idRoom");
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        long userID = sharedPreferences.getLong("userId", 0);
+        int numberPeople = 3;
+        ApiService apiService = ApiClient.getClient().create(ApiService.class);
+        Call<ResponseAll> call = apiService.rent(Long.parseLong(idRoom),userID,numberPeople);
+        call.enqueue(new Callback<ResponseAll>() {
+            @Override
+            public void onResponse(Call<ResponseAll> call, Response<ResponseAll> response) {
+                if (response.isSuccessful()){
+                    ResponseAll responseAll = response.body();
+                    Toast.makeText(OverviewRoom.this, "rennt" + responseAll, Toast.LENGTH_SHORT).show();
+                }else {
+                    try {
+                        String errorBody = response.errorBody().string();
+                        Log.e("TAG", "onResponse Rent: " + errorBody);
+                        Toast.makeText(OverviewRoom.this, "Error"+errorBody, Toast.LENGTH_SHORT).show();
+                    } catch (IOException e) {
+                        Log.e("TAG", "onResponse Rent: Error reading error body"+e);
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseAll> call, Throwable t) {
+                Log.e("TAG", "onFailure Rent: " + t.getMessage());
+            }
+        });
+    }
+
     private void addMarker(GoogleMap map, LatLng position, String title) {
         map.addMarker(new MarkerOptions().position(position).title(title));
     }
@@ -128,11 +242,9 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
                 Log.d("mapplist", "Latitude: " + latitude + ", Longitude: " + longitude);
                 // addMarker(map,new LatLng(latitude,longitude),address);
                 addMarker(map,new LatLng(latitude,longitude),local);
-                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-                float latitudeLocal = sharedPreferences.getFloat("latitude", 0);
-                float longitudeLocal = sharedPreferences.getFloat("longitude", 0);
-                map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitudeLocal, longitudeLocal)));
-                map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitudeLocal, longitudeLocal), 15));
+
+                map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude, longitude)));
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 15));
             }
             @Override
             public void onGeocodingFailed() {
@@ -162,12 +274,14 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
         toolbar = findViewById(R.id.toolbar);
         numberStarRoom = findViewById(R.id.numberStarRoom);
         mMapView = findViewById(R.id.user_list_map);
+        btn_rent = findViewById(R.id.btn_rent);
     }
     private void getExtra(){
         Intent intent = getIntent();
         addressRoom = intent.getStringExtra("addressRoom");
         idRoom = intent.getStringExtra("idRoom");
         numberStar = intent.getStringExtra("numberStar");
+        idHost = intent.getStringExtra("idHost");
         setToolbar(toolbar,addressRoom);
         numberStarRoom.setText(numberStar);
         String imageUrl = getIntent().getStringExtra("selected_image_url");

@@ -68,12 +68,14 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
                     String addressRoom = holder.AddressRoom;
                     String numberStar = holder.numberStar;
                     String area = holder.Area;
+                    String idHost = String.valueOf(holder.idHost);
                     Intent intent = new Intent(v.getContext(), OverviewRoom.class);
                     intent.putExtra("selected_image_url", imageUrl);
                     intent.putExtra("idRoom",idRoom);
                     intent.putExtra("addressRoom",addressRoom);
                     intent.putExtra("area",area);
                     intent.putExtra("numberStar",numberStar);
+                    intent.putExtra("idHost",idHost);
                     v.getContext().startActivity(intent);
                 }
             }
@@ -156,6 +158,7 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
         String AddressRoom;
         String Area;
         String numberStar;
+        long idHost;
         public RoomViewHolder(@NonNull View itemView) {
             super(itemView);
             imgRoom = itemView.findViewById(R.id.imgRoom);
@@ -182,6 +185,7 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
             descriptionRoom.setText("$"+String.valueOf(room.getDescription()));
             priceRoom.setText("$"+String.valueOf(room.getPrice()));
             idRoom = room.getId();
+            idHost = room.getUser().getId();
             Area = room.getBoardingHostel().getArea();
             AddressRoom = room.getBoardingHostel().getAddress();
             numberStar = room.getNumberOfStars();

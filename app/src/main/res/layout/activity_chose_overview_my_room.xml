@@ -17,11 +17,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
+            android:scaleType="centerCrop"
             android:layout_marginStart="10dp"
-            android:src="@drawable/profileeee"
-            android:background="@drawable/boderavt"
-            android:id="@+id/avt"
+            android:src="@drawable/imgsearch"
+            app:strokeWidth="5dp"
+            app:strokeColor="@color/white"
+            app:shapeAppearanceOverlay="@style/circular"
+            android:id="@+id/avtProfile"
             android:layout_width="80dp"
             android:layout_height="80dp" />
         <TextView

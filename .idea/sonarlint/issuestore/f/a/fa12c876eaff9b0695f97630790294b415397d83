@@ -1,0 +1,16 @@
+
+f
+java:S1192]"IDefine a constant instead of duplicating this literal "mapplist" 4 times.(²İšã8áÃÓÈ¼1
+^	java:S107ƒ"<Method has 8 parameters, which is greater than 7 authorized.(ÈÕ¸•ÿÿÿÿÿ8©ÄÓÈ¼1
+W
+java:S1905>"5Remove this unnecessary cast to "OnMapReadyCallback".(¿û·üÿÿÿÿ8²ÄÓÈ¼1
+y
+java:S3252C"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(ê–îéıÿÿÿÿ8³ÄÓÈ¼1
+y
+java:S3252E"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(øü÷Ñûÿÿÿÿ8³ÄÓÈ¼1
+X	java:S125^"<This block of commented-out lines of code should be removed.(ÙÛíˆ8·ÄÓÈ¼1
+Q
+java:S1874k"/Remove this use of "execute"; it is deprecated.(­’šíúÿÿÿÿ8Ë¬ºÊ¼1
+]	java:S125~"<This block of commented-out lines of code should be removed.(×†ß™ûÿÿÿÿ8»ÄÓÈ¼1
+Ÿ
+java:S1186•"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¾’‘Â8¼ÄÓÈ¼1

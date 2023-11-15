@@ -1,18 +1,27 @@
 
-J
-java:S1604'"(Make this anonymous inner class a lambda(åë”Âùÿÿÿÿ8™É¶È¹1
-J
-java:S1604."(Make this anonymous inner class a lambda(¡©Ïœùÿÿÿÿ8ø¼ÑÈ¹1
-J
-java:S16045"(Make this anonymous inner class a lambda(à¬³…ıÿÿÿÿ8Ô½ÒÈ¹1
+E
+java:S1604X"(Make this anonymous inner class a lambda(Ç³ö˜8ÊŞ¿í¼1
 D
-java:S1604<"(Make this anonymous inner class a lambda(Éï—E8Ö½ÓÈ¹1
+java:S1604^"(Make this anonymous inner class a lambda(¦ùõ8ÊŞ¿í¼1
 J
-java:S1604C"(Make this anonymous inner class a lambda(íÏÒ²úÿÿÿÿ8ˆ“ÔÈ¹1
-x	java:S116"WRename this field "MyRoomLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚„ÉŸøÿÿÿÿ8µÉ¶È¹1
-v	java:S116"URename this field "HelpLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚„ÉŸøÿÿÿÿ8µÉ¶È¹1
-z	java:S116"YRename this field "LanguageLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚„ÉŸøÿÿÿÿ8µÉ¶È¹1
-y	java:S116"XRename this field "SettingLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚„ÉŸøÿÿÿÿ8µÉ¶È¹1
+java:S1604s"(Make this anonymous inner class a lambda(åë”Âùÿÿÿÿ8ÊŞ¿í¼1
+J
+java:S1604z"(Make this anonymous inner class a lambda(¡©Ïœùÿÿÿÿ8ÊŞ¿í¼1
+K
+java:S1604"(Make this anonymous inner class a lambda(à¬³…ıÿÿÿÿ8ÊŞ¿í¼1
+E
+java:S1604ˆ"(Make this anonymous inner class a lambda(Éï—E8ËŞ¿í¼1
+K
+java:S1604"(Make this anonymous inner class a lambda(íÏÒ²úÿÿÿÿ8ËŞ¿í¼1
+x	java:S116/"WRename this field "MyRoomLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚„ÉŸøÿÿÿÿ8ìŞ¿í¼1
+v	java:S116/"URename this field "HelpLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚„ÉŸøÿÿÿÿ8ìŞ¿í¼1
+z	java:S116/"YRename this field "LanguageLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚„ÉŸøÿÿÿÿ8ìŞ¿í¼1
+y	java:S116/"XRename this field "SettingLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚„ÉŸøÿÿÿÿ8ìŞ¿í¼1
 k
-java:S1659"IDeclare "MyRoomLayout" and all following declarations on a separate line.(‚„ÉŸøÿÿÿÿ8ÂÉ¶È¹1
-j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÁ—™8ÈÉ¶È¹1
+java:S1659/"IDeclare "MyRoomLayout" and all following declarations on a separate line.(‚„ÉŸøÿÿÿÿ8õŞ¿í¼1
+]	java:S125["<This block of commented-out lines of code should be removed.(ÔøÈ’üÿÿÿÿ8ß¿í¼1
+j	java:S100h"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÁ—™8ß¿í¼1
+^	java:S125—"<This block of commented-out lines of code should be removed.(šû‘ÿşÿÿÿÿ8›ß¿í¼1
+^	java:S125"<This block of commented-out lines of code should be removed.(ËÕîúÿÿÿÿ8›ß¿í¼1
+X
+java:S10683"6Remove this unused "PICK_IMAGE_REQUEST" private field.( Õ Îûÿÿÿÿ8œß¿í¼1

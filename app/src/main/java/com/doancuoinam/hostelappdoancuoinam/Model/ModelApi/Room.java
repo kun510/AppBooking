@@ -17,14 +17,14 @@ public class Room {
     private String type;
     private Boarding_host boardingHostel;
 
-    private Users users;
+    private Users user;
 
-    public Users getUsers() {
-        return users;
+    public Users getUser() {
+        return user;
     }
 
-    public void setUsers(Users users) {
-        this.users = users;
+    public void setUser(Users user) {
+        this.user = user;
     }
 
     public Boarding_host getBoardingHostel() {

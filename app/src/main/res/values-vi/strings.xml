@@ -136,5 +136,12 @@
     <string name="tiengnhat">Chọn Ngôn Ngữ Tiếng Nhật</string>
     <string name="tienganh">Chọn Ngôn Ngữ Tiếng Anh</string>
     <string name="tiengvietnam">Chọn Ngôn Ngữ Tiếng Việt</string>
+    <string name="tiendien">Tiền Điện</string>
+    <string name="tiennuoc">Tiền Nước</string>
+    <string name="tongtien">Tổng Tiền</string>
+    <string name="chiphikhac">Chi Phí Khác</string>
+    <string name="thang">Tháng</string>
     <string name="you_have_successfully_booked_a_room_at_room_21_tien_son">Bạn đã thành công đặt phòng tại phòng 21 Tiên Sơn</string>
+    <string name="btn_rent">Thuê</string>
+    <string name="nullRent">bạn chưa thuê phòng</string>
 </resources>

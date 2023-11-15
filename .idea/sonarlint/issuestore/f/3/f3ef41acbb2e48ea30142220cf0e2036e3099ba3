@@ -1,12 +1,35 @@
 
 r
-java:S1192‡"OUse already-defined constant 'ChannelID' instead of duplicating its value here.(•ú±×ıÿÿÿÿ8Á»¿Ğº1
+java:S1192®"OUse already-defined constant 'ChannelID' instead of duplicating its value here.(•ú±×ıÿÿÿÿ8…‡ÛÊ¼1
+Q
+java:S1066l"/Merge this if statement with the enclosing one.(½ÿÂ„üÿÿÿÿ8…‡ÛÊ¼1
 J
-java:S16041"(Make this anonymous inner class a lambda(Ó´Ÿøÿÿÿÿ8Â»¿Ğº1
-{	java:S115("ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(é¼•„şÿÿÿÿ8÷»¿Ğº1
-u	java:S116'"TRename this field "btn_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ÷Úçüÿÿÿÿ8÷»¿Ğº1
+java:S1604J"(Make this anonymous inner class a lambda(Ó´Ÿøÿÿÿÿ8†‡ÛÊ¼1
+J
+java:S1604X"(Make this anonymous inner class a lambda(†°‡¬øÿÿÿÿ8†‡ÛÊ¼1
+K
+java:S1604„"(Make this anonymous inner class a lambda(íÍà©şÿÿÿÿ8†‡ÛÊ¼1
+n
+java:S1301Å"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ8†‡ÛÊ¼1
+n
+java:S1301Õ"KReplace this "switch" statement by "if" statements to increase readability.(×ö³–úÿÿÿÿ8†‡ÛÊ¼1
+{	java:S115:"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(é¼•„şÿÿÿÿ8µˆÛÊ¼1
+u	java:S1169"TRename this field "btn_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ÷Úçüÿÿÿÿ8µˆÛÊ¼1
 D
-java:S1659%""Declare "pass" on a separate line.(Õëøÿÿÿÿ8€¼¿Ğº1
-X	java:S125a"<This block of commented-out lines of code should be removed.(“Ò‰¶8™¼¿Ğº1
-X	java:S125|"<This block of commented-out lines of code should be removed.(“Ò‰¶8¼¿Ğº1
-X	java:S125"<This block of commented-out lines of code should be removed.(ÆĞä±8¼¿Ğº1
+java:S16597""Declare "pass" on a separate line.(Õëøÿÿÿÿ8¾ˆÛÊ¼1
+y
+java:S3252U"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(œÂ“èıÿÿÿÿ8ËˆÛÊ¼1
+a
+java:S1874‡">Remove this use of "startActivityForResult"; it is deprecated.(¯Õ±şÿÿÿÿ8ÑˆÛÊ¼1
+m
+java:S1874À"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(şèçúÿÿÿÿ8ÔˆÛÊ¼1
+H
+java:S1197Á"*Move the array designators [] to the type.(³Ûü¢8ÕˆÛÊ¼1
+D	java:S131Å""Add a default case to this switch.(×ö³–úÿÿÿÿ8ÕˆÛÊ¼1
+h
+java:S1874Ò"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ8ÖˆÛÊ¼1
+D	java:S131Õ""Add a default case to this switch.(×ö³–úÿÿÿÿ8ÖˆÛÊ¼1
+K	java:S108×")Either remove or fill this block of code.(–Ë—Ğûÿÿÿÿ8ÖˆÛÊ¼1
+Y	java:S125ˆ"<This block of commented-out lines of code should be removed.(“Ò‰¶8ÜˆÛÊ¼1
+Y	java:S125£"<This block of commented-out lines of code should be removed.(“Ò‰¶8ŞˆÛÊ¼1
+Y	java:S125¦"<This block of commented-out lines of code should be removed.(ÆĞä±8ŞˆÛÊ¼1

@@ -23,7 +23,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="50dp"
         android:text="@string/intro2"
         android:textAlignment="center"
         android:textColor="@color/mauchu"
@@ -34,9 +34,10 @@
 
     <TextView
         android:id="@+id/textView2"
+        android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="30dp"
         android:text="@string/intro2nho"
         android:textColor="@color/mauchu"
         android:textSize="14dp"
@@ -44,35 +45,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <ImageView
-        android:id="@+id/clickleft"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linerIntro"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginEnd="116dp"
-        android:src="@mipmap/nextintro"
-        app:layout_constraintEnd_toStartOf="@+id/clickright"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/clickcenter" />
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintBottom_toTopOf="@+id/btn_intro"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-    <ImageView
-        android:id="@+id/clickright"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
-        android:layout_marginEnd="45dp"
-        android:src="@mipmap/nextintro3"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <ImageView
+            android:id="@+id/clickleft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@mipmap/nextintro" />
 
-    <ImageView
-        android:id="@+id/clickcenter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="41dp"
-        android:src="@mipmap/nextintro2"
-        app:layout_constraintEnd_toStartOf="@+id/clickright"
-        app:layout_constraintTop_toTopOf="@+id/clickright" />
+        <ImageView
+            android:id="@+id/clickcenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@mipmap/nextintro2" />
+
+        <ImageView
+            android:id="@+id/clickright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@mipmap/nextintro3" />
+    </LinearLayout>
+
+
 
     <Button
         android:id="@+id/btn_intro"

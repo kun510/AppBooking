@@ -3,13 +3,18 @@ package com.doancuoinam.hostelappdoancuoinam.Service;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Boarding_host;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ImgRoom;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationApp;
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationMessaging;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.RoomFavourite;
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.TotalBill;
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Users;
 import com.doancuoinam.hostelappdoancuoinam.Model.Request.LoginRequest;
 import com.doancuoinam.hostelappdoancuoinam.Model.Request.RegisterRequest;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.Response;
+import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseAll;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseLogin;
+import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseToken;
 
 import java.util.List;
 
@@ -61,10 +66,18 @@ public interface ApiService {
     Call<List<NotificationApp>> allNotificationReceiver(@Query("idUserReceiver") long idUserReceiver);
     @GET("/user/getImgInRoom")
     Call<List<ImgRoom>> getImgInRoom(@Query("idRoom") long idRoom);
-
     @GET("/user/getallroom")
     Call<List<Room>> getRoomMap();
-
+    @GET("/user/getusercurrent")
+    Call<List<Users>> getUserCurrent(@Query("idUser") long idUser);
+    @GET("/user/getbill")
+    Call<List<TotalBill>> getAllBill(@Query("idUser") long idUser);
+    @GET("/user/getToken")
+    Call<ResponseToken> getToken(@Query("userId") long userId);
+    @POST("/user/rent")
+    Call<ResponseAll> rent(@Query("idRoom") long idRoom, @Query("idUser") long idUser, @Query("numberUserInRoom") int numberUserInRoom);
+    @POST("/user/notification")
+    Call<ResponseAll> sendNotification(@Body NotificationMessaging notificationMessaging);
     @Multipart
     @POST("/host/addImgRoom")
     Call<Response> addImgRoom(

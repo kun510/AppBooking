@@ -14,6 +14,7 @@ import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
@@ -55,8 +56,8 @@ public class MyRoom extends AppCompatActivity {
             public void onResponse(Call<List<Rent>> call, Response<List<Rent>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<Rent> myRooms = response.body();
-                    myRoomAdapter.setMyRooms(myRooms);
-                    hideProgressBar();
+                        myRoomAdapter.setMyRooms(myRooms);
+                        hideProgressBar();
                 } else {
                     Toast.makeText(MyRoom.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                     hideProgressBar();

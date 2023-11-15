@@ -27,13 +27,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-        <ImageView
-            android:id="@+id/avt"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:scaleType="centerCrop"
             android:layout_marginStart="10dp"
-            android:background="@drawable/boderavt"
-            android:src="@drawable/profileeee" />
+            android:src="@drawable/imgsearch"
+            app:strokeWidth="5dp"
+            app:strokeColor="@color/white"
+            app:shapeAppearanceOverlay="@style/circular"
+            android:id="@+id/avtProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
 
         <TextView
             android:id="@+id/nameUser"

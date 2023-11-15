@@ -1,5 +1,8 @@
 package com.doancuoinam.hostelappdoancuoinam.view.map;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -90,8 +93,11 @@ public class Map extends Fragment implements OnMapReadyCallback{
                                     Log.d("mapplist", "Latitude: " + latitude + ", Longitude: " + longitude);
                                    // addMarker(map,new LatLng(latitude,longitude),address);
                                     addMarker(map,new LatLng(latitude,longitude),price,numberRoom,address,imageUrl,80,80);
-                                    map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitude, longitude)));
-                                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude, longitude), 15));
+                                    SharedPreferences sharedPreferences = getContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                                    float latitudeLocal = sharedPreferences.getFloat("latitude", 0);
+                                    float longitudeLocal = sharedPreferences.getFloat("longitude", 0);
+                                    map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(latitudeLocal, longitudeLocal)));
+                                    map.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitudeLocal, longitudeLocal), 15));
                                 }
                                 @Override
                                 public void onGeocodingFailed() {

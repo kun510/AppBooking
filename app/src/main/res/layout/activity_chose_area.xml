@@ -39,7 +39,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/radius_btn"
-        android:text="@string/btnlogin"
+        android:text="@string/btn_select"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

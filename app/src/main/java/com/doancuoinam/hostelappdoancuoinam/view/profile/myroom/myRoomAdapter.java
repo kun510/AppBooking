@@ -1,5 +1,6 @@
 package com.doancuoinam.hostelappdoancuoinam.view.profile.myroom;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.R;
+import com.doancuoinam.hostelappdoancuoinam.view.profile.myroom.overviewMyyRoom.ChoseOverviewMyRoom;
 import com.doancuoinam.hostelappdoancuoinam.view.room.roomListSearch.RoomAdapter;
 import com.squareup.picasso.Picasso;
 
@@ -26,6 +28,7 @@ public class myRoomAdapter extends RecyclerView.Adapter<myRoomAdapter.RoomViewHo
     public void setMyRooms(List<Rent> rooms) {
         this.rooms = rooms;
         notifyDataSetChanged();
+
     }
     @NonNull
     @Override
@@ -43,8 +46,10 @@ public class myRoomAdapter extends RecyclerView.Adapter<myRoomAdapter.RoomViewHo
             public void onClick(View v) {
                 int clickedPosition = holder.getBindingAdapterPosition();
                 if (clickedPosition != RecyclerView.NO_POSITION) {
-                    String message = "Nút được nhấn ở vị trí: " + clickedPosition;
-                    Toast.makeText(v.getContext(), message, Toast.LENGTH_SHORT).show();
+//                    String message = "Nút được nhấn ở vị trí: " + clickedPosition;
+//                    Toast.makeText(v.getContext(), message, Toast.LENGTH_SHORT).show();
+                    Intent intent =new Intent(v.getContext(), ChoseOverviewMyRoom.class);
+                    v.getContext().startActivity(intent);
                 }
             }
         });

@@ -135,5 +135,13 @@
     <string name="tiengnhat">日本語を選択</string>
     <string name="tienganh">英語を選択</string>
     <string name="tiengvietnam">ベトナム語を選択</string>
+    <string name="tiendien">電気代</string>
+    <string name="tiennuoc">水道料金</string>
+    <string name="tongtien">総額</string>
+    <string name="chiphikhac">その他の費用</string>
+    <string name="thang">月</string>
+
     <string name="you_have_successfully_booked_a_room_at_room_21_tien_son">21 Tien Sonの部屋を予約しました</string>
+    <string name="btn_rent">家賃</string>
+    <string name="nullRent">まだ部屋を借りていません</string>
 </resources>

@@ -135,5 +135,12 @@
     <string name="tiengnhat">Choose Japanese Language</string>
     <string name="tienganh">Choose English Language</string>
     <string name="tiengvietnam">Choose Vietnamese Language</string>
+    <string name="tiendien">Electricity</string>
+    <string name="tiennuoc">Water </string>
+    <string name="tongtien">Total Amount</string>
+    <string name="chiphikhac">Other Expenses</string>
+    <string name="thang">Month</string>
     <string name="you_have_successfully_booked_a_room_at_room_21_tien_son">You have successfully booked a room at room 21 Tien Son</string>
+    <string name="btn_rent">Rent</string>
+    <string name="nullRent">You haven\'t rented a room yet</string>
 </resources>

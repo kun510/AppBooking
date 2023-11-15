@@ -48,6 +48,8 @@
     <string name="edt_type">Hostel</string>
     <string name="title_local">Da Nang</string>
     <string name="btn_select">Select</string>
+    <string name="btn_rent">Rent</string>
+    <string name="nullRent">bạn chưa thuê phòng</string>
     <string name="btn_manager">Manager</string>
     <string name="item_refundable">Refundable</string>
     <string name="item_area">Area: </string>
@@ -125,6 +127,11 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_test">Test</string>
     <string name="title_activity_my_room">MyRoom</string>
+    <string name="tiendien">Tiền Điện</string>
+    <string name="tiennuoc">Tiền Nước</string>
+    <string name="tongtien">Tổng Tiền</string>
+    <string name="chiphikhac">Chi Phí Khác</string>
+    <string name="thang">Tháng</string>
     <!-- Strings used for fragments for navigation -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>

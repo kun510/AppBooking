@@ -3,6 +3,7 @@ package com.doancuoinam.hostelappdoancuoinam.view.intro;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -11,10 +12,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.doancuoinam.hostelappdoancuoinam.R;
+import com.doancuoinam.hostelappdoancuoinam.view.account.Login;
 
 public class ScreenIntro2 extends AppCompatActivity {
     ImageView intro1,intro2,intro3;
     Button btn_intro;
+    private static final String PREF_NAME = "MyPreferences";
+    private static final String PREF_FIRST_TIME = "isFirstTime";
+    private boolean isFirstTime = true;
     private GestureDetector gestureDetector;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +31,22 @@ public class ScreenIntro2 extends AppCompatActivity {
         utils.ListenClick(views, this);
         btn_intro = findViewById(R.id.btn_intro);
         intro1 = findViewById(R.id.intro1);
+        SharedPreferences preferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        isFirstTime = preferences.getBoolean(PREF_FIRST_TIME, true);
 
+        if (!isFirstTime) {
+            Intent intent = new Intent(ScreenIntro2.this, Login.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
         btn_intro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                isFirstTime = false;
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putBoolean(PREF_FIRST_TIME, isFirstTime);
+                editor.apply();
                 Intent intent = new Intent(ScreenIntro2.this, ScreenIntro3.class);
                 startActivity(intent);
                 finish();
