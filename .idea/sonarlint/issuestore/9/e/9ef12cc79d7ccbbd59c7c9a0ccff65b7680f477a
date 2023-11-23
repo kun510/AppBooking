@@ -1,0 +1,24 @@
+
+C
+java:S1604p"(Make this anonymous inner class a lambda(„ò‡ùÿÿÿÿ
+?
+java:S1604ú"(Make this anonymous inner class a lambda(°§ÎØ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(õÔ¥ùÿÿÿÿ
+m	java:S116?"SRename this field "btn_rent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏèÍãıÿÿÿÿ
+Y
+java:S1659;"CDeclare "idRoom" and all following declarations on a separate line.(‡ê™§
+P
+java:S1905m"5Remove this unnecessary cast to "OnMapReadyCallback".(¿û·üÿÿÿÿ
+c	java:S100o"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÁÒ¦
+d	java:S100—"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢§ò½
+R	java:S125"<This block of commented-out lines of code should be removed.(ÖïÁ¨
+i	java:S100±"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÅ¶øÿÿÿÿ
+n
+java:S3252Û"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(“Ç±‚
+s
+java:S3252İ"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(É´Àşÿÿÿÿ
+R	java:S125ç"<This block of commented-out lines of code should be removed.(ÙÛíˆ
+K
+java:S1874ò"/Remove this use of "execute"; it is deprecated.(äÁ¸Òùÿÿÿÿ
+d
+java:S3252÷"MUse static access with "android.text.Spanned" for "SPAN_EXCLUSIVE_EXCLUSIVE".(‰„Åã

@@ -1,2 +1,25 @@
 
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Õàï¤ùÿÿÿÿ
+W
+java:S1141p"5Extract this nested try block into a separate method.(´Ûõ“ûÿÿÿÿ8½»ã¿1
+n	java:S117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÇ—¨8½»ã¿1
+s	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°×™€ûÿÿÿÿ8½»ã¿1
+E
+java:S1604D"(Make this anonymous inner class a lambda(Š‘œÎ8½»ã¿1
+D
+java:S1604J"(Make this anonymous inner class a lambda(‘¼48½»ã¿1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Õàï¤ùÿÿÿÿ8¿»ã¿1
+x	java:S1160"WRename this field "ElectricBill" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çã¨”ÿÿÿÿÿ8Â½ã¿1
+u	java:S1160"TRename this field "WaterBill" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çã¨”ÿÿÿÿÿ8Ã½ã¿1
+D
+java:S1659-"'Declare "imgInsert" on a separate line.(•Ì‹8Í½ã¿1
+i
+java:S16590"GDeclare "numberRoom" and all following declarations on a separate line.(çã¨”ÿÿÿÿÿ8Í½ã¿1
+G
+java:S1197/"*Move the array designators [] to the type.(ıÅÂÉ8Ó½ã¿1
+`
+java:S1874W">Remove this use of "startActivityForResult"; it is deprecated.(“Œñ¬ÿÿÿÿÿ8â½ã¿1
+f
+java:S1874Z"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8ã½ã¿1
+L
+java:S1874î".Remove this use of "create"; it is deprecated.(Õı“8ù½ã¿1
+p	java:S100ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø›ôãùÿÿÿÿ8ù½ã¿1

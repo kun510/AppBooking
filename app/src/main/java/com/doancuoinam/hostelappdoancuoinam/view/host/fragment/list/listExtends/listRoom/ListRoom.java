@@ -22,7 +22,9 @@ import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
 import com.doancuoinam.hostelappdoancuoinam.view.host.addRoom.AddRoomByHostActivity;
+import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoomEmpty.ListRoomAdapter;
 
+import java.io.IOException;
 import java.util.List;
 
 import retrofit2.Call;
@@ -34,7 +36,7 @@ public class ListRoom extends Fragment {
     RecyclerView listRoom;
     ListRoomAdapter listRoomAdapter;
     ProgressBar progressBar;
-    ImageView addRoomByHost;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,12 +46,11 @@ public class ListRoom extends Fragment {
         listRoomAdapter = new ListRoomAdapter();
         listRoom.setAdapter(listRoomAdapter);
         progressBar = view.findViewById(R.id.progressBar);
-        addRoomByHost = view.findViewById(R.id.addRoomByHost);
         progressBar.setVisibility(View.VISIBLE);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         long userId = sharedPreferences.getLong("userId", 0);
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
-        Call<List<Room>> call = apiService.getRoomByHost(userId);
+        Call<List<Room>> call = apiService.AllRoomByHost(userId);
         call.enqueue(new Callback<List<Room>>() {
             @Override
             public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
@@ -62,7 +63,13 @@ public class ListRoom extends Fragment {
                 } else {
                     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
-                    Log.e("API Call", "Faileddd");
+                    try {
+                        String errorBody = response.errorBody().string();
+                        Log.e("API Call", errorBody);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        Log.e("API Call", e.toString());
+                    }
                 }
             }
 
@@ -73,17 +80,7 @@ public class ListRoom extends Fragment {
                 Log.e("API Call", "Failed", t);
             }
         });
-        eventClickAddRoom();
         return view;
     }
 
-    public void eventClickAddRoom(){
-        addRoomByHost.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), AddRoomByHostActivity.class);
-                getContext().startActivity(intent);
-            }
-        });
-    }
 }

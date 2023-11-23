@@ -18,12 +18,7 @@
             android:text="Danh Sách Phòng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-        <ImageView
-            android:id="@+id/addRoomByHost"
-            android:layout_weight="1"
-            android:src="@drawable/add"
-            android:layout_width="@dimen/size30dp"
-            android:layout_height="@dimen/size30dp"/>
+
     </LinearLayout>
 
     <LinearLayout

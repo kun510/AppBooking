@@ -29,7 +29,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".view.host.bill.AddBillActivity"
+            android:name=".updateUser.UpdateUser"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.addBoarding.AddBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.addBill.AddBillActivity"
             android:exported="false" />
         <activity
             android:name=".view.host.addRoom.AddRoomByHostActivity"
@@ -75,6 +81,9 @@
             android:exported="false" />
         <activity
             android:name=".account.changePassword"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.confirmRent.ConfirmRentActivity"
             android:exported="false" />
         <activity
             android:name=".compose.account.OtpRegisterActivity"

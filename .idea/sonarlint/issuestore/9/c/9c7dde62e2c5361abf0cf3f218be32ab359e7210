@@ -11,6 +11,11 @@ java:S16590",Declare "progressBarHot" on a separate line.(øçãÿÿÿÿÿ
 @
 java:S16591"%Declare "mapHome" on a separate line.(äşäÿıÿÿÿÿ
 V	java:S1259"<This block of commented-out lines of code should be removed.(’û–ûÿÿÿÿ
+]	java:S125i"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8×¿Öå¿1
+X	java:S125p"<This block of commented-out lines of code should be removed.(¡ôÍ8×¿Öå¿1
+]	java:S125}"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8ÕãÖå¿1
+Y	java:S125„"<This block of commented-out lines of code should be removed.(¡ôÍ8ÕãÖå¿1
 f
 java:S1874’"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ
 R	java:S125›"<This block of commented-out lines of code should be removed.(¶¯“Â
+F	java:S108¤")Either remove or fill this block of code.(á¢–¬8ù‹Öå¿1

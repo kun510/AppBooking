@@ -102,14 +102,14 @@ public class HomeFragment extends Fragment {
                     List<Boarding_host> rooms = response.body();
                     roomAdapter.setRooms(rooms);
                 } else {
-                    Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
+               //     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }
                 progressBar.setVisibility(View.GONE);
             }
 
             @Override
             public void onFailure(Call<List<Boarding_host>> call, Throwable t) {
-                Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
                 Log.e("TAG", "onFailureListRoom: " + t.getMessage());
                 progressBar.setVisibility(View.GONE);
             }
@@ -122,14 +122,14 @@ public class HomeFragment extends Fragment {
                     List<Room> rooms = response.body();
                     homeAdapterHot.setRoomsHot(rooms);
                 } else {
-                    Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }
                 progressBarHot.setVisibility(View.GONE);
             }
 
             @Override
             public void onFailure(Call<List<Room>> call, Throwable t) {
-                Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
                 Log.e("TAG", "onFailureListRoomHot: " + t.getMessage());
                 progressBarHot.setVisibility(View.GONE);
             }
@@ -162,7 +162,7 @@ public class HomeFragment extends Fragment {
             location.setText("Latitude: " + lastLocation.getLatitude() + "\nLongitude: " + lastLocation.getLongitude());
         }
         else {
-            Toast.makeText(getContext(), "dien thoai gà ", Toast.LENGTH_SHORT).show();
+
         }
     }
 }

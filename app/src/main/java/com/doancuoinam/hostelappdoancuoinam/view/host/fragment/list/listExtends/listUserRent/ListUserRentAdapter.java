@@ -2,7 +2,6 @@ package com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
 import com.doancuoinam.hostelappdoancuoinam.R;
-import com.doancuoinam.hostelappdoancuoinam.view.host.bill.AddBillActivity;
-import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoom.ListRoomAdapter;
+import com.doancuoinam.hostelappdoancuoinam.view.host.addBill.AddBillActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -43,7 +41,10 @@ public class ListUserRentAdapter extends RecyclerView.Adapter<ListUserRentAdapte
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showItemDialog(rent);
+                String id = String.valueOf(holder.RentId) ;
+                String name = holder.nameRent;
+                String idRoom = String.valueOf(holder.idRoomRent);
+                showItemDialog(rent,id,name,idRoom);
             }
         });
     }
@@ -55,6 +56,9 @@ public class ListUserRentAdapter extends RecyclerView.Adapter<ListUserRentAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView idRent,nameUserRent,priceRoomRent,numberPeopleInRent;
+        long RentId;
+        String nameRent;
+        long idRoomRent;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             idRent = itemView.findViewById(R.id.idRent);
@@ -67,9 +71,12 @@ public class ListUserRentAdapter extends RecyclerView.Adapter<ListUserRentAdapte
             nameUserRent.setText(rent.getUser().getName());
             priceRoomRent.setText(rent.getRoom().getPrice());
             numberPeopleInRent.setText(String.valueOf(rent.getPeopleInRoom()));
+            RentId = rent.getId();
+            nameRent = rent.getUser().getName();
+            idRoomRent = rent.getRoom().getId();
         }
     }
-    private void showItemDialog(Rent rent) {
+    private void showItemDialog(Rent rent,String idRent,String nameRent,String idRoomRent) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         View customLayout = LayoutInflater.from(context).inflate(R.layout.custom_dialog_layout, null);
         builder.setView(customLayout);
@@ -97,6 +104,9 @@ public class ListUserRentAdapter extends RecyclerView.Adapter<ListUserRentAdapte
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, AddBillActivity.class);
+                intent.putExtra("idRent",idRent);
+                intent.putExtra("nameRent",nameRent);
+                intent.putExtra("idRoomRent",idRoomRent);
                 context.startActivity(intent);
             }
         });

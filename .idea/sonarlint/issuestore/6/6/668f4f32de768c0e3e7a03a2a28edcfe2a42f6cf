@@ -1,0 +1,15 @@
+
+m	java:S117P"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢‡§8å†ã¿1
+E
+java:S1604*"(Make this anonymous inner class a lambda(Ö¹™º8‚å†ã¿1
+E
+java:S1604["(Make this anonymous inner class a lambda(íá‹û8‚å†ã¿1
+J
+java:S1604b"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8é“‡ã¿1
+J
+java:S1604i"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8Àã¿1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àˆÚ³8ƒå†ã¿1
+{	java:S1169"ZRename this field "AddressBoarding" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÇõİşÿÿÿÿ8°å†ã¿1
+v	java:S116:"URename this field "BoardingId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çá›ÿÿÿÿÿ8°å†ã¿1
+n
+java:S16599"LDeclare "AddressBoarding" and all following declarations on a separate line.(ºÇõİşÿÿÿÿ8²å†ã¿1

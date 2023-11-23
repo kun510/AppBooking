@@ -40,12 +40,12 @@ public class Profile extends Fragment {
     SwipeRefreshLayout swipeRefreshLayout ;
     ShapeableImageView avt;
     TextView nameUser;
-    private static final int PICK_IMAGE_REQUEST = 1;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        AnhXa(view);
+        Mapping(view);
         setEvent();
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
         SharedPreferences sharedPreferences = view.getContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
@@ -58,10 +58,12 @@ public class Profile extends Fragment {
                     List<Users> userList = response.body();
                    for (Users users : userList){
                        String imageUrl = users.getImg();
+                       String nameUserPut = users.getName();
                        Picasso.get().load(imageUrl).into(avt);
                        SharedPreferences sharedPreferences = view.getContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
                        SharedPreferences.Editor editor = sharedPreferences.edit();
                        editor.putString("avt", imageUrl);
+                       editor.putString("name",nameUserPut);
                        editor.apply();
                        String name = users.getName();
                        nameUser.setText(name);
@@ -93,7 +95,7 @@ public class Profile extends Fragment {
 
     }
 
-    private void AnhXa(View view){
+    private void Mapping(View view){
         roomFavouriteLayout = view.findViewById(R.id.roomFavouriteLayout);
         MyRoomLayout = view.findViewById(R.id.MyRoomLayout);
         HelpLayout = view.findViewById(R.id.HelpLayout);
@@ -140,23 +142,5 @@ public class Profile extends Fragment {
             }
         });
     }
-//    private void openGallery() {
-//        Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-//        startActivityForResult(galleryIntent, PICK_IMAGE_REQUEST);
-//    }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
-//            Uri selectedImageUri = data.getData();
-//            try {
-//                Bitmap bitmap = MediaStore.Images.Media.getBitmap(requireActivity().getContentResolver(), selectedImageUri);
-//                avt.setImageBitmap(bitmap);
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
 }

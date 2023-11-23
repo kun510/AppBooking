@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listBoardingHostel.ListBoardingHostel;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listUserRent.ListRent;
-import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.ListRoomEmpty;
+import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoomEmpty.ListRoomEmpty;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoom.ListRoom;
 
 

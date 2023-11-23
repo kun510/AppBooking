@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_weight="10"
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:scaleType="centerCrop"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/imgsearch"
+                app:strokeWidth="5dp"
+                app:strokeColor="@color/white"
+                app:shapeAppearanceOverlay="@style/circular"
+                android:id="@+id/avtProfile"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+            <TextView
+                android:layout_gravity="center"
+                android:paddingLeft="-80dp"
+                android:layout_weight="7"
+                android:text="Trần Cường"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:fontFamily="@font/aldrich"
+                android:id="@+id/nameUser"
+                android:layout_width="@dimen/size50dp"
+                android:layout_height="@dimen/size50dp"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="106dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/size100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            tools:layout_editor_absoluteX="10dp">
+
+            <LinearLayout
+                android:id="@+id/HelpLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/boderboxhost"
+                android:gravity="center"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/help"
+                    android:layout_width="@dimen/size50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="Trợ Giúp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="106dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SettingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/boderboxhost"
+                android:gravity="center"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/setting"
+                    android:layout_width="@dimen/size50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center"
+                    android:text="Cài Đặt"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="106dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
