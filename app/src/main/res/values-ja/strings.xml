@@ -144,4 +144,7 @@
     <string name="you_have_successfully_booked_a_room_at_room_21_tien_son">21 Tien Sonの部屋を予約しました</string>
     <string name="btn_rent">家賃</string>
     <string name="nullRent">まだ部屋を借りていません</string>
+    <string name="ch_n_khu_v_c">地域の選択</string>
+    <string name="register">登録する</string>
+    <string name="forgot_password">パスワードをお忘れですか？</string>
 </resources>

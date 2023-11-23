@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:background="@color/white"
     android:id="@+id/NotificationLiner"
     android:orientation="vertical"
-    android:layout_height="100dp">
-
+    android:layout_height="80dp">
     <TextView
-        android:id="@+id/contentNotification"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:textSize="@dimen/size20dp"
+        android:layout_weight="4"
+        android:id="@+id/titleNotification"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/thang"
+        android:textColor="@color/black" />
+    <TextView
+        android:layout_weight="6"
+        android:layout_marginStart="10dp"
+        android:id="@+id/contentNotification"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:text="@string/you_have_successfully_booked_a_room_at_room_21_tien_son"
-        android:textColor="@color/search"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="@dimen/size10dp"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:textColor="@color/search" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/black"
-        android:layout_marginTop="@dimen/size30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contentNotification" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:background="@android:color/darker_gray" />
+</LinearLayout>

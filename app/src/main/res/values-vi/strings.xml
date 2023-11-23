@@ -144,4 +144,7 @@
     <string name="you_have_successfully_booked_a_room_at_room_21_tien_son">Bạn đã thành công đặt phòng tại phòng 21 Tiên Sơn</string>
     <string name="btn_rent">Thuê</string>
     <string name="nullRent">bạn chưa thuê phòng</string>
+    <string name="ch_n_khu_v_c">Chọn Khu Vực</string>
+    <string name="register">Đăng ký</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
 </resources>

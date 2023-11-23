@@ -1,0 +1,16 @@
+
+F
+java:S1066”"/Merge this if statement with the enclosing one.(ùãû±
+k	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Üç¢ıÿÿÿÿ
+C
+java:S1604A"(Make this anonymous inner class a lambda(¹øÌúÿÿÿÿÿ
+D
+java:S1659-")Declare "recyclerHot" on a separate line.(³üÊ÷øÿÿÿÿ
+G
+java:S16590",Declare "progressBarHot" on a separate line.(øçãÿÿÿÿÿ
+@
+java:S16591"%Declare "mapHome" on a separate line.(äşäÿıÿÿÿÿ
+V	java:S1259"<This block of commented-out lines of code should be removed.(’û–ûÿÿÿÿ
+f
+java:S1874’"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ
+R	java:S125›"<This block of commented-out lines of code should be removed.(¶¯“Â

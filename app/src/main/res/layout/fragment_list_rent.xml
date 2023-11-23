@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="@dimen/size10dp"
+        android:layout_marginBottom="@dimen/size4dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_weight="9"
+            android:padding="@dimen/size10dp"
+            android:textColor="@color/black"
+            android:text="Danh Sách Người Thuê Trọ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/addRent"
+            android:layout_weight="1"
+            android:src="@drawable/help"
+            android:layout_width="@dimen/size30dp"
+            android:layout_height="@dimen/size30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_height="@dimen/size70dp">
+            <TextView
+                android:textStyle="bold"
+                android:layout_weight="2.5"
+                android:text="Id Rent"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:background="@drawable/border_bottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:text="Tên Người Thuê"
+                android:background="@drawable/border_bottom"
+                android:textColor="@color/black"
+                android:layout_weight="2.5"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/border_bottom"
+                android:layout_weight="2"
+                android:text="Giá Phòng"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="@dimen/size50dp"
+                android:layout_height="match_parent"/>
+
+
+            <TextView
+                android:textStyle="bold"
+                android:background="@drawable/border_bottom"
+                android:layout_weight="3"
+                android:text="Số người trong trọ"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_width="@dimen/size30dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="5dp"
+            android:layout_weight="7"
+            android:id="@+id/listRent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/progressBar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</LinearLayout>

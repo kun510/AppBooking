@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:fitsSystemWindows="false"
-    tools:context=".view.account.Register">
+    tools:context=".account.Register">
 
     <ImageView
         android:id="@+id/imgBackGround"

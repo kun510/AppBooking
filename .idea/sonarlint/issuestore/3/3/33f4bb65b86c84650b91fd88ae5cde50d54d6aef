@@ -1,0 +1,15 @@
+
+E
+java:S1604("(Make this anonymous inner class a lambda(…‡‰ö8¤ãÚĞ¿1
+E
+java:S16046"(Make this anonymous inner class a lambda(…‡‰ö8¤ãÚĞ¿1
+E
+java:S1604D"(Make this anonymous inner class a lambda(…‡‰ö8¤ãÚĞ¿1
+E
+java:S1604R"(Make this anonymous inner class a lambda(…‡‰ö8¤ãÚĞ¿1
+q	java:S116"URename this field "MyBoarding" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÆ»8ÚãÚĞ¿1
+s	java:S116"WRename this field "MyRoomLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÆ»8ÚãÚĞ¿1
+q	java:S116"URename this field "RentLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÆ»8ÚãÚĞ¿1
+p	java:S116"TRename this field "RoomEmpty" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(öÆ»8ÚãÚĞ¿1
+f
+java:S1659"IDeclare "MyRoomLayout" and all following declarations on a separate line.(öÆ»8êãÚĞ¿1

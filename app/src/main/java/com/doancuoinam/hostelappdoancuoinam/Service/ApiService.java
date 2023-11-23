@@ -2,6 +2,7 @@ package com.doancuoinam.hostelappdoancuoinam.Service;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Boarding_host;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ImgRoom;
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ListandCoutRoom;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationApp;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationMessaging;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
@@ -15,6 +16,8 @@ import com.doancuoinam.hostelappdoancuoinam.Model.Response.Response;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseAll;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseLogin;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseToken;
+
+import org.checkerframework.checker.units.qual.C;
 
 import java.util.List;
 
@@ -41,8 +44,7 @@ public interface ApiService {
     @GET("/user/getallroomhot")
     Call<List<Room>> getAllRoomsHot();
     @GET("/user/search")
-    Call<List<Room>> getAllRoomsSearch(@Query("address") String address,
-                                       @Query("price") String price,
+    Call<List<Room>> getAllRoomsSearch(@Query("price") Integer price,
                                        @Query("area") String area,
                                        @Query("people") String people,
                                        @Query("type") String type);
@@ -90,4 +92,13 @@ public interface ApiService {
             @Part MultipartBody.Part image5
 
     );
+
+    @GET("host/RoomEmptyByBoarding")
+    Call<List<ListandCoutRoom>> getRoomEmptyByBoarding(@Query("hostId") long hostId);
+    @GET("host/getBoaddingByHost")
+    Call<List<Boarding_host>> getRoomInBoarding(@Query("hostId") long hostId);
+    @GET("/host/getUserInRent")
+    Call<List<Rent>> getUserInRent(@Query("hostId") long hostId);
+    @GET("/host/RoomByHost")
+    Call<List<Room>> getRoomByHost(@Query("hostId") long hostId);
 }

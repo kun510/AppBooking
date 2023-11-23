@@ -144,4 +144,7 @@
     <string name="you_have_successfully_booked_a_room_at_room_21_tien_son">您已成功预订了21 Tien Son的房间</string>
     <string name="btn_rent">租</string>
     <string name="nullRent">您还没有租好房间</string>
+    <string name="ch_n_khu_v_c">选择地区</string>
+    <string name="register">登记</string>
+    <string name="forgot_password">忘记密码？</string>
 </resources>

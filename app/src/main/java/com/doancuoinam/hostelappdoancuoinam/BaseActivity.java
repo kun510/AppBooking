@@ -10,13 +10,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.doancuoinam.hostelappdoancuoinam.view.fragment.home.HomeFragment;
-import com.doancuoinam.hostelappdoancuoinam.view.fragment.notification.Notifications;
-import com.doancuoinam.hostelappdoancuoinam.view.fragment.message.Message;
-import com.doancuoinam.hostelappdoancuoinam.view.fragment.profile.Profile;
-import com.doancuoinam.hostelappdoancuoinam.view.fragment.search.Search;
-import com.doancuoinam.hostelappdoancuoinam.view.profile.language.Language;
-import com.doancuoinam.hostelappdoancuoinam.view.profile.language.LanguageManager;
+import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.home.HomeFragment;
+import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.notification.Notifications;
+import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message.Message;
+import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.profile.Profile;
+import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.search.Search;
+import com.doancuoinam.hostelappdoancuoinam.view.user.profile.language.LanguageManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class BaseActivity extends AppCompatActivity {

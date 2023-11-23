@@ -143,4 +143,7 @@
     <string name="you_have_successfully_booked_a_room_at_room_21_tien_son">You have successfully booked a room at room 21 Tien Son</string>
     <string name="btn_rent">Rent</string>
     <string name="nullRent">You haven\'t rented a room yet</string>
+    <string name="ch_n_khu_v_c">Select Area</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot password?</string>
 </resources>

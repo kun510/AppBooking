@@ -11,6 +11,22 @@ public class Users {
     private String confirmation_status;
     private String token_device;
 
+    public Users() {
+    }
+
+    public Users(Long id, String phone, String name, String token_device) {
+        this.id = id;
+        this.phone = phone;
+        this.name = name;
+        this.token_device = token_device;
+    }
+
+    public Users(String phone,String name,String email) {
+        this.email = email;
+        this.name = name;
+        this.phone = phone;
+    }
+
     public Long getId() {
         return id;
     }

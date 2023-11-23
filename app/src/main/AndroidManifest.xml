@@ -29,46 +29,52 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".view.profile.myroom.billInRoom.BillMyRoom"
+            android:name=".view.host.bill.AddBillActivity"
             android:exported="false" />
         <activity
-            android:name=".view.account.test"
+            android:name=".view.host.addRoom.AddRoomByHostActivity"
             android:exported="false" />
         <activity
-            android:name=".view.room.listImgInRoom.OverviewRoom"
+            android:name=".view.user.profile.myroom.billInRoom.BillMyRoom"
             android:exported="false" />
         <activity
-            android:name=".view.room.AddListImgByRoom"
+            android:name=".account.test"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.room.listImgInRoom.OverviewRoom"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.room.AddListImgByRoom"
             android:exported="true" />
         <activity
-            android:name=".view.profile.myroom.overviewMyyRoom.ChoseOverviewMyRoom"
+            android:name=".view.user.profile.myroom.overviewMyyRoom.ChoseOverviewMyRoom"
             android:exported="false" />
         <activity
-            android:name=".view.intro.ChoseAreaActivity"
+            android:name=".view.user.intro.ChoseAreaActivity"
             android:exported="false" />
         <activity
-            android:name=".view.room.roomList.RoomListByBoarding"
+            android:name=".view.user.room.roomList.RoomListByBoarding"
             android:exported="false" />
         <activity
-            android:name=".view.profile.language.Language"
+            android:name=".view.user.profile.language.Language"
             android:configChanges="locale|layoutDirection|screenSize"
             android:exported="false" />
         <activity
-            android:name=".view.profile.Help"
+            android:name=".view.user.profile.Help"
             android:exported="false" />
         <activity
-            android:name=".view.profile.myroom.MyRoom"
+            android:name=".view.user.profile.myroom.MyRoom"
             android:exported="false"
             android:label="@string/title_activity_my_room"
             android:theme="@style/Theme.HostelAppDoanCuoiNam" />
         <activity
-            android:name=".view.profile.roomFavourite.RoomFavouriteActivity"
+            android:name=".view.user.profile.roomFavourite.RoomFavouriteActivity"
             android:exported="false" />
         <activity
-            android:name=".view.profile.SettingProfile"
+            android:name=".view.user.profile.SettingProfile"
             android:exported="false" />
         <activity
-            android:name=".view.account.changePassword"
+            android:name=".account.changePassword"
             android:exported="false" />
         <activity
             android:name=".compose.account.OtpRegisterActivity"
@@ -81,27 +87,27 @@
             android:label="@string/title_activity_register_compose"
             android:theme="@style/Theme.HostelAppDoanCuoiNam" />
         <activity
-            android:name=".view.account.OtpRegister"
+            android:name=".account.OtpRegister"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".view.room.roomListSearch.RoomListSearch"
+            android:name=".view.user.room.roomListSearch.RoomListSearch"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".view.intro.ScreenIntro4"
+            android:name=".view.user.intro.ScreenIntro4"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".view.intro.ScreenIntro3"
+            android:name=".view.user.intro.ScreenIntro3"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".view.intro.ScreenIntro2"
+            android:name=".view.user.intro.ScreenIntro2"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".view.intro.ScreenIntro1"
+            android:name=".view.user.intro.ScreenIntro1"
             android:exported="true"
             android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
@@ -115,11 +121,15 @@
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".view.account.Register"
+            android:name=".view.host.BaseActivityHost"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
-            android:name=".view.account.Login"
+            android:name=".account.Register"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".account.Login"
             android:exported="false"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
@@ -160,7 +170,7 @@
             android:required="false" />
 
         <service
-            android:name=".view.account.MyFirebaseMessagingService"
+            android:name=".account.MyFirebaseMessagingService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

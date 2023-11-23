@@ -5,13 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/intro1"
-    tools:context=".view.intro.ChoseAreaActivity">
+    tools:context=".view.user.intro.ChoseAreaActivity">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <TextView
+        android:layout_marginBottom="@dimen/size80dp"
+        android:textSize="@dimen/size50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/ch_n_khu_v_c"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/boderstard"
-            android:backgroundTint="@color/btn_xanh" />
+            android:backgroundTint="@color/mauchuxanh" />
 
         <ImageView
             android:id="@+id/seletor"
@@ -36,7 +47,7 @@
     <Button
         android:id="@+id/btn_choseaa"
         android:layout_width="336dp"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/radius_btn"
         android:text="@string/btn_select"
@@ -44,7 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
