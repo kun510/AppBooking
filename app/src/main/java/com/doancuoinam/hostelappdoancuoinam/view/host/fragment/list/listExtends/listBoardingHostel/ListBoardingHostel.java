@@ -35,7 +35,7 @@ import retrofit2.Response;
 
 public class ListBoardingHostel extends Fragment {
     RecyclerView recyclerView;
-    ListBoardingHostelAdapter boardingHostelAdapter;
+    ListBoardingAdapter boardingHostelAdapter;
     ProgressBar progressBar;
     ImageView addBoardingByHost;
     @Override
@@ -47,7 +47,7 @@ public class ListBoardingHostel extends Fragment {
         addBoardingByHost = view.findViewById(R.id.addBoardingByHost);
         progressBar.setVisibility(View.VISIBLE);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL, false));
-        boardingHostelAdapter = new ListBoardingHostelAdapter();
+        boardingHostelAdapter = new ListBoardingAdapter();
         recyclerView.setAdapter(boardingHostelAdapter);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         long userId = sharedPreferences.getLong("userId", 0);

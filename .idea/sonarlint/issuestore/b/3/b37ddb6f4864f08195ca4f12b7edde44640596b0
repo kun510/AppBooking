@@ -19,5 +19,5 @@ java:S1874M"JDon't override a deprecated method or explicitly mark it as "@Depr
 M
 java:S1874±"/Remove this use of "Handler"; it is deprecated.(„ÑñŒ8Şƒ›í¿1
 L
-java:S1874Î".Remove this use of "create"; it is deprecated.(Õı“8âƒ›í¿1
-p	java:S100Ñ"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø›ôãùÿÿÿÿ8âƒ›í¿1
+java:S1874È".Remove this use of "create"; it is deprecated.(Õı“8âƒ›í¿1
+p	java:S100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø›ôãùÿÿÿÿ8âƒ›í¿1

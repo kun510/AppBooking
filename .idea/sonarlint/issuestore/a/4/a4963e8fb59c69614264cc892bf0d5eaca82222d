@@ -1,6 +1,14 @@
 
+m	java:S117Q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ã¼ó8é£§ò¿1
 J
-java:S1604#"(Make this anonymous inner class a lambda(˜ß³ûÿÿÿÿ8Ú¦Áì¿1
-t	java:S116"SRename this field "TurnNoti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”çàƒûÿÿÿÿ8æ¦Áì¿1
+java:S16047"(Make this anonymous inner class a lambda(˜ß³ûÿÿÿÿ8é£§ò¿1
+E
+java:S1604E"(Make this anonymous inner class a lambda(ŽÕä8é£§ò¿1
+J
+java:S1604n"(Make this anonymous inner class a lambda(çÄÝöøÿÿÿÿ8ÁÁ²ò¿1
+J
+java:S1604>"(Make this anonymous inner class a lambda(„û…‡ùÿÿÿÿ8ê£§ò¿1
+t	java:S116$"SRename this field "TurnNoti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”çàƒûÿÿÿÿ8Õ¤§ò¿1
+s	java:S116'"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹8™Í­ò¿1
 i
-java:S1659"GDeclare "changePass" and all following declarations on a separate line.(”çàƒûÿÿÿÿ8ø¦Áì¿1
+java:S1659$"GDeclare "changePass" and all following declarations on a separate line.(”çàƒûÿÿÿÿ8ë¤§ò¿1

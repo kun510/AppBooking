@@ -35,7 +35,7 @@ import retrofit2.Response;
 public class ListRent extends Fragment {
      RecyclerView recyclerView;
      ProgressBar progressBar;
-     ListUserRentAdapter listUserRentAdapter;
+    AdapterUserRent listUserRentAdapter;
      ImageView addRent;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,7 +45,7 @@ public class ListRent extends Fragment {
         progressBar = view.findViewById(R.id.progressBar);
         addRent = view.findViewById(R.id.addRent);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL, false));
-        listUserRentAdapter = new ListUserRentAdapter();
+        listUserRentAdapter = new AdapterUserRent();
         recyclerView.setAdapter(listUserRentAdapter);
         progressBar.setVisibility(View.VISIBLE);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);

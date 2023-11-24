@@ -61,6 +61,7 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
                     String imageUrl = selectedRoom.getImg();
                     String idRoom = String.valueOf(holder.idRoom);
                     String addressRoom = holder.AddressRoom;
+                    String tienphong = holder.pricene;
                     String numberStar = holder.numberStar;
                     String area = holder.Area;
                     String idHost = String.valueOf(holder.idHost);
@@ -70,6 +71,7 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
                     intent.putExtra("addressRoom",addressRoom);
                     intent.putExtra("area",area);
                     intent.putExtra("numberStar",numberStar);
+                    intent.putExtra("tienphong",tienphong);
                     intent.putExtra("idHost",idHost);
                     v.getContext().startActivity(intent);
                 }
@@ -153,6 +155,7 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
         String AddressRoom;
         String Area;
         String numberStar;
+        String pricene;
         long idHost;
         public RoomViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -184,6 +187,7 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
             Area = room.getBoardingHostel().getArea();
             AddressRoom = room.getBoardingHostel().getAddress();
             numberStar = room.getNumberOfStars();
+            pricene = room.getPrice();
             RoomFavourite roomFavourite = new RoomFavourite();
             idRoomFavourite = roomFavourite.getId();
         }

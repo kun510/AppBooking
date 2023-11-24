@@ -1,10 +1,19 @@
 
+e
+java:S1192<"HDefine a constant instead of duplicating this literal "MyPrefs" 4 times.(Öß¯®8€¥ñ†À1
+m	java:S117~"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ã¼ó8––‡‡À1
+E
+java:S1604q"(Make this anonymous inner class a lambda(Õä8––‡‡À1
+K
+java:S1604›"(Make this anonymous inner class a lambda(çÄİöøÿÿÿÿ8––‡‡À1
 J
-java:S1604]"(Make this anonymous inner class a lambda(à¬³…ıÿÿÿÿ8ø·Åë¿1
-J
-java:S1604e"(Make this anonymous inner class a lambda(íÏÒ²úÿÿÿÿ8ù·Åë¿1
-v	java:S116("URename this field "HelpLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï½’»ÿÿÿÿÿ8ˆ¸Åë¿1
-y	java:S116("XRename this field "SettingLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï½’»ÿÿÿÿÿ8ˆ¸Åë¿1
-M
-java:S1659("+Declare "SettingLayout" on a separate line.(Ï½’»ÿÿÿÿÿ8”¸Åë¿1
-j	java:S100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã–å¿8¢¸Åë¿1
+java:S1604j"(Make this anonymous inner class a lambda(„û…‡ùÿÿÿÿ8­ôš‡À1
+K
+java:S1604©"(Make this anonymous inner class a lambda(˜ß³ûÿÿÿÿ8ş¼œ‡À1
+F
+java:S1604°"(Make this anonymous inner class a lambda(Åúİ‹8ş¼œ‡À1
+t	java:S1163"SRename this field "TurnNoti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹·üÿÿÿÿ8šËæ†À1
+s	java:S1164"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹8šËæ†À1
+i
+java:S16593"GDeclare "changePass" and all following declarations on a separate line.(‹·üÿÿÿÿ8íËæ†À1
+j	java:S100`"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã–å¿8’ôÆô¿1

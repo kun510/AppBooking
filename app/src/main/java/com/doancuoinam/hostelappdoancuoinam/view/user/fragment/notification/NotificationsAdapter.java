@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationApp;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.myroom.MyRoom;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -55,16 +57,21 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
         TextView contentNotification,titleNotification;
         LinearLayout NotificationLiner;
 
+        ImageView imgavt;
+
         public NotificationsViewHolder(@NonNull View itemView) {
             super(itemView);
             contentNotification = itemView.findViewById(R.id.contentNotification);
             NotificationLiner = itemView.findViewById(R.id.NotificationLiner);
             titleNotification = itemView.findViewById(R.id.titleNotification);
+            imgavt = itemView.findViewById(R.id.imgavt);
         }
 
         void bind(NotificationApp notificationApp) {
             contentNotification.setText(notificationApp.getContent());
             titleNotification.setText(notificationApp.getUser_id_sender().getName());
+            String avt = notificationApp.getUser_id_sender().getImg();
+            Picasso.get().load(avt).into(imgavt);
         }
     }
 }

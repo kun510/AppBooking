@@ -65,6 +65,7 @@ public class ChartNumberRoomInBoardingHostel extends Fragment {
 
                     PieData pieData = new PieData(pieDataSet);
                     pieData.setValueFormatter(new DefaultValueFormatter(0));
+
                     chartListRoom.setData(pieData);
                     chartListRoom.getDescription().setEnabled(false);
                     chartListRoom.setCenterText("Số phòng");

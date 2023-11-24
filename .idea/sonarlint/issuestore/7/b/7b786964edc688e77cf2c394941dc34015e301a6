@@ -4,6 +4,7 @@ java:S1192F"IDefine a constant instead of duplicating this literal "API Call" 3
 m	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”Âıﬂ8∏…π‰ø1
 D
 java:S16042"(Make this anonymous inner class a lambda(ëÅº48±Ã˘‰ø1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†äÑº8ö˘áô¿1
 p	java:S116"TRename this field "name_rent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(∆Ò–û8ª…π‰ø1
 u	java:S116 "YRename this field "electric_hotel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡âﬂß8ª…π‰ø1
 D

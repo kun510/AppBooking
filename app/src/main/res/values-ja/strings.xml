@@ -147,4 +147,6 @@
     <string name="ch_n_khu_v_c">地域の選択</string>
     <string name="register">登録する</string>
     <string name="forgot_password">パスワードをお忘れですか？</string>
+    <string name="mail">電話に送信されたコードを入力してください</string>
+    <string name="confirmOtp">確認する</string>
 </resources>

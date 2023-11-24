@@ -147,4 +147,6 @@
     <string name="ch_n_khu_v_c">Chọn Khu Vực</string>
     <string name="register">Đăng ký</string>
     <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="mail">Hãy nhập mã đã gửi về mail</string>
+    <string name="confirmOtp">Xác Nhận</string>
 </resources>

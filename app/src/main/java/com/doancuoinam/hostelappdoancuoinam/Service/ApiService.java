@@ -15,6 +15,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.Request.RegisterRequest;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.Response;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseAll;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseLogin;
+import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseOtp;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseToken;
 
 import java.util.List;
@@ -178,5 +179,12 @@ public interface ApiService {
             @Part MultipartBody.Part email,
             @Part MultipartBody.Part name,
             @Part MultipartBody.Part imageFile1
+    );
+    @POST("/Admin/sendMail")
+    Call<ResponseOtp> sendMailChangePassword(@Query("sendTo") String to);
+    @PUT("/user/changePassword")
+    Call<ResponseAll> changePassword(
+            @Query("password") String password,
+            @Query("userID") long userID
     );
 }

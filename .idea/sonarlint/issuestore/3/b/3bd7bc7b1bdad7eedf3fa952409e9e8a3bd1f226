@@ -1,0 +1,18 @@
+
+m	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢‡§8¢ù…–À1
+E
+java:S1604,"(Make this anonymous inner class a lambda(Ö¹™º8àçý•À1
+E
+java:S1604f"(Make this anonymous inner class a lambda(íá‹û8£ù…–À1
+J
+java:S1604m"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8£ù…–À1
+J
+java:S1604t"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8£ù…–À1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àˆÚ³8áçý•À1
+n	java:S116>"RRename this field "Address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê´î×8›èý•À1
+m	java:S116>"QRename this field "Status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê´î×8›èý•À1
+v	java:S116A"URename this field "BoardingId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çŽá›ÿÿÿÿÿ8ïÖ…–À1
+d
+java:S1659>"GDeclare "numberRoom" and all following declarations on a separate line.(ê´î×8œèý•À1
+9
+java:S2153Q"Remove the boxing to "Float".(®¸Š8žèý•À1

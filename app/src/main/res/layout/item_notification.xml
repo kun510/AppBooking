@@ -1,31 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/white"
-    android:id="@+id/NotificationLiner"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_height="80dp">
-    <TextView
-        android:textStyle="bold"
-        android:layout_marginStart="10dp"
-        android:textSize="@dimen/size20dp"
-        android:layout_weight="4"
-        android:id="@+id/titleNotification"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="@string/thang"
-        android:textColor="@color/black" />
-    <TextView
-        android:layout_weight="6"
-        android:layout_marginStart="10dp"
-        android:id="@+id/contentNotification"
+    android:id="@+id/NotificationLiner"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/cnhat_boca"
+        android:backgroundTint="@color/purple_nhat"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text="@string/you_have_successfully_booked_a_room_at_room_21_tien_son"
-        android:textColor="@color/search" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/darker_gray" />
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_alignParentTop="true"
+            android:layout_width="30dp"
+            android:layout_margin="5dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/baseline_turned_in_24"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgavt"
+            android:layout_width="70dp"
+            android:scaleType="centerCrop"
+            app:strokeWidth="5dp"
+            app:shapeAppearanceOverlay="@style/circular"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:strokeColor="@color/white"
+            android:padding="4dp"
+            android:src="@drawable/peopleinroom" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/imgavt"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/mauchuxanh"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:id="@+id/titleNotification"
+                android:fontFamily="@font/aldrich"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/contentNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0985664533"
+                android:fontFamily="@font/aldrich"
+                android:textSize="15sp"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
 </LinearLayout>

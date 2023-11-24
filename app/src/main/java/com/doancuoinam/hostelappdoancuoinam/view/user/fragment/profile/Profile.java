@@ -21,6 +21,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Users;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.chatSupport.ChatSupportActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.Help;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.language.Language;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.myroom.MyRoom;
@@ -123,7 +124,7 @@ public class Profile extends Fragment {
         HelpLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (getActivity(), Help.class);
+                Intent intent = new Intent (getActivity(), ChatSupportActivity.class);
                 startActivity(intent);
             }
         });

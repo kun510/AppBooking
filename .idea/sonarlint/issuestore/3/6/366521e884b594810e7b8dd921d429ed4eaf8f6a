@@ -1,0 +1,9 @@
+
+r	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û·×ÿÿÿÿÿ8ÉÆ€À1
+E
+java:S1604&"(Make this anonymous inner class a lambda(ï¡©8ÊÆ€À1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(û±§°ÿÿÿÿÿ8ËÆ€À1
+q	java:S116"URename this field "btn_change" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥¦¬À8€‚Æ€À1
+F
+java:S1659")Declare "confirmPass" on a separate line.(î¦şÆ8‡‚Æ€À1
+o	java:S100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û·×ÿÿÿÿÿ8œ‚Æ€À1

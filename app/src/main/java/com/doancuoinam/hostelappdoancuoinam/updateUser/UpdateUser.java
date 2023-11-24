@@ -181,14 +181,8 @@ public class UpdateUser extends AppCompatActivity {
                         }
                     },2000);
                 } else {
-                    try {
-                        String errorBodyString = response.errorBody().string();
-                        Log.e("TAG", "Error Response Body: " + errorBodyString);
-                        Toast.makeText(UpdateUser.this, "Cập nhật bị lỗi", Toast.LENGTH_SHORT).show();
-                        progressBar.setVisibility(View.GONE);
-                    } catch (IOException e) {
-                        Log.e("TAG", "Error Response error response body", e);
-                    }
+                    Toast.makeText(UpdateUser.this, "Cập nhật bị lỗi", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
                 }
 
             }

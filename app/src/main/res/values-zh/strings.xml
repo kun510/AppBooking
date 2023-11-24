@@ -147,4 +147,6 @@
     <string name="ch_n_khu_v_c">选择地区</string>
     <string name="register">登记</string>
     <string name="forgot_password">忘记密码？</string>
+    <string name="mail">请输入发送到手机的代码</string>
+    <string name="confirmOtp">确认</string>
 </resources>

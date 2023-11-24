@@ -1,0 +1,16 @@
+
+r	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÎÂ¢ùÿÿÿÿ8ùµ–™À1
+E
+java:S1604*"(Make this anonymous inner class a lambda(Ö¹™º8ùµ–™À1
+E
+java:S1604i"(Make this anonymous inner class a lambda(íá‹û8ùµ–™À1
+J
+java:S1604o"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8ùµ–™À1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®¬áøÿÿÿÿ8üµ–™À1
+o	java:S116<"SRename this field "UserRent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûëö8µ¶–™À1
+q	java:S116<"URename this field "IdRoomRent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûëö8µ¶–™À1
+r	java:S116?"QRename this field "RentId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢»ùÿÿÿÿ8µ¶–™À1
+t
+java:S1845A"XRename field "idRoomRent" to prevent any misunderstanding/clash with field "IdRoomRent".(áİÖ8¸¶–™À1
+d
+java:S1659<"GDeclare "IdRoomRent" and all following declarations on a separate line.(ûëö8¹¶–™À1

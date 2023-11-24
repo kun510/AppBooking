@@ -18,6 +18,7 @@
     <string name="intro4nho">Accurate on location and details of each room, responsible for customer safety</string>
     <string name="createAcc">Let’s create an account for you</string>
     <string name="configpass">Enter your confirm password</string>
+    <string name="confirmOtp">Xác Nhận</string>
     <string name="dacotk">Do you have an account?</string>
     <string name="btnsignup">REGISTER</string>
     <string name="welcom">Welcome to Kun Hostel App</string>
@@ -99,6 +100,7 @@
     <string name="do_you_already_have_an_account">Do you already have an account?</string>
     <string name="m_otp">Mã OTP</string>
     <string name="h_y_nh_p_m_g_i_v_s_i_n_tho_i">Hãy nhập mã đã gửi về số điện thoại</string>
+    <string name="mail">Hãy nhập mã đã gửi về mail</string>
     <string name="phoneotp">0974559331</string>
     <string name="_21_tien_son_17_hoa_cuong_bac_hai_chau_da_nang">21 Tien son</string>
     <string name="danang">, Da Nang</string>

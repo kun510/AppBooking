@@ -46,7 +46,7 @@ public class AddBillActivity extends AppCompatActivity {
         nameRentGet = intent.getStringExtra("nameRent");
         idRoomRentGet = intent.getStringExtra("idRoomRent");
         long RentId = Long.parseLong(idRentGet);
-
+        idRoomRent.setText(idRentGet);
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

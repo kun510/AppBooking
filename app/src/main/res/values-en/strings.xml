@@ -146,4 +146,6 @@
     <string name="ch_n_khu_v_c">Select Area</string>
     <string name="register">Register</string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="mail">Enter the code sent to your email</string>
+    <string name="confirmOtp">Confirm</string>
 </resources>

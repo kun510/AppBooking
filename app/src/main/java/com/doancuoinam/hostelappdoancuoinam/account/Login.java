@@ -234,6 +234,7 @@ public class Login extends AppCompatActivity {
                     ResponseLogin loginResponse = response.body();
                     String message = loginResponse.getMessage();
                     long userId = loginResponse.getUserId();
+                    String emailUserPut = loginResponse.getEmail();
                     FirebaseMessaging.getInstance().getToken().addOnSuccessListener(token -> {
                         saveTokenToDatabase(userId, token);
                          tokenD = token;
@@ -243,6 +244,7 @@ public class Login extends AppCompatActivity {
                     SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putLong("userId", userId);
+                    editor.putString("email",emailUserPut);
                     editor.apply();
 
                     switch (message) {

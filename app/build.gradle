@@ -150,5 +150,6 @@ dependencies {
 
     //char
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
-
+    //routerImage
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 }

@@ -2,6 +2,8 @@ package com.doancuoinam.hostelappdoancuoinam.view.host.fragment.profile;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,13 +16,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Users;
+import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseOtp;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.changePassword.OtpConfirmChangePasswordActivity;
+import com.doancuoinam.hostelappdoancuoinam.chatSupport.ChatSupportActivity;
+import com.doancuoinam.hostelappdoancuoinam.updateUser.UpdateUser;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.Help;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.SettingProfile;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.language.Language;
@@ -37,16 +44,18 @@ import retrofit2.Response;
 
 
 public class ProfileHost extends Fragment {
-    LinearLayout HelpLayout,SettingLayout;
+
     SwipeRefreshLayout swipeRefreshLayout ;
     ShapeableImageView avt;
     TextView nameUser;
+    LinearLayout editProfile,changePass,TurnNoti,about,help;
+    ProgressBar progress_otp;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile_host, container, false);
         Mapping(view);
-        setEvent();
+
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
         SharedPreferences sharedPreferences = view.getContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
         long userID = sharedPreferences.getLong("userId", 0);
@@ -80,29 +89,95 @@ public class ProfileHost extends Fragment {
                 Log.e("TAG", "onFailureListRoom: " + t.getMessage());
             }
         });
+        eventChangePass();
+        eventClick();
         return view;
     }
     private void Mapping(View view){
-        HelpLayout = view.findViewById(R.id.HelpLayout);
-        SettingLayout = view.findViewById(R.id.SettingLayout);
-        swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);
+        editProfile = view.findViewById(R.id.editProfile);
+        changePass = view.findViewById(R.id.changePass);
         avt = view.findViewById(R.id.avtProfile);
         nameUser = view.findViewById(R.id.nameUser);
+        progress_otp = view.findViewById(R.id.progress_otp);
+        swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);
+        help = view.findViewById(R.id.help);
     }
-    private void setEvent(){
-        HelpLayout.setOnClickListener(new View.OnClickListener() {
+    private void eventChangePass(){
+        changePass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (getActivity(), Help.class);
-                startActivity(intent);
+                progress_otp.setVisibility(View.VISIBLE);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("Xác nhận thay đổi mật khẩu");
+                builder.setMessage("Bạn có chắc chắn muốn thay đổi mật khẩu không?");
+                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        SharedPreferences sharedPreferences = view.getContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                        String email = sharedPreferences.getString("email","");
+                        ApiService apiService = ApiClient.getClient().create(ApiService.class);
+                        Call<ResponseOtp> call = apiService.sendMailChangePassword(email);
+                        call.enqueue(new Callback<ResponseOtp>() {
+                            @Override
+                            public void onResponse(Call<ResponseOtp> call, Response<ResponseOtp> response) {
+                                if (response.isSuccessful()) {
+                                    ResponseOtp responseOtp = response.body();
+                                    if (responseOtp.isSuccess()) {
+                                        String Otp =  responseOtp.getOtp();
+                                        SharedPreferences sharedPreferences = getContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                                        editor.putString("otp", Otp);
+                                        editor.apply();
+                                        Intent intent = new Intent(getContext(), OtpConfirmChangePasswordActivity.class);
+                                        getContext().startActivity(intent);
+                                        progress_otp.setVisibility(View.GONE);
+                                    } else {
+                                        progress_otp.setVisibility(View.GONE);
+                                        Toast.makeText(getContext(), "sendMail Fail", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+                                    progress_otp.setVisibility(View.GONE);
+                                    Toast.makeText(getContext(), "Lỗi Mail", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<ResponseOtp> call, Throwable t) {
+                                Log.d("TAG", "senMail: " + t);
+                                progress_otp.setVisibility(View.GONE);
+
+                            }
+                        });
+
+                    }
+                });
+
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+
+                    }
+                });
+
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
-
-        SettingLayout.setOnClickListener(new View.OnClickListener() {
+    }
+    private void eventClick(){
+        editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (getActivity(), SettingProfile.class);
-                startActivity(intent);
+                Intent intent = new Intent(getContext(), UpdateUser.class);
+                getContext().startActivity(intent);
+            }
+        });
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ChatSupportActivity.class);
+                getContext().startActivity(intent);
             }
         });
     }

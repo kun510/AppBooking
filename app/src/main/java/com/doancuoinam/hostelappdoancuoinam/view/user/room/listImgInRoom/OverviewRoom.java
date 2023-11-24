@@ -55,23 +55,23 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
     RecyclerView recyclerView;
     AdapterOverview adapterOverview;
     ProgressBar progressBar;
-    ImageView imgRoomMain;
-    String addressRoom,idRoom,numberStar,area,idHost;
-    TextView numberStarRoom;
-    Toolbar toolbar;
+    ImageView imgRoomMain,backNe;
+    String addressRoom,idRoom,numberStar,area,idHost,priceRoom;
+    TextView numberStarRoom,addressList,tienDien,tienphong;
     MapView mMapView;
     Button btn_rent;
     public static final String MAPVIEW_BUNDLE_KEY = "MapViewBundleKey";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_overview_room);
+        setContentView(R.layout.testlistroom);
         mapping();
         getExtra();
         recyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.HORIZONTAL, false));
         adapterOverview = new AdapterOverview();
         recyclerView.setAdapter(adapterOverview);
         NotificationRentLogDevice();
+        setToolbar();
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
         showProgressBar();
         Call<List<ImgRoom>> call = apiService.getImgInRoom(Long.parseLong(idRoom));
@@ -241,28 +241,26 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
         });
         geocodingTask.execute(local);
     }
-    private void setToolbar(Toolbar toolbar,String name){
-        setSupportActionBar(toolbar);
-        SpannableString spannableString = new SpannableString(name);
-        spannableString.setSpan(new ForegroundColorSpan(Color.BLACK), 0, spannableString.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        getSupportActionBar().setTitle(spannableString);
-        toolbar.setNavigationIcon(R.drawable.backdetail);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+    private void setToolbar(){
+        backNe.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 onBackPressed();
             }
         });
 
     }
     private void mapping(){
-        recyclerView = findViewById(R.id.listImgInRoom);
+        recyclerView = findViewById(R.id.recycer);
         progressBar = findViewById(R.id.progressBarImg);
-        imgRoomMain = findViewById(R.id.imgRoomMain);
-        toolbar = findViewById(R.id.toolbar);
-        numberStarRoom = findViewById(R.id.numberStarRoom);
+        numberStarRoom = findViewById(R.id.star);
         mMapView = findViewById(R.id.user_list_map);
-        btn_rent = findViewById(R.id.btn_rent);
+        btn_rent = findViewById(R.id.button);
+        addressList = findViewById(R.id.addressList);
+        tienDien = findViewById(R.id.textView10);
+        tienphong = findViewById(R.id.tienphong);
+        backNe = findViewById(R.id.backNe);
+        imgRoomMain= findViewById(R.id.imgRoomMain);
     }
     private void getExtra(){
         Intent intent = getIntent();
@@ -270,8 +268,12 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
         idRoom = intent.getStringExtra("idRoom");
         numberStar = intent.getStringExtra("numberStar");
         idHost = intent.getStringExtra("idHost");
-        setToolbar(toolbar,addressRoom);
+        String a =  intent.getStringExtra("area");
+        priceRoom = intent.getStringExtra("tienphong");
+        tienphong.setText(priceRoom);
+        tienDien.setText(a);
         numberStarRoom.setText(numberStar);
+        addressList.setText(addressRoom);
         String imageUrl = getIntent().getStringExtra("selected_image_url");
         Picasso.get().load(imageUrl).into(imgRoomMain);
     }

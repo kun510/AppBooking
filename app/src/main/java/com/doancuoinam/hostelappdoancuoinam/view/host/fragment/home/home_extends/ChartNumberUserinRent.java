@@ -59,6 +59,7 @@ public class ChartNumberUserinRent extends Fragment {
                     for (Rent rent : rentList) {
                         countUserInRent.add(new BarEntry(Float.valueOf(rent.getRoom().getId()),Float.valueOf(rent.getPeopleInRoom())));
                     }
+
                     BarDataSet barDataSet = new BarDataSet(countUserInRent,"số người trong phòng");
                     barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
                     barDataSet.setValueTextColor(Color.BLACK);
@@ -69,6 +70,7 @@ public class ChartNumberUserinRent extends Fragment {
                     YAxis yAxis = barChartUserRent.getAxisLeft();
                     yAxis.setAxisMinimum(1f);
                     yAxis.setAxisMaximum(10f);
+
                     barChartUserRent.setFitBars(true);
                     barChartUserRent.setData(barData);
                     barChartUserRent.getDescription().setText("Số người");
