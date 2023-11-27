@@ -152,4 +152,6 @@
     <string name="welcomshort">Chào mừng</string>
     <string name="welcomCome">đến với Kun Hostel</string>
     <string name="khuvuchome">"Khu Vực: "</string>
+    <string name="txtmail">nhập Email của bạn</string>
+    <string name="nameUser">nhập Tên của bạn</string>
 </resources>

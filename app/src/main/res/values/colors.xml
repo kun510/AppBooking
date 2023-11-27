@@ -21,6 +21,9 @@
     <color name="clr_white_text">#FFFFFF</color>
     <color name="clr_grey_text">#D3D3D3</color>
     <color name="clr_grey_text_transparent">#80D3D3D3</color>
+    <color name="theme_color">#2176FF</color>
+    <color name="theme_color_80">#CC2176FF</color>
+    <color name="theme_color_8">#142176FF</color>
 <!--    -&#45;&#45;-->
 
     <color name="btn_xanh">#1B9C85</color>

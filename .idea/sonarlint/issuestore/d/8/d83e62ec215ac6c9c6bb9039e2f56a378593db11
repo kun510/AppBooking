@@ -1,0 +1,47 @@
+
+C
+java:S1604:"(Make this anonymous inner class a lambda(ÑÝ¼Öúÿÿÿÿ
+=
+java:S1604_"(Make this anonymous inner class a lambda(ùˆÕ
+r	java:S116""XRename this field "btn_login_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†¿¼…ûÿÿÿÿ
+d	java:S116#"ORename this field "Otp1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹
+d	java:S116#"ORename this field "Otp2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹
+d	java:S116#"ORename this field "Otp3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹
+d	java:S116#"ORename this field "Otp4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹
+d	java:S116#"ORename this field "Otp5" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹
+d	java:S116#"ORename this field "Otp6" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çÌ©¹
+g	java:S116$"RRename this field "some_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨š¾³
+l	java:S116%"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹
+W
+java:S1659#"ADeclare "Otp2" and all following declarations on a separate line.(çÌ©¹
+<
+java:S1659$"&Declare "resetOtp" on a separate line.(¨š¾³
+c
+java:S1659&"HDeclare "phoneNumber" and all following declarations on a separate line.(‚ÇÂ°ûÿÿÿÿ
+h	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ž—ùÿÿÿÿ
+m
+java:S3776P"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(£øýÿÿÿÿ
+˜
+java:S1186“"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186Ÿ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186¥"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186±"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186·"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186Ã"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186É"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186Õ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186Û"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186ù"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê

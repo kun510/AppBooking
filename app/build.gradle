@@ -63,7 +63,7 @@ dependencies {
     //add check phone country
     implementation 'com.hbb20:ccp:2.7.0'
     //add otp
-    implementation platform('com.google.firebase:firebase-bom:31.2.0')
+    implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
     implementation 'com.google.firebase:firebase-firestore-ktx:24.9.1'
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-storage-ktx:20.3.0'
@@ -156,4 +156,5 @@ dependencies {
 
     //RecyclerView
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

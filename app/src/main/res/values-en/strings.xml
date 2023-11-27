@@ -151,4 +151,6 @@
     <string name="welcomshort">Welcome</string>
     <string name="welcomCome">to Kun Hostel</string>
     <string name="khuvuchome">"Area: "</string>
+    <string name="txtmail">Enter your Email</string>
+    <string name="nameUser">Enter your Name</string>
 </resources>

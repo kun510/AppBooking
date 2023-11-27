@@ -103,6 +103,7 @@
     <string name="m_otp">Mã OTP</string>
     <string name="h_y_nh_p_m_g_i_v_s_i_n_tho_i">Hãy nhập mã đã gửi về số điện thoại</string>
     <string name="mail">Hãy nhập mã đã gửi về mail</string>
+    <string name="txtmail">Enter your Email</string>
     <string name="phoneotp">0974559331</string>
     <string name="_21_tien_son_17_hoa_cuong_bac_hai_chau_da_nang">21 Tien son</string>
     <string name="danang">, Da Nang</string>
@@ -113,6 +114,7 @@
     <string name="khuvuc">Chọn Khu Vực</string>
     <string name="khuvuchome">"Khu Vực: "</string>
     <string name="bancochac">Bạn có chắc chắn muốn huỷ thích room này ?</string>
+    <string name="nameUser">Enter your Name</string>
     <string name="bothich">Bạn đã bỏ thích thành công</string>
     <string name="thongbao">Thông Báo!!</string>
     <string name="diachihot">179 Le Loi</string>

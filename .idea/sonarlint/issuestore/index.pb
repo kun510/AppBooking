@@ -45,8 +45,6 @@ Vapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/Model/Request/LoginReque
 Sapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/Model/Response/Response.java,7\a\7a86bc85a3dd48d4dff98124ac125515614d6e4a
 
 Oapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/Model/ModelApi/Room.java,6\3\63c07254f54950db2b2fbd3b3bd561e09093bbb5
-ó
-gapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/compose/account/signInWithPhoneAuthCredential.kt,2\e\2e40822ddd6d92d2be2d303a17507e036ccddaff
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 ì
@@ -57,10 +55,6 @@ Wapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/compose/account/ui/theme
 Xapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/compose/account/ui/theme/Theme.kt,5\8\589b136f0abcdd7902f047affeadc4740fe21b1d
 à
 Xapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/compose/account/ui/theme/Color.kt,e\8\e840e263ed5f08b79090ecc013b4551388415af7
-ç
-]app/src/main/java/com/doancuoinam/hostelappdoancuoinam/compose/account/OtpRegisterActivity.kt,4\7\47a74944a28634a5d6a4e2c7051567a08a95869b
-â
-Yapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/compose/account/RegisterCompose.kt,6\c\6cbc5810fe1155eb92bee6e92739c358d3649763
 é
 ^app/src/main/java/com/doancuoinam/hostelappdoancuoinam/compose/account/OtpRegisterViewModel.kt,b\9\b996881e3f60906b38c68e369b4690a860766642
 à
@@ -192,3 +186,13 @@ happ/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/room/listImgIn
 fapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/fragment/home/HomeAdapterListHot.java,a\3\a3dff8ee5a5e4d145cb8184f5305bbca3f2b8421
 õ
 kapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/fragment/home/HomeAdapterListBoarding.java,4\8\48950c7517456e99d2d22dd7a5fdd4a615774634
+ì
+capp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/fragment/message/FirebaseUtil.java,f\e\fe248cf53888861d79d59c078c79067eee52067f
+ë
+aapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/fragment/message/MemoryData.java,b\b\bbea2dd3bf4be1734121c89b87fde50fc2de5ee9
+
+Oapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/account/OtpRegister.java,d\8\d83e62ec215ac6c9c6bb9039e2f56a378593db11
+í
+bapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/fragment/message/MessageList.java,8\5\859bded68e905bae4a077d70509c7a1414ac1cd8
+ï
+eapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/fragment/message/MessageAdapter.java,2\0\207eca63f8279d8d2755e912f2a6c30ade29e62a

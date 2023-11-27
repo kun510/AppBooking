@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imgBackGround"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:src="@drawable/background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,6 +46,38 @@
             android:layout_marginEnd="20dp"
             android:background="@drawable/edit_text"
             android:hint="@string/enter_your_number_phone"
+            android:padding="10dp"
+            android:textColor="@color/mauchu"
+            android:textColorHint="@color/mauchu"
+            android:textSize="14sp" />
+        <EditText
+            android:maxHeight="1dp"
+            android:inputType="textEmailAddress"
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_text"
+            android:hint="@string/txtmail"
+            android:padding="10dp"
+            android:textColor="@color/mauchu"
+            android:textColorHint="@color/mauchu"
+            android:textSize="14sp" />
+        <EditText
+            android:maxHeight="1dp"
+            android:inputType="text"
+            android:id="@+id/nameUser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/edit_text"
+            android:hint="@string/nameUser"
             android:padding="10dp"
             android:textColor="@color/mauchu"
             android:textColorHint="@color/mauchu"
@@ -96,7 +128,7 @@
     </LinearLayout>
 
     <Button
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="@string/btnsignup"
         android:background="@drawable/radius_btn"
         android:id="@+id/btn_register"

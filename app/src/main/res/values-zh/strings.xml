@@ -152,4 +152,6 @@
     <string name="welcomshort">欢迎来到</string>
     <string name="welcomCome">" Kun Hostel"</string>
     <string name="khuvuchome">"选择地区: "</string>
+    <string name="txtmail">请输入发送到手机的代码</string>
+    <string name="nameUser">忘记密码？</string>
 </resources>

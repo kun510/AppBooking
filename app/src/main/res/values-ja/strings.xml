@@ -152,4 +152,6 @@
     <string name="welcomshort">ようこそ</string>
     <string name="welcomCome">へ Kun Hostel</string>
     <string name="khuvuchome">"地域を選択: "</string>
+    <string name="txtmail">電話に送信されたコードを入力してください</string>
+    <string name="nameUser">登録する</string>
 </resources>

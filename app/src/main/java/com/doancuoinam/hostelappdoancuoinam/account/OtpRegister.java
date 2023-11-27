@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -34,7 +35,7 @@ public class OtpRegister extends AppCompatActivity {
     EditText Otp1,Otp2,Otp3,Otp4,Otp5,Otp6;
     TextView some_id,resetOtp;
     ProgressBar progress_otp;
-    String  verificationId,phoneNumber,pass = "";
+    String  verificationId,phoneNumber,pass,email,name = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,14 @@ public class OtpRegister extends AppCompatActivity {
         phoneNumber = intent.getStringExtra("numberphone");
         verificationId = intent.getStringExtra("verificationId");
         pass = intent.getStringExtra("pass");
+        email = intent.getStringExtra("email");
+        name = intent.getStringExtra("name");
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("userPhoneNumber", phoneNumber);
+        editor.putString("userEmail",email);
+        editor.putString("userNameVF",name);
+        editor.apply();
         some_id.setText(phoneNumber);
         btn_login_otp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,8 +98,10 @@ public class OtpRegister extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         String phoneApi = phoneNumber;
                         String passwordApi = pass;
+                        String emailApi = email;
+                        String namedApi = name;
                         ApiService apiService = ApiClient.getClient().create(ApiService.class);
-                        RegisterRequest registerRequest = new RegisterRequest(phoneApi,passwordApi);
+                        RegisterRequest registerRequest = new RegisterRequest(phoneApi,passwordApi,emailApi,namedApi);
                         Call<Response> call = apiService.register(registerRequest);
                         call.enqueue(new Callback<Response>() {
                             @Override

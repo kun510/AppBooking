@@ -1,15 +1,13 @@
 
-l
-java:S1450"VRemove the "mParam1" field and declare it as a local variable in the relevant methods.(•Íï‘
-l
-java:S1450"VRemove the "mParam2" field and declare it as a local variable in the relevant methods.(¡ˆ€ 
-M
-java:S1135"2Complete the task associated to this TODO comment.(ÜûŠ—øÿÿÿÿ
-M
-java:S1135"2Complete the task associated to this TODO comment.(ðï¢öúÿÿÿÿ
-M
-java:S1135)"2Complete the task associated to this TODO comment.(ßíŠÿÿÿÿÿ
-A
-java:S1068"+Remove this unused "mParam1" private field.(•Íï‘
-A
-java:S1068"+Remove this unused "mParam2" private field.(¡ˆ€ 
+z	java:S116#"^Rename this field "MessageRecyclerView" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ó¿ÖÓ8“Þã‚Á1
+Z
+java:S18542">Remove this useless assignment to local variable "userNameVF".(‰®˜W8§Þã‚Á1
+K
+java:S14812"/Remove this unused "userNameVF" local variable.(‰®˜W8§Þã‚Á1
+S
+java:S1874<"6Remove this use of "ProgressDialog"; it is deprecated.(ã§Õå8«Þã‚Á1
+S
+java:S1874<"6Remove this use of "ProgressDialog"; it is deprecated.(ã§Õå8­Þã‚Á1
+O
+java:S1874>"2Remove this use of "setMessage"; it is deprecated.(êøç¢8­Þã‚Á1
+]	java:S125Y"<This block of commented-out lines of code should be removed.(ö´Š§ÿÿÿÿÿ8¡é“ƒÁ1

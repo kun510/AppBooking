@@ -76,6 +76,10 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String txtPhone = phone.getText().toString();
                 String txtPass = pass.getText().toString();
+                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("userPhoneNumber", txtPhone);
+                editor.apply();
                 loginUser(txtPhone,txtPass);
             }
         });
