@@ -148,4 +148,7 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="mail">Enter the code sent to your email</string>
     <string name="confirmOtp">Confirm</string>
+    <string name="welcomshort">Welcome</string>
+    <string name="welcomCome">to Kun Hostel</string>
+    <string name="khuvuchome">"Area: "</string>
 </resources>

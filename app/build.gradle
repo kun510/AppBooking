@@ -65,6 +65,7 @@ dependencies {
     //add otp
     implementation platform('com.google.firebase:firebase-bom:31.2.0')
     implementation 'com.google.firebase:firebase-firestore-ktx:24.9.1'
+    implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-storage-ktx:20.3.0'
     implementation 'com.firebaseui:firebase-ui-firestore:8.0.2'
     //API HTTP
@@ -152,4 +153,7 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     //routerImage
     implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //RecyclerView
+    implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
 }

@@ -20,11 +20,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <ImageView
+            android:layout_gravity="center"
             android:id="@+id/addRent"
             android:layout_weight="1"
             android:src="@drawable/help"
-            android:layout_width="@dimen/size30dp"
-            android:layout_height="@dimen/size30dp"/>
+            android:layout_width="@dimen/size28dp"
+            android:layout_height="@dimen/size28dp"/>
     </LinearLayout>
 
     <LinearLayout

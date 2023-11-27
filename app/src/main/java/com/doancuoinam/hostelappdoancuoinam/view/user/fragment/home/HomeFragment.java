@@ -19,9 +19,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import android.Manifest;
 
@@ -43,10 +43,12 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
     RecyclerView recyclerView,recyclerHot;
-    HomeAdapterNew roomAdapter;
+    HomeAdapterListBoarding roomAdapter;
     HomeAdapterHot homeAdapterHot;
+    HomeAdapterListHot homeAdapterListHot;
     ProgressBar progressBar,progressBarHot;
-    TextView location,mapHome;
+    TextView location;
+    ImageView mapHome;
     Location lastLocation;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     @Override
@@ -58,10 +60,10 @@ public class HomeFragment extends Fragment {
 //        long userId = sharedPreferences.getLong("userId", 0);
 //        Toast.makeText(getActivity(), "User ID: " + userId, Toast.LENGTH_SHORT).show();
         recyclerView = view.findViewById(R.id.recyclerPlaces);
-        mapHome = view.findViewById(R.id.mapHome);
+        mapHome = view.findViewById(R.id.map);
         progressBar = view.findViewById(R.id.progressBar);
         progressBarHot = view.findViewById(R.id.progressBarHot);
-        location = view.findViewById(R.id.location);
+        location = view.findViewById(R.id.nameArea);
         mapHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,19 +84,20 @@ public class HomeFragment extends Fragment {
         }
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.HORIZONTAL, false));
-        roomAdapter = new HomeAdapterNew();
+        roomAdapter = new HomeAdapterListBoarding();
         recyclerView.setAdapter(roomAdapter);
         recyclerHot = view.findViewById(R.id.recyclerHot);
         recyclerHot.setLayoutManager(new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false));
-        homeAdapterHot = new HomeAdapterHot();
-        recyclerHot.setAdapter(homeAdapterHot);
+//        homeAdapterHot = new HomeAdapterHot();
+//        recyclerHot.setAdapter(homeAdapterHot);
+        homeAdapterListHot = new HomeAdapterListHot();
+        recyclerHot.setAdapter(homeAdapterListHot);
         showProgressBar();
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         String Area = sharedPreferences.getString("selectedItem", "");
         location.setText(Area);
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
         Call<List<Boarding_host>> call = apiService.getAllBoarding(Area);
-
         call.enqueue(new Callback<List<Boarding_host>>() {
             @Override
             public void onResponse(Call<List<Boarding_host>> call, Response<List<Boarding_host>> response) {
@@ -120,7 +123,8 @@ public class HomeFragment extends Fragment {
             public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
                 if (response.isSuccessful()) {
                     List<Room> rooms = response.body();
-                    homeAdapterHot.setRoomsHot(rooms);
+//                    homeAdapterHot.setRoomsHot(rooms);
+                    homeAdapterListHot.setDataAdapter(rooms);
                 } else {
                   //  Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }

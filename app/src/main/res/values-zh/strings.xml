@@ -149,4 +149,7 @@
     <string name="forgot_password">忘记密码？</string>
     <string name="mail">请输入发送到手机的代码</string>
     <string name="confirmOtp">确认</string>
+    <string name="welcomshort">欢迎来到</string>
+    <string name="welcomCome">" Kun Hostel"</string>
+    <string name="khuvuchome">"选择地区: "</string>
 </resources>

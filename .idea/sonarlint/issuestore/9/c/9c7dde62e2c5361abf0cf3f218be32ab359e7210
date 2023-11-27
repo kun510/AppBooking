@@ -1,21 +1,21 @@
 
-F
-java:S1066”"/Merge this if statement with the enclosing one.(ùãû±
-k	java:S117]"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Üç¢ıÿÿÿÿ
-C
-java:S1604A"(Make this anonymous inner class a lambda(¹øÌúÿÿÿÿÿ
-D
-java:S1659-")Declare "recyclerHot" on a separate line.(³üÊ÷øÿÿÿÿ
-G
-java:S16590",Declare "progressBarHot" on a separate line.(øçãÿÿÿÿÿ
-@
-java:S16591"%Declare "mapHome" on a separate line.(äşäÿıÿÿÿÿ
-V	java:S1259"<This block of commented-out lines of code should be removed.(’û–ûÿÿÿÿ
-]	java:S125i"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8×¿Öå¿1
-X	java:S125p"<This block of commented-out lines of code should be removed.(¡ôÍ8×¿Öå¿1
-]	java:S125}"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8ÕãÖå¿1
-Y	java:S125„"<This block of commented-out lines of code should be removed.(¡ôÍ8ÕãÖå¿1
-f
-java:S1874’"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ
-R	java:S125›"<This block of commented-out lines of code should be removed.(¶¯“Â
-F	java:S108¤")Either remove or fill this block of code.(á¢–¬8ù‹Öå¿1
+M
+java:S1066˜"/Merge this if statement with the enclosing one.(ùãû±8×ÙÂÙÀ1
+r	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Üç¢ıÿÿÿÿ8×ÙÂÙÀ1
+J
+java:S1604C"(Make this anonymous inner class a lambda(¹øÌúÿÿÿÿÿ8×ÙÂÙÀ1
+K
+java:S1659-")Declare "recyclerHot" on a separate line.(³üÊ÷øÿÿÿÿ8‰ÚÂÙÀ1
+N
+java:S16591",Declare "progressBarHot" on a separate line.(øçãÿÿÿÿÿ8‰ÚÂÙÀ1
+]	java:S125;"<This block of commented-out lines of code should be removed.(’û–ûÿÿÿÿ8—ÚÂÙÀ1
+]	java:S125["<This block of commented-out lines of code should be removed.(ÑµÍïúÿÿÿÿ8¡ÚÂÙÀ1
+]	java:S125l"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8¥ÚÂÙÀ1
+X	java:S125s"<This block of commented-out lines of code should be removed.(¡ôÍ8¥ÚÂÙÀ1
+X	java:S125~"<This block of commented-out lines of code should be removed.(Õ™Šö8¦ÚÂÙÀ1
+^	java:S125"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8§ÚÂÙÀ1
+Y	java:S125ˆ"<This block of commented-out lines of code should be removed.(¡ôÍ8§ÚÂÙÀ1
+m
+java:S1874–"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8¨ÚÂÙÀ1
+Y	java:S125Ÿ"<This block of commented-out lines of code should be removed.(¶¯“Â8©ÚÂÙÀ1
+F	java:S108¨")Either remove or fill this block of code.(á¢–¬8©ÚÂÙÀ1

@@ -21,7 +21,6 @@ import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
 
-
 import java.util.List;
 
 import retrofit2.Call;
@@ -32,6 +31,7 @@ import retrofit2.Response;
 public class RoomListByBoarding extends AppCompatActivity {
     RecyclerView recyclerView;
     AdapterListRoomByBoarding roomAdapter;
+
     ProgressBar progressBar;
     String nameBoarding,idBoarding;
     @Override
@@ -57,7 +57,6 @@ public class RoomListByBoarding extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     List<Room> rooms = response.body();
                     roomAdapter.setRoomsList(rooms);
-
                 } else {
                     Toast.makeText(RoomListByBoarding.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }

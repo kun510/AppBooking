@@ -1,11 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/whitexam"
+    android:orientation="vertical"
+    android:background="@color/white"
     android:fitsSystemWindows="false">
+    <RelativeLayout
+        android:id="@+id/rectangle_6"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_rounded_background">
+        <LinearLayout
+            android:id="@+id/liner"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/size20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginStart="@dimen/size10dp"
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:letterSpacing="-0.02"
+                android:text="@string/welcom"
+                android:textColor="@color/clr_white_text"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="17sp"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginStart="@dimen/size10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="-0.02"
+                    android:text="@string/khuvuchome"
+                    android:textColor="@color/clr_white_text"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="17sp"/>
+                <TextView
+                    android:layout_marginStart="@dimen/size10dp"
+                    android:id="@+id/nameArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:letterSpacing="-0.02"
+                    android:text="cuong"
+                    android:textStyle="bold"
+                    android:textColor="@color/clr_white_text"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_marginBottom="@dimen/size10dp"
+            android:id="@+id/map"
+            android:layout_marginRight="@dimen/size10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/locationhome"
+            android:layout_width="@dimen/size40dp"
+            android:layout_height="@dimen/size30dp"/>
+    </RelativeLayout>
+
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,68 +81,6 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:id="@+id/rectangle_6"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:background="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-                <TextView
-                    android:layout_marginStart="10dp"
-                    android:paddingLeft="10dp"
-                    android:id="@+id/location"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:letterSpacing="-0.02"
-                    android:text="@string/_21_tien_son_17_hoa_cuong_bac_hai_chau_da_nang"
-                    android:textColor="@color/xamne"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:textSize="17sp"/>
-                <TextView
-                    android:id="@+id/location1"
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:letterSpacing="-0.02"
-                    android:text="@string/danang"
-                    android:textColor="@color/xamne"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:textSize="17sp"/>
-            </LinearLayout>
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/xam"
-                app:layout_constraintTop_toBottomOf="@+id/rectangle_6" />
-
-            <LinearLayout
-                android:layout_marginStart="@dimen/size10dp"
-                android:gravity="right"
-                android:background="@color/white"
-                android:id="@+id/linearLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:layout_constraintTop_toBottomOf="@+id/rectangle_6">
-                <TextView
-                    android:layout_gravity="right"
-                    android:id="@+id/mapHome"
-                    android:paddingLeft="10dp"
-                    android:letterSpacing="-0.02"
-                    android:gravity="center_vertical"
-                    android:text="@string/map"
-                    android:textColor="@color/xamne"
-                    android:textSize="16sp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-            </LinearLayout>
 
             <LinearLayout
                 android:background="@color/white"
@@ -83,10 +89,11 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:paddingLeft="10dp"
+
                 android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
                 <TextView
+                    android:paddingLeft="10dp"
                     android:layout_marginStart="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -112,13 +119,14 @@
                     android:visibility="gone"
                     />
             </LinearLayout>
+
             <LinearLayout
-                android:paddingLeft="10dp"
                 android:layout_weight="5"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <TextView
+                    android:paddingLeft="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:alpha="0.8"
@@ -143,5 +151,5 @@
                     />
             </LinearLayout>
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+</LinearLayout>

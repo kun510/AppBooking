@@ -149,4 +149,7 @@
     <string name="forgot_password">Quên mật khẩu?</string>
     <string name="mail">Hãy nhập mã đã gửi về mail</string>
     <string name="confirmOtp">Xác Nhận</string>
+    <string name="welcomshort">Chào mừng</string>
+    <string name="welcomCome">đến với Kun Hostel</string>
+    <string name="khuvuchome">"Khu Vực: "</string>
 </resources>

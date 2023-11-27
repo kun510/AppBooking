@@ -149,4 +149,7 @@
     <string name="forgot_password">パスワードをお忘れですか？</string>
     <string name="mail">電話に送信されたコードを入力してください</string>
     <string name="confirmOtp">確認する</string>
+    <string name="welcomshort">ようこそ</string>
+    <string name="welcomCome">へ Kun Hostel</string>
+    <string name="khuvuchome">"地域を選択: "</string>
 </resources>

@@ -1,66 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="2dp"
-    android:layout_width="250dp"
-    app:cardCornerRadius="30dp"
-    android:layout_marginEnd="@dimen/size20dp"
-    android:id="@+id/cardViewNear"
-   android:layout_marginRight="5dp"
-    android:layout_height="150dp"
-    android:background="@color/white">
-
+    android:id="@+id/liner"
+    android:padding="@dimen/size10dp"
+    android:layout_height="wrap_content">
     <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="wrap_content"
+        android:id="@+id/cell_title_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imgRoomNear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/boderimg"
-            android:clipToOutline="true"
-            android:outlineProvider="background"
-            android:scaleType="centerCrop"
-            android:src="@drawable/canhonear" />
-
-        <TextView
-            android:textColor="@color/white"
-            android:id="@+id/txtRoomNear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:padding="10dp"
-            android:text="@string/_21_tien_son_near"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-        <LinearLayout
-            android:paddingTop="-10dp"
-            android:layout_gravity="right"
-            android:padding="5dp"
-            android:id="@+id/linearLayout4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/boderstard"
-            android:orientation="horizontal">
-
-            <TextView
-                android:paddingLeft="10dp"
-                android:textColor="@color/white"
-                android:id="@+id/numberStar"
+        <RelativeLayout
+            android:layout_marginRight="@dimen/size4dp"
+            android:layout_marginLeft="@dimen/size4dp"
+            android:layout_width="match_parent"
+            android:layout_height="184dp">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewNear"
+                android:layout_centerInParent="true"
+                app:cardCornerRadius="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4.5"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_height="wrap_content">
+                <ImageView
+                    app:cardCornerRadius="30dp"
+                    android:id="@+id/imgRoomNear"
+                    android:background="@drawable/border_mask"
+                    android:src="@drawable/detail"
+                    android:clipToOutline="true"
+                    android:outlineProvider="background"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:textColor="@color/white"
+                    android:id="@+id/txtRoomNear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:padding="10dp"
+                    android:text="@string/_21_tien_son_near"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:paddingTop="-10dp"
+                    android:layout_gravity="right"
+                    android:padding="5dp"
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boderstard"
+                    android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="17dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:src="@drawable/star" />
-        </LinearLayout>
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:id="@+id/numberStar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.5"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/star" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
     </FrameLayout>
-
-</androidx.cardview.widget.CardView>
+</LinearLayout>
