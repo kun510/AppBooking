@@ -6,6 +6,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ListandCoutRoom;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationApp;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationMessaging;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ReviewRq;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.RoomFavourite;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.TotalBill;
@@ -94,7 +95,7 @@ public interface ApiService {
     Call<List<Room>> getRoomByHost(@Query("hostId") long hostId);
 
     @GET("/host/AllRoomByHost")
-    Call<List<Room>> AllRoomByHost(@Query("hostId") long hostId);
+    Call<List<Room>> AllRoomByHost(@Query("hostId") long hostId,@Query("boardingId") long boardingId);
 
     @GET("/host/getRents")
     Call<List<Rent>> getRentByHostIdConfirm(@Query("hostId") long hostId);
@@ -113,7 +114,12 @@ public interface ApiService {
 
     @POST("/user/notification")
     Call<ResponseAll> sendNotification(@Body NotificationMessaging notificationMessaging);
-
+    @POST("user/review")
+    Call<String> review(
+            @Body ReviewRq reviewRq,
+            @Query("idRoom") long idRoom,
+            @Query("idUser") long idUser
+    );
     @Multipart
     @POST("/host/addImgRoom")
     Call<Response> addImgRoom(
@@ -126,7 +132,16 @@ public interface ApiService {
             @Part MultipartBody.Part image5
 
     );
-
+    @Multipart
+    @POST("/user/report")
+    Call<ResponseAll> report(
+            @Part("reason") RequestBody reason,
+            @Part MultipartBody.Part imageFile1,
+            @Part MultipartBody.Part imageFile2,
+            @Part MultipartBody.Part imageFile3,
+            @Part("idRoom") RequestBody idRoom,
+            @Part("idUser") RequestBody idUser
+    );
     @Multipart
     @POST("/host/addBoardingHostel")
     Call<ResponseAll> addBoardingHostel(

@@ -1,11 +1,13 @@
 
 J
-java:S1604-"(Make this anonymous inner class a lambda(—™¿Şşÿÿÿÿ8×ÓÎÖÀ1
+java:S1604/"(Make this anonymous inner class a lambda(—™¿Şşÿÿÿÿ8ó¤ÌÂ1
 E
-java:S16043"(Make this anonymous inner class a lambda(Åªìº8×ÓÎÖÀ1
+java:S16045"(Make this anonymous inner class a lambda(Åªìº8ó¤ÌÂ1
 E
-java:S16049"(Make this anonymous inner class a lambda(²å¢8×ÓÎÖÀ1
-B
-java:S1659I"%Declare "content" on a separate line.(–µ°æ8ˆÔÎÖÀ1
+java:S1604;"(Make this anonymous inner class a lambda(²å¢8ó¤ÌÂ1
+9
+java:S1116E"Remove this empty statement.(åš•8¾ÙÌÂ1
+i
+java:S1659`"GDeclare "numberStar" and all following declarations on a separate line.(Æ³åÇÿÿÿÿÿ8È¥ÌÂ1
 h
-java:S1659K"KDeclare "imgRoomcontent" and all following declarations on a separate line.(üÔ§é8‰ÔÎÖÀ1
+java:S1659b"KDeclare "imgRoomcontent" and all following declarations on a separate line.(üÔ§é8µŸÎÂ1

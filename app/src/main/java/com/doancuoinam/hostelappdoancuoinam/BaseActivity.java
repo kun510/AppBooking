@@ -12,7 +12,7 @@ import android.view.MenuItem;
 
 import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.home.HomeFragment;
 import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.notification.Notifications;
-import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message.Message;
+import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message.Messages;
 import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.profile.Profile;
 import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.search.Search;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.language.LanguageManager;
@@ -29,7 +29,7 @@ public class BaseActivity extends AppCompatActivity {
         final Fragment homeFragment = new HomeFragment();
         final Fragment searchFragment = new Search();
         final Fragment NotificationFragment = new Notifications();
-        final Fragment Message = new Message();
+        final Fragment Message = new Messages();
        // final Fragment Message = new Map();
         final Fragment Profile = new Profile();
 

@@ -4,5 +4,7 @@ java:S1604P"(Make this anonymous inner class a lambda(°§ÎØ8û÷‘×À1
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±è«óıÿÿÿÿ8ÇƒØÖÀ1
 J
 java:S1659$"(Declare "idBoarding" on a separate line.(Ş­˜Äıÿÿÿÿ8çƒØÖÀ1
+X	java:S125="<This block of commented-out lines of code should be removed.(ë“ø–8Ğ´™ Â1
+]	java:S125D"<This block of commented-out lines of code should be removed.(ÃåØûûÿÿÿÿ8Àƒ– Â1
 j
 java:S3252M"MUse static access with "android.text.Spanned" for "SPAN_EXCLUSIVE_EXCLUSIVE".(‰„Åã8Ãø‘×À1

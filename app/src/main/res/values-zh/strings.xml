@@ -154,4 +154,13 @@
     <string name="khuvuchome">"选择地区: "</string>
     <string name="txtmail">请输入发送到手机的代码</string>
     <string name="nameUser">忘记密码？</string>
+    <string name="chat">选择地区....</string>
+    <string name="Bad">坏的</string>
+    <string name="Not_Bad">不错</string>
+    <string name="Nice">好的！</string>
+    <string name="Good">好工作！</string>
+    <string name="Awesome">惊人的！</string>
+    <string name="Rate">评价服务</string>
+    <string name="phản_hồi">请给我反馈</string>
+    <string name="review">登记</string>
 </resources>

@@ -154,4 +154,13 @@
     <string name="khuvuchome">"Khu Vực: "</string>
     <string name="txtmail">nhập Email của bạn</string>
     <string name="nameUser">nhập Tên của bạn</string>
+    <string name="chat">Nhập tin nhắn ....</string>
+    <string name="Bad">Tệ!!</string>
+    <string name="Not_Bad">Tạm ổn</string>
+    <string name="Nice">Khá tốt</string>
+    <string name="Good">Tốt</string>
+    <string name="Awesome">Tuyệt Vời</string>
+    <string name="Rate">Đánh giá dịch vụ</string>
+    <string name="phản_hồi">Hãy cho tôi xin phản hồi</string>
+    <string name="review">Đánh Giá</string>
 </resources>

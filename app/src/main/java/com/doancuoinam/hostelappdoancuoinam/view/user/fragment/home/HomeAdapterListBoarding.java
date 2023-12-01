@@ -46,7 +46,6 @@ public class HomeAdapterListBoarding extends RecyclerView.Adapter<HomeAdapterLis
                 String id = String.valueOf(holder.idBoarding);
                 if (clickedPosition != RecyclerView.NO_POSITION) {
                     String message = "Nút được nhấn ở vị trí: " + id;
-                    Toast.makeText(view.getContext(), message, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(view.getContext(), RoomListByBoarding.class);
                     intent.putExtra("idBoarding", id);
                     intent.putExtra("nameboarding",roomName);

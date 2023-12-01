@@ -1,21 +1,21 @@
 
 W
-java:S1141y"5Extract this nested try block into a separate method.(´Ûõ“ûÿÿÿÿ8ô‰Õİ¿1
+java:S1141}"5Extract this nested try block into a separate method.(´Ûõ“ûÿÿÿÿ8„°®‹Â1
 E
-java:S1604B"(Make this anonymous inner class a lambda(Š‘œÎ8õ‰Õİ¿1
+java:S1604F"(Make this anonymous inner class a lambda(Š‘œÎ8…°®‹Â1
 D
-java:S1604H"(Make this anonymous inner class a lambda(‘¼48õ‰Õİ¿1
+java:S1604L"(Make this anonymous inner class a lambda(‘¼48…°®‹Â1
 F
-java:S1604Â"(Make this anonymous inner class a lambda(„ÑñŒ8÷›šå¿1
+java:S1604É"(Make this anonymous inner class a lambda(„ÑñŒ8…°®‹Â1
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‚²Æêüÿÿÿÿ8ö‰Õİ¿1
 D
-java:S1659."'Declare "imgInsert" on a separate line.(»êêĞ8‘‹Õİ¿1
-o	java:S100Q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø›ôãùÿÿÿÿ8›‹Õİ¿1
+java:S16592"'Declare "imgInsert" on a separate line.(»êêĞ8ı±®‹Â1
+o	java:S100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø›ôãùÿÿÿÿ8†²®‹Â1
 `
-java:S1874_">Remove this use of "startActivityForResult"; it is deprecated.(“Œñ¬ÿÿÿÿÿ8Ÿ‹Õİ¿1
+java:S1874c">Remove this use of "startActivityForResult"; it is deprecated.(“Œñ¬ÿÿÿÿÿ8Š²®‹Â1
 f
-java:S1874c"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8Ÿ‹Õİ¿1
+java:S1874g"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8Š²®‹Â1
 M
-java:S1874Â"/Remove this use of "Handler"; it is deprecated.(„ÑñŒ8¤Åšå¿1
+java:S1874É"/Remove this use of "Handler"; it is deprecated.(„ÑñŒ8œ‰°‹Â1
 L
-java:S1874Û".Remove this use of "create"; it is deprecated.(Õı“8­‹Õİ¿1
+java:S1874â".Remove this use of "create"; it is deprecated.(Õı“8 ‰°‹Â1

@@ -3,6 +3,7 @@ package com.doancuoinam.hostelappdoancuoinam.account;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -32,6 +33,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseLogin;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 import com.doancuoinam.hostelappdoancuoinam.view.host.BaseActivityHost;
 import com.doancuoinam.hostelappdoancuoinam.view.user.intro.ChoseAreaActivity;
 import com.google.android.gms.common.ConnectionResult;
@@ -48,8 +50,10 @@ import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class Login extends AppCompatActivity {
+public class Login extends AppCompatActivity implements ToastInterface {
     EditText phone,pass;
     TextView fogot;
     Button btn_login;
@@ -76,6 +80,10 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 String txtPhone = phone.getText().toString();
                 String txtPass = pass.getText().toString();
+                if (txtPhone.trim().isEmpty() || txtPass.trim().isEmpty()){
+                    createCustomToast("Failed ☹️", "điền đầy đủ!", MotionToastStyle.ERROR);
+                    return;
+                }
                 SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("userPhoneNumber", txtPhone);
@@ -253,32 +261,33 @@ public class Login extends AppCompatActivity {
 
                     switch (message) {
                         case "Admin":
-                            Toast.makeText(Login.this, "Admin ", Toast.LENGTH_SHORT).show();
+                            createCustomToast("success 😍", "You are Admin!", MotionToastStyle.SUCCESS);
                             break;
                         case "Host":
+                            createCustomToast("success 😍", "Login Completed successfully!", MotionToastStyle.SUCCESS);
                             startActivity(new Intent(Login.this, BaseActivityHost.class));
                             break;
                         case "User":
+                            createCustomToast("success 😍", "Login Completed successfully!", MotionToastStyle.SUCCESS);
                             startActivity(new Intent(Login.this, ChoseAreaActivity.class));
                             break;
                         case "Wait for confirmation":
-                            Toast.makeText(Login.this, "Chờ Xác Nhận", Toast.LENGTH_SHORT).show();
+                            createCustomToast("Chờ Xác Nhận", "", MotionToastStyle.WARNING);
                             break;
                         case "User is banned":
                             Toast.makeText(Login.this, "Chờ mở lệnh cấm", Toast.LENGTH_SHORT).show();
                             break;
                         default:
-                            Toast.makeText(Login.this, "Unknown role or error", Toast.LENGTH_SHORT).show();
+                            createCustomToast("Failed ☹️", "Unknown role or error!", MotionToastStyle.ERROR);
                     }
-
                 } else {
-                    Toast.makeText(Login.this, "Check username or password", Toast.LENGTH_SHORT).show();
+                    createCustomToast("Failed ☹️", "Check username or password!", MotionToastStyle.ERROR);
                 }
             }
             @Override
             public void onFailure(Call<ResponseLogin> call, Throwable t) {
-              //  Log.e("cHcww", "onFailure: "+ t.getMessage()  );
-                Toast.makeText(Login.this, "Lỗi kết nối mạng hoặc máy chủ không phản hồi", Toast.LENGTH_SHORT).show();
+                Log.e("cHcww", "onFailure: "+ t.getMessage()  );
+               // Toast.makeText(Login.this, "Lỗi kết nối mạng hoặc máy chủ không phản hồi", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -295,6 +304,7 @@ public class Login extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     Response result = response.body();
                     if (result != null && result.isSuccess()) {
+
                         Toast.makeText(Login.this, "token OK", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(Login.this, "token fail", Toast.LENGTH_SHORT).show();
@@ -324,5 +334,10 @@ public class Login extends AppCompatActivity {
             manager.createNotificationChannel(channel);
 
         }
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(this, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }

@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background"
+    android:padding="16dp"
+    android:layout_gravity="center"
+    android:radius="4dp"
+    android:elevation="4dp">
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mauchuxanh"
+        android:textSize="18sp"
+        android:text="Nhập số người ở trong trọ"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"/>
+    <EditText
+        android:id="@+id/people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:maxLines="1"
+        android:hint="5"
+        android:textColorHint="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/size20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="4"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_gravity="left"
+            android:id="@+id/btnClose"
+            android:layout_width="80dp"
+            android:textColor="@color/mauchuxanh"
+            android:layout_height="wrap_content"
+            android:text="Đóng" />
+        <TextView
+            android:layout_weight="6"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:id="@+id/btnAddBill"
+            android:layout_width="80dp"
+            android:textColor="@color/mauchuxanh"
+            android:layout_height="wrap_content"
+            android:text="Gửi yêu cầu Thuê" />
+    </LinearLayout>
+
+</LinearLayout>

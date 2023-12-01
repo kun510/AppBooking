@@ -2,6 +2,7 @@ package com.doancuoinam.hostelappdoancuoinam.view.host.addBoarding;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -28,6 +29,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseAll;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -41,8 +43,10 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class AddBoardingActivity extends AppCompatActivity {
+public class AddBoardingActivity extends AppCompatActivity implements ToastInterface {
     private ImageView btnAddImg, imgInsert;
     private Spinner spinner;
     private String[] areaList = {"Hai Chau", "Thanh Khe", "Lien Chieu", "Ngu Hanh Son", "Cam Le", "Hoa Trung", "Son Tra", "Hoa Vang"};
@@ -176,7 +180,10 @@ public class AddBoardingActivity extends AppCompatActivity {
     private void handleInsert() {
         String selectedArea = spinner.getSelectedItem().toString();
         String address = insertAddr.getText().toString();
-
+        if (selectedArea.trim().isEmpty() || address.trim().isEmpty()){
+            createCustomToast("Failed ☹️", "điền đầy đủ", MotionToastStyle.ERROR);
+            return;
+        }
         Uri imageUri = Uri.parse("file://" + imagePath);
         MultipartBody.Part imagePart = prepareImageFile(imageUri);
 
@@ -190,7 +197,7 @@ public class AddBoardingActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     ResponseAll result = response.body();
                     showError(result.getMessage());
-                    Toast.makeText(AddBoardingActivity.this, "Thêm dãy trọ Thành Công", Toast.LENGTH_SHORT).show();
+                    createCustomToast("success 😍", "Thêm dãy trọ Thành Công!", MotionToastStyle.SUCCESS);
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -223,5 +230,10 @@ public class AddBoardingActivity extends AppCompatActivity {
     private void showError(String message) {
         error.setVisibility(View.VISIBLE);
         error.setText(message);
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(this, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }

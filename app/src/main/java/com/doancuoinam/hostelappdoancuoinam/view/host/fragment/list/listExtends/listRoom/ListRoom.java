@@ -21,6 +21,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.empty.EmptyActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.host.addRoom.AddRoomByHostActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoomEmpty.ListRoomAdapter;
 
@@ -30,6 +31,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.Query;
 
 
 public class ListRoom extends Fragment {
@@ -49,17 +51,24 @@ public class ListRoom extends Fragment {
         progressBar.setVisibility(View.VISIBLE);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         long userId = sharedPreferences.getLong("userId", 0);
+        long boardingId = 1;
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
-        Call<List<Room>> call = apiService.AllRoomByHost(userId);
+        Call<List<Room>> call = apiService.AllRoomByHost(userId,boardingId);
         call.enqueue(new Callback<List<Room>>() {
             @Override
             public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
                 if (response.isSuccessful()) {
                     List<Room> rooms = response.body();
                     Log.d("TAG", "API Call: " + rooms.get(0).getId());
-                    listRoomAdapter.setRooms(rooms);
                     progressBar.setVisibility(View.GONE);
                     Log.e("API Call", "ok");
+                    if (rooms.isEmpty()){
+                        Intent intent = new Intent(getContext(), EmptyActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else {
+                        listRoomAdapter.setRooms(rooms);
+                    }
                 } else {
                     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);

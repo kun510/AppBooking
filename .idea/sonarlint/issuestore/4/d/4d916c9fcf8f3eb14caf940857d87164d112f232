@@ -1,22 +1,13 @@
 
-d
-java:S1192Ê"FDefine a constant instead of duplicating this literal "email" 3 times.(ò¦‡—8“»ìÿÀ1
 D
-java:S16046"(Make this anonymous inner class a lambda(­×­8”»ìÿÀ1
+java:S1604-"(Make this anonymous inner class a lambda(­×­8ì²¦ªÁ1
 E
-java:S1604?"(Make this anonymous inner class a lambda(¨ŠÀë8”»ìÿÀ1
+java:S16046"(Make this anonymous inner class a lambda(¨ŠÀë8ì²¦ªÁ1
 K
-java:S1604º"(Make this anonymous inner class a lambda(¥íîŸÿÿÿÿÿ8”»ìÿÀ1
-s	java:S116&"WRename this field "btn_register" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áçû¡8¬»ìÿÀ1
-s	java:S116,"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹8¬»ìÿÀ1
+java:S1604´"(Make this anonymous inner class a lambda(¥íîŸÿÿÿÿÿ8ì²¦ªÁ1
+s	java:S116!"WRename this field "btn_register" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áçû¡8³¦ªÁ1
+s	java:S116&"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹8³¦ªÁ1
 ^
-java:S1659'"ADeclare "pass" and all following declarations on a separate line.(ƒ¥÷î8²»ìÿÀ1
-X	java:S125["<This block of commented-out lines of code should be removed.(ÀÜŞ8Â»ìÿÀ1
-o	java:S100d"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(——ùÿÿÿÿ8Â»ìÿÀ1
-Y	java:S125©"<This block of commented-out lines of code should be removed.(ÀÜŞ8É»ìÿÀ1
-S
-java:S1874Ñ"6Remove this use of "ProgressDialog"; it is deprecated.(•’è8Ì»ìÿÀ1
-S
-java:S1874Ñ"6Remove this use of "ProgressDialog"; it is deprecated.(•’è8Î»ìÿÀ1
-P
-java:S1874Ó"2Remove this use of "setMessage"; it is deprecated.(êøç¢8Î»ìÿÀ1
+java:S1659""ADeclare "pass" and all following declarations on a separate line.(ƒ¥÷î8†³¦ªÁ1
+X	java:S125R"<This block of commented-out lines of code should be removed.(ÀÜŞ8•³¦ªÁ1
+o	java:S100["NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(——ùÿÿÿÿ8•³¦ªÁ1

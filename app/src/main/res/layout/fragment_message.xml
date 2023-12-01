@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".view.user.fragment.message.Message">
-
+    tools:context=".view.user.fragment.message.Messages">
    <RelativeLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content">
        <ImageView
+           android:id="@+id/searchMsg"
            android:layout_width="35dp"
            android:layout_height="35dp"
            android:layout_marginStart="@dimen/size20dp"
@@ -18,8 +18,7 @@
            android:layout_centerVertical="true"
            android:src="@drawable/baseline_search_24"
            android:padding="6dp"
-           android:background="@drawable/round_back_light_10"
-           />
+           android:background="@drawable/round_back_light_10"/>
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
@@ -27,8 +26,7 @@
            android:textColor="#424242"
            android:textSize="@dimen/size18sp"
            android:textStyle="bold"
-           android:layout_centerInParent="true"
-           />
+           android:layout_centerInParent="true"/>
        <de.hdodenhof.circleimageview.CircleImageView
            android:id="@+id/userProfilePic"
            android:layout_width="35dp"
@@ -37,12 +35,10 @@
            android:layout_marginTop="@dimen/size40dp"
            android:layout_centerVertical="true"
            android:src="@drawable/profileeee"
-           android:layout_alignParentEnd="true"
-           />
+           android:layout_alignParentEnd="true"/>
    </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/MessageRecyclerView"
-        />
+        android:id="@+id/MessageRecyclerView"/>
 </LinearLayout>

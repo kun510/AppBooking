@@ -14,10 +14,8 @@ import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.home.HomeFragmentHost;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.ListFragment;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.profile.ProfileHost;
-import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message.Message;
+import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message.Messages;
 import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.notification.Notifications;
-import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.profile.Profile;
-import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.search.Search;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.language.LanguageManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -32,7 +30,7 @@ public class BaseActivityHost extends AppCompatActivity {
         final Fragment homeFragment = new HomeFragmentHost();
         final Fragment listFragment = new ListFragment();
         final Fragment NotificationFragment = new Notifications();
-        final Fragment Message = new Message();
+        final Fragment Message = new Messages();
         final Fragment Profile = new ProfileHost();
 
         loadFragment(homeFragment);

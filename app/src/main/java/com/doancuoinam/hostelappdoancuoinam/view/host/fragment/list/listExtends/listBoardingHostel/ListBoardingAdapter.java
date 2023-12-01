@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Boarding_host;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.view.host.addRoom.AddRoomByHostActivity;
+import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoom.ListRoomActivity;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.squareup.picasso.Picasso;
 
@@ -45,9 +46,15 @@ public class ListBoardingAdapter extends RecyclerView.Adapter<ListBoardingAdapte
             @Override
             public void onClick(View view) {
                 String id = String.valueOf(holder.BoardingId);
-                showItemDialog(listandCoutRoom,id);
-                Toast.makeText(context, "ok", Toast.LENGTH_SHORT).show();
-                holder.onClickImg.setVisibility(View.VISIBLE);
+              //  showItemDialog(listandCoutRoom,id);
+                if ("Waiting Confirm".equals(listandCoutRoom.getStatus())) {
+                    Toast.makeText(context, "Hãy đợi duyệt", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(view.getContext(), ListRoomActivity.class);
+                    intent.putExtra("BoardingId",id);
+                    view.getContext().startActivity(intent);
+                    holder.onClickImg.setVisibility(View.VISIBLE);
+                }
             }
         });
     }

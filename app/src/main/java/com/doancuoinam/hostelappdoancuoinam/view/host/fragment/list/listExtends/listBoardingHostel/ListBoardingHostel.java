@@ -22,6 +22,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ListandCoutRoom;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.empty.EmptyActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.host.addBoarding.AddBoardingActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.host.addRoom.AddRoomByHostActivity;
 
@@ -58,8 +59,14 @@ public class ListBoardingHostel extends Fragment {
             public void onResponse(Call<List<Boarding_host>> call, Response<List<Boarding_host>> response) {
                 if (response.isSuccessful()){
                     List<Boarding_host> roomList = response.body();
-                    boardingHostelAdapter.setDataBoardingHostel(getContext(),roomList);
                     progressBar.setVisibility(View.GONE);
+                    if (roomList.isEmpty()){
+                        Intent intent = new Intent(getContext(), EmptyActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else {
+                        boardingHostelAdapter.setDataBoardingHostel(getContext(),roomList);
+                    }
                 }else {
                     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);

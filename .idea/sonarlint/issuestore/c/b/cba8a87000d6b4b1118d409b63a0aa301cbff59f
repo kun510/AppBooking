@@ -1,0 +1,43 @@
+
+i
+java:S1192å"KDefine a constant instead of duplicating this literal "text/plain" 3 times.(ñ‘ì„8”Ì«Â1
+c
+java:S1192e"FDefine a constant instead of duplicating this literal "Error" 4 times.(È¢™8·–äªÂ1
+X
+java:S1141€"5Extract this nested try block into a separate method.(´Ûõ“ûÿÿÿÿ8·–äªÂ1
+E
+java:S16049"(Make this anonymous inner class a lambda(İÇ£ 8¸–äªÂ1
+D
+java:S1604@"(Make this anonymous inner class a lambda(èŸ½8¸–äªÂ1
+F
+java:S1604Ì"(Make this anonymous inner class a lambda(Ï¤â“8¸–äªÂ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Š÷ ¥øÿÿÿÿ8º–äªÂ1
+`
+java:S1874U">Remove this use of "startActivityForResult"; it is deprecated.(“Œñ¬ÿÿÿÿÿ8«˜äªÂ1
+f
+java:S1874Y"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8«˜äªÂ1
+n
+java:S3776Y"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¹Î¾8¬˜äªÂ1
+s
+java:S3252¹"PUse static access with "android.view.ViewGroup$LayoutParams" for "MATCH_PARENT".(„¸ğÂşÿÿÿÿ8¸˜äªÂ1
+n
+java:S3252º"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(Ø®“œ8¸˜äªÂ1
+n
+java:S3252À"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(âµÏş8º˜äªÂ1
+n
+java:S3252É"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(Úêß8»˜äªÂ1
+u
+java:S3776ß"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(¼‚ôãıÿÿÿÿ8¿˜äªÂ1
+L
+java:S1874å".Remove this use of "create"; it is deprecated.(ñ‘ì„8¢Î«Â1
+L
+java:S1874æ".Remove this use of "create"; it is deprecated.(Ù¹Ô¬8¢Î«Â1
+Q
+java:S1874ç".Remove this use of "create"; it is deprecated.(»ıïÊúÿÿÿÿ8Ã˜äªÂ1
+a
+java:S1155ì">Use isEmpty() to check whether the collection is empty or not.(ş‹¤¸şÿÿÿÿ8¤Î«Â1
+L
+java:S1874ò".Remove this use of "create"; it is deprecated.(í¦ıÉ8§Î«Â1
+Y	java:S125õ"<This block of commented-out lines of code should be removed.(Ú•Ğ8û¯˜«Â1
+\
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(ª¶Ì8¨Î«Â1

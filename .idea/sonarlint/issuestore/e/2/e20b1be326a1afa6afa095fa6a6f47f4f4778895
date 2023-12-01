@@ -1,19 +1,21 @@
 
 n
-java:S1192Q"LDefine a constant instead of duplicating this literal "isFavourite" 4 times.(·¦ ‡úÿÿÿÿ8§¯¨“À1
+java:S1192Y"LDefine a constant instead of duplicating this literal "isFavourite" 4 times.(·¦ ‡úÿÿÿÿ8´ğÕ«Â1
 E
-java:S16047"(Make this anonymous inner class a lambda(ù¶ëÇ8¨¯¨“À1
+java:S16047"(Make this anonymous inner class a lambda(ù¶ëÇ8µğÕ«Â1
 E
-java:S1604a"(Make this anonymous inner class a lambda(Ì‹ç8¨¯¨“À1
+java:S1604i"(Make this anonymous inner class a lambda(Ì‹ç8µğÕ«Â1
 J
-java:S1604T"(Make this anonymous inner class a lambda(‚ûßÄúÿÿÿÿ8¨¯¨“À1
+java:S1604\"(Make this anonymous inner class a lambda(‚ûßÄúÿÿÿÿ8µğÕ«Â1
 O
-java:S1153·"1Directly append the argument of String.valueOf().(“ñÖÎ8ª¯¨“À1
+java:S1153¿"1Directly append the argument of String.valueOf().(“ñÖÎ8¶ğÕ«Â1
 O
-java:S1153¸"1Directly append the argument of String.valueOf().(Üé¹ç8ª¯¨“À1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±è«óıÿÿÿÿ8ª¯¨“À1
-{	java:S116—"YRename this field "btn_selectRoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ‹¬öşÿÿÿÿ8ƒ°¨“À1
-s	java:S116›"VRename this field "AddressRoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±—À8ƒ°¨“À1
-l	java:S116œ"ORename this field "Area" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Şûİ8ƒ°¨“À1
+java:S1153À"1Directly append the argument of String.valueOf().(Üé¹ç8¶ğÕ«Â1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±è«óıÿÿÿÿ8·ğÕ«Â1
+9
+java:S1116D"Remove this empty statement.(ÿ™‡¾8êğÕ«Â1
+{	java:S116Ÿ"YRename this field "btn_selectRoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ‹¬öşÿÿÿÿ8úğÕ«Â1
+s	java:S116£"VRename this field "AddressRoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±—À8úğÕ«Â1
+l	java:S116¤"ORename this field "Area" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Şûİ8úğÕ«Â1
 g
-java:S1659–"IDeclare "numberPeople" and all following declarations on a separate line.(˜ãÈ–8…°¨“À1
+java:S1659"IDeclare "numberPeople" and all following declarations on a separate line.(˜ãÈ–8üğÕ«Â1

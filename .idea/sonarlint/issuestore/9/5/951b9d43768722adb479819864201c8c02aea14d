@@ -1,6 +1,6 @@
 
->
-java:S1604F"(Make this anonymous inner class a lambda(°§ΞΨ
+E
+java:S1604S"(Make this anonymous inner class a lambda(°§ΞΨ8‡ό¶Β1
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·³ϊÿÿÿÿ
-c
-java:S3252C"MUse static access with "android.text.Spanned" for "SPAN_EXCLUSIVE_EXCLUSIVE".(‰„Εγ
+j
+java:S3252P"MUse static access with "android.text.Spanned" for "SPAN_EXCLUSIVE_EXCLUSIVE".(‰„Εγ8ΐό¶Β1

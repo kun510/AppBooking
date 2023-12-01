@@ -53,6 +53,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/MyRoomLayout"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
@@ -121,6 +122,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/RoomEmpty"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"

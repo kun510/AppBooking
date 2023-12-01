@@ -1,18 +1,21 @@
 
-m	java:S117["QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢‡§8¢ù…–À1
+m	java:S117b"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢‡§8’à©®Â1
 E
-java:S1604,"(Make this anonymous inner class a lambda(Ö¹™º8àçý•À1
+java:S1604-"(Make this anonymous inner class a lambda(Ö¹™º8“à©®Â1
 E
-java:S1604f"(Make this anonymous inner class a lambda(íá‹û8£ù…–À1
+java:S1604m"(Make this anonymous inner class a lambda(íá‹û8“à©®Â1
 J
-java:S1604m"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8£ù…–À1
+java:S1604t"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8“à©®Â1
 J
-java:S1604t"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8£ù…–À1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àˆÚ³8áçý•À1
-n	java:S116>"RRename this field "Address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê´î×8›èý•À1
-m	java:S116>"QRename this field "Status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê´î×8›èý•À1
-v	java:S116A"URename this field "BoardingId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çŽá›ÿÿÿÿÿ8ïÖ…–À1
+java:S1604{"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8“à©®Â1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àˆÚ³8”à©®Â1
+]	java:S1251"<This block of commented-out lines of code should be removed.(æÏýõÿÿÿÿÿ8¾à©®Â1
+n	java:S116E"RRename this field "Address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê´î×8Äà©®Â1
+m	java:S116E"QRename this field "Status" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê´î×8Äà©®Â1
+v	java:S116H"URename this field "BoardingId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çŽá›ÿÿÿÿÿ8Äà©®Â1
 d
-java:S1659>"GDeclare "numberRoom" and all following declarations on a separate line.(ê´î×8œèý•À1
+java:S1659E"GDeclare "numberRoom" and all following declarations on a separate line.(ê´î×8Åà©®Â1
 9
-java:S2153Q"Remove the boxing to "Float".(®¸Š8žèý•À1
+java:S2153X"Remove the boxing to "Float".(®¸Š8Çà©®Â1
+U
+java:S1144\"3Remove this unused private "showItemDialog" method.(²€ßáýÿÿÿÿ8Ìà©®Â1

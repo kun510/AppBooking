@@ -1,6 +1,7 @@
 package com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoomEmpty;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -19,6 +20,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.empty.EmptyActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoomEmpty.ListRoomAdapter;
 
 import java.io.IOException;
@@ -53,9 +55,15 @@ public class ListRoomEmpty extends Fragment {
                 if (response.isSuccessful()) {
                     List<Room> rooms = response.body();
                     Log.d("TAG", "API Call: " + rooms.get(0).getId());
-                    listRoomAdapter.setRooms(rooms);
                     progressBar.setVisibility(View.GONE);
                     Log.e("API Call", "ok");
+                    if (rooms.isEmpty()){
+                        Intent intent = new Intent(getContext(), EmptyActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else {
+                        listRoomAdapter.setRooms(rooms);
+                    }
                 } else {
                     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);

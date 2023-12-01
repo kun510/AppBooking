@@ -3,7 +3,6 @@ package com.doancuoinam.hostelappdoancuoinam.account;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,21 +14,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.doancuoinam.hostelappdoancuoinam.R;
-import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message.MemoryData;
+import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message.MessageList;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.concurrent.TimeUnit;
 
@@ -40,7 +35,6 @@ public class Register extends AppCompatActivity {
     private FirebaseAuth mAuth;
     String mVerificationId;
     private PhoneAuthProvider.ForceResendingToken resendToken;
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://hostelappdoancuoinam-default-rtdb.firebaseio.com/");
     ProgressBar progress_otp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +42,6 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         AnhXa();
         progress_otp.setVisibility(View.INVISIBLE);
-        FirebaseApp.initializeApp(this);
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("users");
-
         doHave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -166,12 +157,15 @@ public class Register extends AppCompatActivity {
                                 mVerificationId = verificationId;
                                 resendToken = forceResendingToken;
                                 if (confirm.equals(password)){
-//                                    Intent intent = new Intent(Register.this, OtpRegister.class);
-//                                    intent.putExtra("numberphone",numberPhone);
-//                                    intent.putExtra("verificationId",mVerificationId);
-//                                    intent.putExtra("pass",password);
-//                                    startActivity(intent);
-                                    saveDataFirebase(numberPhone,emailUser,nameUsers,password,mVerificationId);
+                                    Intent intent = new Intent(Register.this, OtpRegister.class);
+                                    String avt = "https://res.cloudinary.com/dmf3si8zv/image/upload/v1701184258/Hostel/User/profileeee.png.png";
+                                    setupFirebase(numberPhone,nameUsers,avt);
+                                    intent.putExtra("numberphone",numberPhone);
+                                    intent.putExtra("email",emailUser);
+                                    intent.putExtra("name",nameUsers);
+                                    intent.putExtra("verificationId",mVerificationId);
+                                    intent.putExtra("pass",password);
+                                    startActivity(intent);
                                 }
                                 else {
                                     Toast.makeText(Register.this, R.string.nhaplai, Toast.LENGTH_SHORT).show();
@@ -195,50 +189,11 @@ public class Register extends AppCompatActivity {
                     }
                 });
     }
-    public void saveDataFirebase(String phone,String email,String name,String password  ,String mVerificationId){
-        if (!MemoryData.getData(this).isEmpty()){
-            Intent intent = new Intent(Register.this, OtpRegister.class);
-            intent.putExtra("numberphone",MemoryData.getData(this));
-            intent.putExtra("email","");
-            intent.putExtra("name",MemoryData.getName(this));
-            intent.putExtra("verificationId",mVerificationId);
-            intent.putExtra("pass",password);
-            startActivity(intent);
-            finish();
-        }
-        ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setCancelable(false);
-        progressDialog.setMessage("Loading....");
-        progressDialog.show();
-        DatabaseReference userReference = databaseReference.child(phone);
-        userReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                progressDialog.dismiss();
-                if (snapshot.child("users").hasChild(phone)){
-                    Toast.makeText(Register.this, "Mobile already exists", Toast.LENGTH_SHORT).show();
-                }else {
-                    userReference.child("email").setValue(email);
-                    userReference.child("name").setValue(name);
-                    MemoryData.saveData(phone,Register.this);
-                    MemoryData.saveName(name,Register.this);
-                    Toast.makeText(Register.this, "Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Register.this, OtpRegister.class);
-                    intent.putExtra("numberphone",phone);
-                    intent.putExtra("email",email);
-                    intent.putExtra("name",name);
-                    intent.putExtra("verificationId",mVerificationId);
-                    intent.putExtra("pass",password);
-                    startActivity(intent);
-                    finish();
-                }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                progressDialog.dismiss();
-                Log.e("FirebaseError", "Database operation canceled", error.toException());
-            }
-        });
+    public void setupFirebase(String phone,String name,String avt){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("users");
+        MessageList messageList = new MessageList(name,phone,avt);
+        myRef.child(phone).setValue(messageList);
     }
 }

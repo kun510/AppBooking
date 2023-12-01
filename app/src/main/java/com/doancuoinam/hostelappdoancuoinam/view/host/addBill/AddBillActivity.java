@@ -1,6 +1,7 @@
 package com.doancuoinam.hostelappdoancuoinam.view.host.addBill;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,15 +19,18 @@ import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseAll;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 
 import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
 
-public class AddBillActivity extends AppCompatActivity {
+public class AddBillActivity extends AppCompatActivity implements ToastInterface {
     LinearLayout btnInsert;
     TextView idRoomRent,name_rent;
     EditText electric_hotel,costsIncurred;
@@ -50,8 +54,15 @@ public class AddBillActivity extends AppCompatActivity {
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int electric = Integer.parseInt(electric_hotel.getText().toString());
-                int costsIn = Integer.parseInt(costsIncurred.getText().toString());
+                String electricCheck = electric_hotel.getText().toString();
+                String costsInCheck = costsIncurred.getText().toString();
+                if (electricCheck.trim().isEmpty() || costsInCheck.trim().isEmpty()){
+                    createCustomToast("Failed ☹️", "điền đầy đủ", MotionToastStyle.ERROR);
+                    return;
+                }
+                int electric = Integer.parseInt(electricCheck);
+                int costsIn = Integer.parseInt(costsInCheck);
+
                 progressBar.setVisibility(View.VISIBLE);
                 ApiService apiService = ApiClient.getClient().create(ApiService.class);
                 Call<ResponseAll> call = apiService.addBill(electric,costsIn,RentId,hostId);
@@ -61,9 +72,9 @@ public class AddBillActivity extends AppCompatActivity {
                         if (response.isSuccessful()){
                             progressBar.setVisibility(View.GONE);
                             onBackPressed();
-                            Toast.makeText(AddBillActivity.this, "Thêm Hoá đơn Thành Công", Toast.LENGTH_SHORT).show();
+                            createCustomToast("success 😍", "Thêm Hoá đơn Thành Công!", MotionToastStyle.SUCCESS);
                         }else {
-                            Toast.makeText(AddBillActivity.this, "Thêm Hoá đơn Bị lỗi", Toast.LENGTH_SHORT).show();
+                            createCustomToast("Failed ☹️", "Phòng đã có hoá đơn rồi", MotionToastStyle.ERROR);
                             progressBar.setVisibility(View.GONE);
                             try {
                                 String errorBody = response.errorBody().string();
@@ -92,5 +103,10 @@ public class AddBillActivity extends AppCompatActivity {
         name_rent = findViewById(R.id.name_rent);
         electric_hotel = findViewById(R.id.electric_hotel);
         costsIncurred = findViewById(R.id.costsIncurred);
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(this, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }

@@ -21,6 +21,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.empty.EmptyActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.host.addBill.AddBillActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.host.confirmRent.ConfirmRentActivity;
 
@@ -57,8 +58,14 @@ public class ListRent extends Fragment {
             public void onResponse(Call<List<Rent>> call, Response<List<Rent>> response) {
                 if (response.isSuccessful()){
                     List<Rent> rentList = response.body();
-                    listUserRentAdapter.setDataRentList(getContext(),rentList);
                     progressBar.setVisibility(View.GONE);
+                    if (rentList.isEmpty()){
+                        Intent intent = new Intent(getContext(), EmptyActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else {
+                        listUserRentAdapter.setDataRentList(getContext(),rentList);
+                    }
                 }else {
                     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);

@@ -58,14 +58,14 @@ public class RoomListByBoarding extends AppCompatActivity {
                     List<Room> rooms = response.body();
                     roomAdapter.setRoomsList(rooms);
                 } else {
-                    Toast.makeText(RoomListByBoarding.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(RoomListByBoarding.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }
                 hideProgressBar();
             }
 
             @Override
             public void onFailure(Call<List<Room>> call, Throwable t) {
-                Toast.makeText(RoomListByBoarding.this, "Lỗi kết nối", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(RoomListByBoarding.this, "Lỗi kết nối", Toast.LENGTH_SHORT).show();
                 Log.e("TAG", "onFailureRoomaaaaa: " + t.getMessage());
                 hideProgressBar();
             }

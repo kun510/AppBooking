@@ -2,6 +2,7 @@ package com.doancuoinam.hostelappdoancuoinam.account;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,6 +21,7 @@ import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.Response;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -29,8 +31,10 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class OtpRegister extends AppCompatActivity {
+public class OtpRegister extends AppCompatActivity implements ToastInterface {
     Button btn_login_otp;
     EditText Otp1,Otp2,Otp3,Otp4,Otp5,Otp6;
     TextView some_id,resetOtp;
@@ -86,7 +90,7 @@ public class OtpRegister extends AppCompatActivity {
         String  codeOtp6 = Otp6.getText().toString();
         if (codeOtp1.trim().isEmpty() || codeOtp2.trim().isEmpty() || codeOtp3.trim().isEmpty() || codeOtp4.trim().isEmpty()
                 || codeOtp5.trim().isEmpty() || codeOtp6.trim().isEmpty()) {
-            Toast.makeText(OtpRegister.this, "Điền Đầy Đủ", Toast.LENGTH_SHORT).show();
+            createCustomToast("Điền Đầy Đủ!", "", MotionToastStyle.WARNING);
         }
         String code = codeOtp1 + codeOtp2 + codeOtp3 + codeOtp4 + codeOtp5 + codeOtp6;
         if (verificationId != null) {
@@ -112,14 +116,14 @@ public class OtpRegister extends AppCompatActivity {
                                         String message = registerResponse.getMessage();
                                         if (message != null) {
                                             if (message.equals("Register successfully")) {
-                                                Toast.makeText(OtpRegister.this, "Register successfully", Toast.LENGTH_SHORT).show();
+                                                createCustomToast("success 😍", "Register successfully!", MotionToastStyle.SUCCESS);
                                                 Intent intent = new Intent(OtpRegister.this, Login.class);
                                                 startActivity(intent);
                                                 finish();
                                             } else if (message.equals("User with the provided phone already exists.")) {
-                                                Toast.makeText(OtpRegister.this, "User with the provided phone already exists." + message, Toast.LENGTH_SHORT).show();
+                                                createCustomToast("Failed ☹️", "User with the provided phone already exists", MotionToastStyle.ERROR);
                                             } else {
-                                                Toast.makeText(OtpRegister.this, "Register Fail " + message, Toast.LENGTH_SHORT).show();
+                                                createCustomToast("Failed ☹️", "Register Fail", MotionToastStyle.ERROR);
                                             }
                                         }
                                     }
@@ -130,11 +134,13 @@ public class OtpRegister extends AppCompatActivity {
 
                             @Override
                             public void onFailure(Call<Response> call, Throwable t) {
-                                Toast.makeText(OtpRegister.this, "Error HTTP: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                                createCustomToast("Error HTTP:!", "", MotionToastStyle.INFO);
+                               // Toast.makeText(OtpRegister.this, "Error HTTP: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
                     } else {
-                        Toast.makeText(OtpRegister.this, "Otp sai", Toast.LENGTH_SHORT).show();
+                        createCustomToast("Otp Wrong!", "", MotionToastStyle.INFO);
+                        //  Toast.makeText(OtpRegister.this, "Otp sai", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -250,5 +256,10 @@ public class OtpRegister extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(this, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }

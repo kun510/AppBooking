@@ -2,6 +2,7 @@ package com.doancuoinam.hostelappdoancuoinam.view.host.addRoom;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,6 +27,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseAll;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 import com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listRoom.ListRoom;
 
 import java.io.File;
@@ -40,8 +42,10 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class AddRoomByHostActivity extends AppCompatActivity {
+public class AddRoomByHostActivity extends AppCompatActivity implements ToastInterface {
      ImageView btnAddImg, imgInsert;
      Spinner spinner;
     String listType[]={"Type","Hostel", "Motel","Apartment"};
@@ -170,7 +174,12 @@ public class AddRoomByHostActivity extends AppCompatActivity {
         String WaterBillRoom = WaterBill.getText().toString();
         String priceRoom = price.getText().toString();
         String peopleRoom = people.getText().toString();
-
+        if (selectedType.trim().isEmpty() || descriptionRoom.trim().isEmpty() ||
+                numberRoomInRoom.trim().isEmpty() || ElectricBillRoom.trim().isEmpty() ||
+                WaterBillRoom.trim().isEmpty() || priceRoom.trim().isEmpty() || peopleRoom.trim().isEmpty()){
+            createCustomToast("Failed ☹️", "điền đầy đủ", MotionToastStyle.ERROR);
+            return;
+        }
         MultipartBody.Part descriptionPart = MultipartBody.Part.createFormData("description", descriptionRoom);
         MultipartBody.Part numberRoomPart = MultipartBody.Part.createFormData("numberRoom", numberRoomInRoom);
         MultipartBody.Part electricBillPart = MultipartBody.Part.createFormData("ElectricBill", ElectricBillRoom);
@@ -182,10 +191,13 @@ public class AddRoomByHostActivity extends AppCompatActivity {
         Intent intent = getIntent();
         idBoardingIntent = intent.getStringExtra("boardingId");
         long boardingId = Long.parseLong(idBoardingIntent);
-
+        Toast.makeText(this, "id trojj"+boardingId, Toast.LENGTH_SHORT).show();
         Uri imageUri = Uri.parse("file://" + imagePath);
         MultipartBody.Part imagePart = prepareImageFile(imageUri);
-
+        if (imagePart == null){
+            createCustomToast("Failed ☹️", "điền đầy đủ", MotionToastStyle.ERROR);
+            return;
+        }
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         long hostId = sharedPreferences.getLong("userId", 0);
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
@@ -210,13 +222,14 @@ public class AddRoomByHostActivity extends AppCompatActivity {
                     Log.d("TAG", "onResponse: "+ result);
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(AddRoomByHostActivity.this, "Thêm phòng thành công", Toast.LENGTH_SHORT).show();
+                    createCustomToast("success 😍", "Thêm Phòng Thành Công!", MotionToastStyle.SUCCESS);
                     onBackPressed();
 
                 } else {
                     try {
                         String errorBodyString = response.errorBody().string();
                         Log.e("TAG", "Error Response Body: " + errorBodyString);
-                        Toast.makeText(AddRoomByHostActivity.this, "Thêm phòng bị lỗi", Toast.LENGTH_SHORT).show();
+                        createCustomToast("Fail", "Lỗi !"+ errorBodyString, MotionToastStyle.ERROR);
                         progressBar.setVisibility(View.GONE);
                     } catch (IOException e) {
                         Log.e("TAG", "Error Response error response body", e);
@@ -227,7 +240,7 @@ public class AddRoomByHostActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<ResponseAll> call, Throwable t) {
                 Log.e("TAG", "Call Api Fail: ", t);
-                Toast.makeText(AddRoomByHostActivity.this,"Lỗi Mạng", Toast.LENGTH_SHORT).show();
+                createCustomToast("Failed ☹️", "Lỗi Mạng", MotionToastStyle.ERROR);
                 progressBar.setVisibility(View.GONE);
             }
         });
@@ -250,5 +263,10 @@ public class AddRoomByHostActivity extends AppCompatActivity {
         spinner = findViewById(R.id.spinner);
         btnInsert = findViewById(R.id.insert);
         progressBar = findViewById(R.id.progressBar);
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(this, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }

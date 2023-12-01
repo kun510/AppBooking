@@ -59,6 +59,13 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:textSize="17sp"/>
+                <Spinner
+                    android:visibility="gone"
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/boderstard"
+                    android:backgroundTint="@color/mauchuxanh" />
             </LinearLayout>
 
         </LinearLayout>
@@ -89,7 +96,6 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-
                 android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
                 <TextView
@@ -103,6 +109,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold" />
                 <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="visible"
                     android:layout_marginTop="@dimen/size30dp"
                     android:layout_marginBottom="@dimen/size20dp"
                     android:layout_gravity="center"
@@ -110,6 +117,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal" />
+                <com.airbnb.lottie.LottieAnimationView
+                    android:visibility="gone"
+                    android:id="@+id/empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_rawRes="@raw/empty" />
                 <ProgressBar
                     android:layout_gravity="center"
                     android:id="@+id/progressBar"

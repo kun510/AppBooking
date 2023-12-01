@@ -19,13 +19,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import android.Manifest;
 
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Boarding_host;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.R;
@@ -50,6 +54,9 @@ public class HomeFragment extends Fragment {
     TextView location;
     ImageView mapHome;
     Location lastLocation;
+    Spinner spinner;
+    LottieAnimationView empty;
+    String list[]={"Hai Chau", "Thanh Khe", "Lien Chieu", "Ngu Hanh Son", "Cam Le", "Hoa Trung", "Son Tra", "Hoa Vang"};
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,10 +67,17 @@ public class HomeFragment extends Fragment {
 //        long userId = sharedPreferences.getLong("userId", 0);
 //        Toast.makeText(getActivity(), "User ID: " + userId, Toast.LENGTH_SHORT).show();
         recyclerView = view.findViewById(R.id.recyclerPlaces);
+        spinner = view.findViewById(R.id.spinner);
         mapHome = view.findViewById(R.id.map);
         progressBar = view.findViewById(R.id.progressBar);
         progressBarHot = view.findViewById(R.id.progressBarHot);
         location = view.findViewById(R.id.nameArea);
+        empty = view.findViewById(R.id.empty);
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(
+                getContext(), android.R.layout.simple_spinner_item, list
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
         mapHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,7 +117,14 @@ public class HomeFragment extends Fragment {
             public void onResponse(Call<List<Boarding_host>> call, Response<List<Boarding_host>> response) {
                 if (response.isSuccessful()) {
                     List<Boarding_host> rooms = response.body();
-                    roomAdapter.setRooms(rooms);
+                    if (rooms == null || rooms.isEmpty()){
+                        recyclerView.setVisibility(View.GONE);
+                        empty.setVisibility(View.VISIBLE);
+                    }else {
+                        recyclerView.setVisibility(View.VISIBLE);
+                        empty.setVisibility(View.GONE);
+                        roomAdapter.setRooms(rooms);
+                    }
                 } else {
                //     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }
@@ -136,6 +157,52 @@ public class HomeFragment extends Fragment {
                // Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
                 Log.e("TAG", "onFailureListRoomHot: " + t.getMessage());
                 progressBarHot.setVisibility(View.GONE);
+            }
+        });
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                location.setText(parentView.getItemAtPosition(position).toString());
+                String selectedItem = list[position];
+                ApiService apiService = ApiClient.getClient().create(ApiService.class);
+                Call<List<Boarding_host>> call = apiService.getAllBoarding(selectedItem);
+                call.enqueue(new Callback<List<Boarding_host>>() {
+                    @Override
+                    public void onResponse(Call<List<Boarding_host>> call, Response<List<Boarding_host>> response) {
+                        if (response.isSuccessful()) {
+                            List<Boarding_host> rooms = response.body();
+                            if (rooms == null || rooms.isEmpty()){
+                                recyclerView.setVisibility(View.GONE);
+                                empty.setVisibility(View.VISIBLE);
+                            }else {
+                                recyclerView.setVisibility(View.VISIBLE);
+                                empty.setVisibility(View.GONE);
+                                roomAdapter.setRooms(rooms);
+                            }
+                        } else {
+                            //     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
+                        }
+                        progressBar.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<Boarding_host>> call, Throwable t) {
+                        //  Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
+                        Log.e("TAG", "onFailureListRoom: " + t.getMessage());
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
+                spinner.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+            }
+        });
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                spinner.setVisibility(View.VISIBLE);
             }
         });
         return view;

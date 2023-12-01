@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,14 +19,17 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationApp;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class Notifications extends Fragment {
+public class Notifications extends Fragment implements ToastInterface {
  RecyclerView recyclerNotification;
  NotificationsAdapter notificationsAdapter;
     @Override
@@ -47,16 +51,22 @@ public class Notifications extends Fragment {
                     List<NotificationApp> notificationApps = response.body();
                     notificationsAdapter.setNotificationAppList(notificationApps);
                 } else {
-                    Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
+                    createCustomToast("Lỗi khi tải dữ liệu!", "", MotionToastStyle.WARNING);
+                   // Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<List<NotificationApp>> call, Throwable t) {
-                Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
                 Log.e("TAG", "onFailureListRoom: " + t.getMessage());
             }
         });
         return view;
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(getActivity(), message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(getContext(), www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }

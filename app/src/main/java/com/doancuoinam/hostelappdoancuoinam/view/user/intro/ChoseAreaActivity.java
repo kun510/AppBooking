@@ -1,6 +1,7 @@
 package com.doancuoinam.hostelappdoancuoinam.view.user.intro;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,6 +15,9 @@ import android.widget.Spinner;
 import com.doancuoinam.hostelappdoancuoinam.BaseActivity;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.home.HomeFragment;
+
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
 public class ChoseAreaActivity extends AppCompatActivity {
     String list[]={"Hai Chau", "Thanh Khe", "Lien Chieu", "Ngu Hanh Son", "Cam Le", "Hoa Trung", "Son Tra", "Hoa Vang"};
@@ -40,6 +44,14 @@ public class ChoseAreaActivity extends AppCompatActivity {
                 editor.putString("selectedItem", selectedItem);
                 editor.apply();
                 Intent intent = new Intent(ChoseAreaActivity.this, BaseActivity.class);
+                MotionToast.Companion.createToast(ChoseAreaActivity.this,
+                        "success 😍",
+                        "Selected area  successfully!",
+                        MotionToastStyle.INFO,
+                        MotionToast.GRAVITY_CENTER,
+                        MotionToast.LONG_DURATION,
+                        ResourcesCompat.getFont(ChoseAreaActivity.this, www.sanju.motiontoast.R.font.helvetica_regular));
+
                 startActivity(intent);
             }
         });

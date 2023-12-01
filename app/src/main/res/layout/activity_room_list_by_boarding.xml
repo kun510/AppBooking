@@ -16,6 +16,7 @@
             android:background="@android:color/white"
             app:popupTheme="@android:color/black" />
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_gravity="center"
             android:id="@+id/recyclerRoomDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

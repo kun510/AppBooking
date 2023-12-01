@@ -3,6 +3,7 @@ package com.doancuoinam.hostelappdoancuoinam.view.user.profile.roomFavourite;
 import static android.content.Context.MODE_PRIVATE;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,12 +18,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.RoomFavourite;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 import com.squareup.picasso.Picasso;
 
 import java.time.Instant;
@@ -35,11 +38,15 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
 public class RoomFavouriteAdapter extends RecyclerView.Adapter<RoomFavouriteAdapter.RoomViewHolder> {
     private List<RoomFavourite> rooms;
-    public void setRoomsFavouriteList(List<RoomFavourite> rooms) {
+    Context context;
+    public void setRoomsFavouriteList(List<RoomFavourite> rooms,Context context) {
         this.rooms = rooms;
+        this.context = context;
         notifyDataSetChanged();
     }
     @NonNull
@@ -114,6 +121,8 @@ public class RoomFavouriteAdapter extends RecyclerView.Adapter<RoomFavouriteAdap
     public int getItemCount() {
         return rooms != null ? rooms.size() : 0;
     }
+
+
 
     public class RoomViewHolder extends RecyclerView.ViewHolder {
         ImageView imgRoom;

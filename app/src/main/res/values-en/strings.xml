@@ -153,4 +153,13 @@
     <string name="khuvuchome">"Area: "</string>
     <string name="txtmail">Enter your Email</string>
     <string name="nameUser">Enter your Name</string>
+    <string name="chat">Type something....</string>
+    <string name="Bad">Bad</string>
+    <string name="Not_Bad">Not Bad</string>
+    <string name="Nice">Nice!</string>
+    <string name="Good">Good Job!</string>
+    <string name="Awesome">Awesome!</string>
+    <string name="Rate">Rate The Service</string>
+    <string name="phản_hồi">Please give me feedback</string>
+    <string name="review">Review</string>
 </resources>

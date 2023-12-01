@@ -1,0 +1,15 @@
+
+k
+java:S1192 "IDefine a constant instead of duplicating this literal "idMyroom" 3 times.(›Óš†øÿÿÿÿ8ó‘«Â1
+J
+java:S1604#"(Make this anonymous inner class a lambda(Ûæ¼Ûùÿÿÿÿ8­™–Â1
+D
+java:S1604*"(Make this anonymous inner class a lambda(ÅåÄz8¯™–Â1
+J
+java:S16042"(Make this anonymous inner class a lambda(Îı„Ãıÿÿÿÿ8íîªÂ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–‚‹ùÿÿÿÿ8îÖ–Â1
+|	java:S116"[Rename this field "BillMyRoomLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Úæ¹ıÿÿÿÿ8½™–Â1
+p	java:S116"ORename this field "Rate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Úæ¹ıÿÿÿÿ8½™–Â1
+|	java:S116"[Rename this field "ReportRoomLayout" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶Úæ¹ıÿÿÿÿ8Ğ°îªÂ1
+c
+java:S1659"ADeclare "Rate" and all following declarations on a separate line.(¶Úæ¹ıÿÿÿÿ8Ñ™–Â1

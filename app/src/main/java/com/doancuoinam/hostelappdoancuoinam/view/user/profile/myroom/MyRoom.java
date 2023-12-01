@@ -2,9 +2,11 @@ package com.doancuoinam.hostelappdoancuoinam.view.user.profile.myroom;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,14 +22,18 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.empty.EmptyActivity;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class MyRoom extends AppCompatActivity {
+public class MyRoom extends AppCompatActivity implements ToastInterface {
     RecyclerView recyclerMyRoom;
     ProgressBar progressBarList;
     @Override
@@ -52,17 +58,25 @@ public class MyRoom extends AppCompatActivity {
             public void onResponse(Call<List<Rent>> call, Response<List<Rent>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<Rent> myRooms = response.body();
-                        myRoomAdapter.setMyRooms(myRooms);
                         hideProgressBar();
+                        if (myRooms.isEmpty()){
+                            Intent intent = new Intent(MyRoom.this, EmptyActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }else {
+                            myRoomAdapter.setMyRooms(myRooms,MyRoom.this);
+                        }
                 } else {
-                    Toast.makeText(MyRoom.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MyRoom.this, EmptyActivity.class);
+                    startActivity(intent);
+                    createCustomToast("Bạn Chưa Thuê Phòng!", "", MotionToastStyle.INFO);
                     hideProgressBar();
                 }
             }
 
             @Override
             public void onFailure(Call<List<Rent>> call, Throwable t) {
-                Toast.makeText(MyRoom.this, "Lỗi kết nối", Toast.LENGTH_SHORT).show();
+               Toast.makeText(MyRoom.this, "Lỗi kết nối", Toast.LENGTH_SHORT).show();
                 Log.e("TAG", "onFailureRoomFavourite: " + t.getMessage());
                 hideProgressBar();
             }
@@ -88,5 +102,10 @@ public class MyRoom extends AppCompatActivity {
     }
     private void hideProgressBar() {
         progressBarList.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(this, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }

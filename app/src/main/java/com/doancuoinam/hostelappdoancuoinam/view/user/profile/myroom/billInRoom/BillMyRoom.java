@@ -2,9 +2,11 @@ package com.doancuoinam.hostelappdoancuoinam.view.user.profile.myroom.billInRoom
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,14 +20,18 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.TotalBill;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.empty.EmptyActivity;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class BillMyRoom extends AppCompatActivity {
+public class BillMyRoom extends AppCompatActivity implements ToastInterface {
     RecyclerView recyclerView;
     AdapterBill adapterBill;
     @Override
@@ -48,9 +54,16 @@ public class BillMyRoom extends AppCompatActivity {
             public void onResponse(Call<List<TotalBill>> call, Response<List<TotalBill>> response) {
                 if (response.isSuccessful()) {
                     List<TotalBill> totalBills = response.body();
-                   adapterBill.setDataBill(totalBills);
+                    if (totalBills.isEmpty()){
+                        Intent intent = new Intent(BillMyRoom.this, EmptyActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else {
+                        adapterBill.setDataBill(totalBills);
+                    }
                 } else {
-                    Toast.makeText(BillMyRoom.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
+                    //null
+                    createCustomToast("Bạn Chưa có Hoá đơn!", "", MotionToastStyle.INFO);
                 }
             }
 
@@ -74,5 +87,10 @@ public class BillMyRoom extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(this, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }

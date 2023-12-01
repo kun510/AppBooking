@@ -154,4 +154,13 @@
     <string name="khuvuchome">"地域を選択: "</string>
     <string name="txtmail">電話に送信されたコードを入力してください</string>
     <string name="nameUser">登録する</string>
+    <string name="chat">英語を選択...</string>
+    <string name="Bad">悪い</string>
+    <string name="Not_Bad">悪くない</string>
+    <string name="Nice">ニース！</string>
+    <string name="Good">よくやった！</string>
+    <string name="Awesome">素晴らしい！</string>
+    <string name="Rate">サービスを評価する</string>
+    <string name="phản_hồi">フィードバックをお聞かせください</string>
+    <string name="review">フラグ</string>
 </resources>

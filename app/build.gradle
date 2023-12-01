@@ -81,6 +81,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:18.2.0'
     implementation 'com.google.android.gms:play-services-location:21.0.1'
     implementation 'com.google.maps.android:android-maps-utils:0.5+'
+
     //RxJava
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
     implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
@@ -157,4 +158,12 @@ dependencies {
     //RecyclerView
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Toast
+    implementation 'com.github.Spikeysanju:MotionToast:1.4'
+
+    //Rating
+    implementation 'com.github.vimalcvs:Material-Smart-Rating:6.0.0'
+
+
 }

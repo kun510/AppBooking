@@ -1,6 +1,7 @@
 package com.doancuoinam.hostelappdoancuoinam.view.user.intro;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -11,6 +12,10 @@ import android.widget.ProgressBar;
 
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.language.LanguageManager;
+
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
+
 
 public class ScreenIntro1 extends AppCompatActivity {
     ProgressBar progressBar;
@@ -24,6 +29,7 @@ public class ScreenIntro1 extends AppCompatActivity {
         progressBar.setMax(100);
         final Handler handler = new Handler();
         handler.postDelayed(() -> loadNextScreen(), 6000);
+
     }
     private void loadNextScreen() {
         Intent intent = new Intent(ScreenIntro1.this, ScreenIntro2.class);

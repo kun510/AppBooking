@@ -3,25 +3,32 @@ package com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message;
 public class MessageList {
     private String name;
     private String phone;
+    private String avt;
     private String lastMessage;
-    private String email;
     private int unseenMessage;
 
-    public MessageList(String name, String phone, String lastMessage,String email ,int unseenMessage) {
-        this.name = name;
+
+    public MessageList(String phone, String lastMessage) {
         this.phone = phone;
         this.lastMessage = lastMessage;
-        this.email = email;
-        this.unseenMessage = unseenMessage;
+
     }
 
-    public String getEmail() {
-        return email;
+    public MessageList(String name, String phone, String avt) {
+        this.name = name;
+        this.phone = phone;
+        this.avt = avt;
     }
 
-    public void setEmail(String profilePic) {
-        email = profilePic;
+
+
+    public MessageList(String userName, String userPhoneNumber, String userAvt, String lastMessage) {
+        this.name = userName;
+        this.phone = userPhoneNumber;
+        this.avt = userAvt;
+        this.lastMessage = lastMessage;
     }
+
 
     public String getName() {
         return name;
@@ -37,6 +44,14 @@ public class MessageList {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getAvt() {
+        return avt;
+    }
+
+    public void setAvt(String avt) {
+        this.avt = avt;
     }
 
     public String getLastMessage() {

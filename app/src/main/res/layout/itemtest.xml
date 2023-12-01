@@ -14,26 +14,26 @@
         app:layout_constraintTop_toBottomOf="@id/imageShow" />
 
     <View
+        android:layout_marginTop="@dimen/size10dp"
         android:id="@+id/viewBackground"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/tv_show_background"
         android:paddingBottom="@dimen/size20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/TextName" />
-
+        app:layout_constraintBottom_toBottomOf="@id/imageShow"
+        app:layout_constraintTop_toTopOf="@id/imageShow" />
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:layout_width="110dp"
+        android:layout_marginTop="@dimen/size10dp"
+        android:layout_width="170dp"
         android:id="@+id/imageShow"
         android:contentDescription="@string/khuvuc"
         android:scaleType="centerCrop"
-        android:src="@drawable/heart"
+        android:src="@drawable/detail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="15dp"
         app:riv_corner_radius="6dp"
-        android:layout_height="152dp"/>
+        android:layout_height="150dp" />
     <TextView
         android:text="aaaaaa"
         android:id="@+id/TextName"

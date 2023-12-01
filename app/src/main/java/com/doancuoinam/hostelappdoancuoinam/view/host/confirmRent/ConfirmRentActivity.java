@@ -47,7 +47,7 @@ public class ConfirmRentActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
                     progressBar.setVisibility(View.GONE);
                     List<Rent> rentList = response.body();
-                    confirmAdapter.setDataRentListConfirm(ConfirmRentActivity.this,rentList);
+                    confirmAdapter.setDataRentListConfirm(ConfirmRentActivity.this,ConfirmRentActivity.this,rentList);
                 }else {
                     progressBar.setVisibility(View.GONE);
                     Toast.makeText(ConfirmRentActivity.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clipChildren="false"
+    android:background="@color/white"
     android:clipToPadding="false"
     android:id="@+id/liner"
     android:padding="@dimen/size10dp"
@@ -98,13 +99,26 @@
                         android:layout_width="@dimen/size24dp"
                         android:layout_height="@dimen/size24dp"/>
                     <TextView
-                        android:padding="@dimen/size10dp"
+                        android:paddingTop="@dimen/size10dp"
+                        android:paddingBottom="@dimen/size10dp"
                         android:layout_toEndOf="@id/numberroom"
                         android:layout_below="@id/descriptionRoom"
                         android:id="@+id/numberRoom"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/xamne"
                         android:text="@string/item_wifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:paddingTop="@dimen/size10dp"
+                        android:paddingRight="@dimen/size10dp"
+                        android:paddingBottom="@dimen/size10dp"
+                        android:textSize="15sp"
+                        android:layout_toEndOf="@id/numberRoom"
+                        android:layout_below="@id/descriptionRoom"
+                        android:id="@+id/phong"
+                        android:textColor="@color/xamne"
+                        android:text="  phòng"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -117,7 +131,9 @@
                         android:layout_width="@dimen/size20dp"
                         android:layout_height="@dimen/size20dp"/>
                     <TextView
-                        android:padding="@dimen/size10dp"
+                        android:paddingTop="@dimen/size10dp"
+                        android:paddingBottom="@dimen/size10dp"
+                        android:gravity="center"
                         android:layout_toEndOf="@id/imgElectricitybill"
                         android:layout_below="@id/numberRoom"
                         android:id="@+id/electricitybill"
@@ -126,7 +142,18 @@
                         android:text="@string/item_airconditioner"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
-
+                  <TextView
+                      android:paddingTop="@dimen/size10dp"
+                      android:paddingRight="@dimen/size10dp"
+                      android:paddingBottom="@dimen/size10dp"
+                      android:textSize="15sp"
+                        android:layout_toEndOf="@id/electricitybill"
+                        android:layout_below="@id/numberRoom"
+                        android:id="@+id/tiendien"
+                        android:textColor="@color/xamne"
+                        android:text=" /kWh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <ImageView
                         android:layout_marginTop="20dp"
                         android:id="@+id/billwater"
@@ -145,7 +172,17 @@
                         android:layout_marginLeft="10dp"
                         android:text="@string/item_bath"
                         android:textColor="@color/xamne" />
-
+                    <TextView
+                        android:paddingTop="@dimen/size10dp"
+                        android:paddingRight="@dimen/size10dp"
+                        android:paddingBottom="@dimen/size10dp"
+                        android:textSize="15sp"
+                        android:layout_toEndOf="@id/waterBill"
+                        android:layout_below="@id/electricitybill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" /Người"
+                        android:textColor="@color/xamne" />
 
                     <ImageView
                         android:layout_marginTop="20dp"
@@ -155,15 +192,41 @@
                         android:layout_width="@dimen/size20dp"
                         android:layout_height="@dimen/size20dp"/>
                     <TextView
-                        android:padding="@dimen/size10dp"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/size10dp"
+                        android:paddingBottom="@dimen/size10dp"
+                        android:textSize="15sp"
                         android:layout_toEndOf="@id/peopleinroom"
                         android:layout_below="@id/waterBill"
-                        android:id="@+id/numberPeople"
+                        android:id="@+id/nguoine"
                         android:layout_marginLeft="10dp"
+                        android:textColor="@color/xamne"
+                        android:text="Max  "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:gravity="center"
+                        android:paddingTop="@dimen/size10dp"
+                        android:paddingBottom="@dimen/size10dp"
+                        android:layout_toEndOf="@id/nguoine"
+                        android:layout_below="@id/waterBill"
+                        android:id="@+id/numberPeople"
                         android:textColor="@color/xamne"
                         android:text="@string/item_bath"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+                <TextView
+                    android:gravity="center"
+                    android:paddingTop="@dimen/size10dp"
+                    android:paddingRight="@dimen/size10dp"
+                    android:paddingBottom="@dimen/size10dp"
+                    android:textSize="15sp"
+                    android:layout_toEndOf="@id/numberPeople"
+                    android:layout_below="@id/waterBill"
+                    android:textColor="@color/xamne"
+                    android:text="  Người"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
                     <TextView
                         android:layout_toEndOf="@id/peopleinroom"
@@ -225,7 +288,16 @@
                         android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"/>
-
+                    <TextView
+                        android:textColor="@color/bgContent"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textSize="20sp"
+                        android:layout_gravity="bottom"
+                        android:id="@+id/txtAdrr"
+                        android:text="21 Tiên Sơn 17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
                     <ImageView
                         android:layout_gravity="bottom|right"
                         android:layout_marginRight="@dimen/size10dp"
@@ -235,6 +307,32 @@
                         android:id="@+id/check"
                         android:layout_width="30dp"
                         android:layout_height="30dp" />
+                    <LinearLayout
+                        android:paddingTop="-10dp"
+                        android:layout_gravity="right"
+                        android:padding="5dp"
+                        android:id="@+id/linearLayout4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boderstard"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/white"
+                            android:id="@+id/numberStar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.5"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/star" />
+                    </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
             </RelativeLayout>
         </FrameLayout>

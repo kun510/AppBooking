@@ -1,32 +1,32 @@
 
-m
-java:S1192v"KDefine a constant instead of duplicating this literal "api logg: " 4 times.(ÀëÅ½ÿÿÿÿÿ8 Ùìé¿1
-m	java:S117a"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ÿŞ8¡Ùìé¿1
-n	java:S117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´§Âª8¡Ùìé¿1
-s	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜûÜüúÿÿÿÿ8¡Ùìé¿1
-s	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜûÜüúÿÿÿÿ8¡Ùìé¿1
+n
+java:S1192€"KDefine a constant instead of duplicating this literal "api logg: " 4 times.(ÀëÅ½ÿÿÿÿÿ8åÕÃ‹Â1
+m	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„ÿŞ8æÕÃ‹Â1
+n	java:S117‘"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´§Âª8æÕÃ‹Â1
+s	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜûÜüúÿÿÿÿ8æÕÃ‹Â1
+s	java:S117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜûÜüúÿÿÿÿ8æÕÃ‹Â1
 J
-java:S1604="(Make this anonymous inner class a lambda( ìİÒøÿÿÿÿ8¡Ùìé¿1
+java:S1604C"(Make this anonymous inner class a lambda( ìİÒøÿÿÿÿ8æÕÃ‹Â1
 E
-java:S1604C"(Make this anonymous inner class a lambda(êø·Î8¡Ùìé¿1
-n	java:S101*"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Î¾”îüÿÿÿÿ8¡Ùìé¿1
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ€Œ°8¢Ùìé¿1
-x	java:S116Q"\Rename this field "name_rent_confirm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓĞ˜˜8¬Úìé¿1
-q	java:S116Q"URename this field "phone_rent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓĞ˜˜8¬Úìé¿1
+java:S1604I"(Make this anonymous inner class a lambda(êø·Î8æÕÃ‹Â1
+i	java:S101."MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(º³Ç8æÕÃ‹Â1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ€Œ°8çÕÃ‹Â1
+x	java:S116\"\Rename this field "name_rent_confirm" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓĞ˜˜8ôÖÃ‹Â1
+q	java:S116\"URename this field "phone_rent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓĞ˜˜8ôÖÃ‹Â1
 k
-java:S1659Q"NDeclare "name_rent_confirm" and all following declarations on a separate line.(ÓĞ˜˜8­Úìé¿1
+java:S1659\"NDeclare "name_rent_confirm" and all following declarations on a separate line.(ÓĞ˜˜8öÖÃ‹Â1
 A
-java:S1659R"$Declare "cancel" on a separate line.(ä¾ü‹8­Úìé¿1
+java:S1659]"$Declare "cancel" on a separate line.(ä¾ü‹8öÖÃ‹Â1
 b
-java:S1854h"@Remove this useless assignment to local variable "responseData".(•€ñøÿÿÿÿ8¯Úìé¿1
+java:S1854s"@Remove this useless assignment to local variable "responseData".(•€ñøÿÿÿÿ8øÖÃ‹Â1
 S
-java:S1481h"1Remove this unused "responseData" local variable.(•€ñøÿÿÿÿ8°Úìé¿1
+java:S1481s"1Remove this unused "responseData" local variable.(•€ñøÿÿÿÿ8ùÖÃ‹Â1
 c
-java:S1854"@Remove this useless assignment to local variable "responseData".(•€ñøÿÿÿÿ8²Úìé¿1
+java:S1854˜"@Remove this useless assignment to local variable "responseData".(•€ñøÿÿÿÿ8ûÖÃ‹Â1
 T
-java:S1481"1Remove this unused "responseData" local variable.(•€ñøÿÿÿÿ8²Úìé¿1
-X	java:S125›"<This block of commented-out lines of code should be removed.(’ëÇK8³Úìé¿1
-j	java:S100¬"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôı”g8³Úìé¿1
-p	java:S100·"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¶ëÔıÿÿÿÿ8´Úìé¿1
-k	java:S100Ã"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢§ò½8µÚìé¿1
-Y	java:S125Ê"<This block of commented-out lines of code should be removed.(ÖïÁ¨8µÚìé¿1
+java:S1481˜"1Remove this unused "responseData" local variable.(•€ñøÿÿÿÿ8ûÖÃ‹Â1
+X	java:S125¥"<This block of commented-out lines of code should be removed.(’ëÇK8üÖÃ‹Â1
+j	java:S100¶"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôı”g8ıÖÃ‹Â1
+p	java:S100Á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ¶ëÔıÿÿÿÿ8şÖÃ‹Â1
+k	java:S100Í"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢§ò½8şÖÃ‹Â1
+Y	java:S125Ô"<This block of commented-out lines of code should be removed.(ÖïÁ¨8ÿÖÃ‹Â1

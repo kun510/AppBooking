@@ -41,7 +41,7 @@
     <string name="tenroom">21 Tien Son</string>
     <string name="btnselect">Search a room</string>
     <string name="slu_search">Find a perfect place to stay</string>
-    <string name="txt_people">People</string>
+    <string name="txt_people"> People</string>
     <string name="txt_guest">Guests</string>
     <string name="txt_price">Price</string>
     <string name="edt_price">15$</string>
@@ -142,6 +142,7 @@
     <!-- Strings used for fragments for navigation -->
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="review">review</string>
     <string name="sendAdmin">Hãy gửi cho Tôi vấn đề bạn thắc mắc</string>
     <string name="Welcome_t">Xin Chào bạn! Tôi có thể giúp gì cho bạn</string>
     <string name="tiengtrung">Chọn Ngôn Ngữ Tiếng Trung</string>
@@ -152,4 +153,13 @@
     <string name="ch_n_khu_v_c">Chọn Khu Vực</string>
     <string name="register">Register</string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="chat">Type something....</string>
+    <string name="Bad">Bad</string>
+    <string name="Not_Bad">Not Bad</string>
+    <string name="Nice">Nice!</string>
+    <string name="Good">Good Job!</string>
+    <string name="Awesome">Awesome!</string>
+    <string name="Rate">Rate The Service</string>
+    <string name="phản_hồi">Hãy cho tôi xin phản hồi</string>
+
 </resources>

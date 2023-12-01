@@ -1,5 +1,6 @@
 package com.doancuoinam.hostelappdoancuoinam.view.user.profile.myroom;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
 import com.doancuoinam.hostelappdoancuoinam.R;
+import com.doancuoinam.hostelappdoancuoinam.empty.EmptyActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.user.profile.myroom.overviewMyyRoom.ChoseOverviewMyRoom;
 import com.squareup.picasso.Picasso;
 
@@ -20,8 +22,9 @@ import java.util.List;
 
 public class myRoomAdapter extends RecyclerView.Adapter<myRoomAdapter.RoomViewHolder>{
     private List<Rent> rooms;
-
-    public void setMyRooms(List<Rent> rooms) {
+    Context context;
+    public void setMyRooms(List<Rent> rooms,Context context) {
+        this.context = context;
         this.rooms = rooms;
         notifyDataSetChanged();
 
@@ -44,7 +47,9 @@ public class myRoomAdapter extends RecyclerView.Adapter<myRoomAdapter.RoomViewHo
                 if (clickedPosition != RecyclerView.NO_POSITION) {
 //                    String message = "Nút được nhấn ở vị trí: " + clickedPosition;
 //                    Toast.makeText(v.getContext(), message, Toast.LENGTH_SHORT).show();
+                    String idMyRoom = String.valueOf(holder.roomId);
                     Intent intent =new Intent(v.getContext(), ChoseOverviewMyRoom.class);
+                    intent.putExtra("idMyroom",idMyRoom);
                     v.getContext().startActivity(intent);
                 }
             }
@@ -60,7 +65,7 @@ public class myRoomAdapter extends RecyclerView.Adapter<myRoomAdapter.RoomViewHo
         ImageView imgRoom;
         TextView priceRoom,numberPeople,electricityBill,waterBill,numberRoom,descriptionRoom,areaRoom,addrRoom;
         Button btn_manager;
-
+        long roomId;
         public RoomViewHolder(@NonNull View itemView) {
             super(itemView);
             imgRoom = itemView.findViewById(R.id.imgRoom);
@@ -85,6 +90,7 @@ public class myRoomAdapter extends RecyclerView.Adapter<myRoomAdapter.RoomViewHo
             numberRoom.setText(rent.getRoom().getNumberRoom() + " Room");
             descriptionRoom.setText("$"+String.valueOf(rent.getRoom().getDescription()));
             priceRoom.setText("$"+String.valueOf(rent.getRoom().getPrice()));
+            roomId = rent.getRoom().getId();
         }
     }
 }

@@ -1,0 +1,9 @@
+
+G
+java:S1874"1Remove this use of "AsyncTask"; it is deprecated.(•¹ß¡
+Q
+java:S1874";Remove this use of "getFromLocationName"; it is deprecated.(¦ğõÌ
+Y
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(¦Áøÿÿÿÿ
+_
+java:S1874%"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Óµ©}

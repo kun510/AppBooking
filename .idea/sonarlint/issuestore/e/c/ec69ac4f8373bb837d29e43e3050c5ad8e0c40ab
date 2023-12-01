@@ -1,0 +1,38 @@
+
+\
+java:S1192\"FDefine a constant instead of duplicating this literal "Error" 4 times.(È¢™
+P
+java:S1141w"5Extract this nested try block into a separate method.(´Ûõ“ûÿÿÿÿ
+>
+java:S16045"(Make this anonymous inner class a lambda(İÇ£ 
+=
+java:S1604<"(Make this anonymous inner class a lambda(èŸ½
+?
+java:S1604Ã"(Make this anonymous inner class a lambda(Ï¤â“
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Õàï¤ùÿÿÿÿ8…š´¬Â1
+Y
+java:S1874L">Remove this use of "startActivityForResult"; it is deprecated.(“Œñ¬ÿÿÿÿÿ
+_
+java:S1874P"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾
+g
+java:S3776P"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¹Î¾
+l
+java:S3252°"PUse static access with "android.view.ViewGroup$LayoutParams" for "MATCH_PARENT".(„¸ğÂşÿÿÿÿ
+g
+java:S3252±"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(Ø®“œ
+g
+java:S3252·"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(âµÏş
+g
+java:S3252À"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(Úêß
+n
+java:S3776Ö"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(÷Ñå¬ùÿÿÿÿ
+E
+java:S1874Û".Remove this use of "create"; it is deprecated.(ÍË¬Ÿ
+E
+java:S1874Ü".Remove this use of "create"; it is deprecated.(‰ÏïÉ
+Z
+java:S1155á">Use isEmpty() to check whether the collection is empty or not.(ş‹¤¸şÿÿÿÿ
+E
+java:S1874ç".Remove this use of "create"; it is deprecated.(í¦ıÉ
+U
+java:S1155ö">Use isEmpty() to check whether the collection is empty or not.(ª¶Ì

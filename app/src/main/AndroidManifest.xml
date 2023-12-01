@@ -28,10 +28,41 @@
         android:theme="@style/Theme.Design.NoActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".view.host.fragment.list.listExtends.listRoom.ListRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.report.reportBoardingHostel.ReportBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.report.reportRoom.ReportRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.rating.ListReviewInRoom.ListReviewInRoomActivity"
+            android:exported="true">
 
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".view.user.rating.RatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".empty.EmptyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.fragment.message.searchMsg.SearchMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.fragment.message.chat.ChatActivity"
+            android:exported="false" />
         <activity
             android:name=".chatSupport.ChatSupportActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".changePassword.OtpConfirmChangePasswordActivity"
             android:exported="false" />
@@ -60,7 +91,7 @@
             android:name=".view.user.room.listImgInRoom.OverviewRoom"
             android:exported="false" />
         <activity
-            android:name=".view.user.room.AddListImgByRoom"
+            android:name=".view.host.addRoom.AddListImgByRoom"
             android:exported="true" />
         <activity
             android:name=".view.user.profile.myroom.overviewMyyRoom.ChoseOverviewMyRoom"
@@ -92,16 +123,6 @@
         <activity
             android:name=".view.host.confirmRent.ConfirmRentActivity"
             android:exported="false" />
-        <activity
-            android:name=".compose.account.OtpRegisterActivity"
-            android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.HostelAppDoanCuoiNam" />
-        <activity
-            android:name=".compose.account.RegisterCompose"
-            android:exported="true"
-            android:label="@string/title_activity_register_compose"
-            android:theme="@style/Theme.HostelAppDoanCuoiNam" />
         <activity
             android:name=".account.OtpRegister"
             android:exported="false"

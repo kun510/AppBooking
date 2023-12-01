@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.doancuoinam.hostelappdoancuoinam.BaseActivity;
@@ -24,6 +25,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseToken;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 import com.doancuoinam.hostelappdoancuoinam.view.user.room.listImgInRoom.OverviewRoom;
 
 
@@ -38,11 +40,15 @@ import java.util.Map;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class confirmAdapter extends RecyclerView.Adapter<confirmAdapter.ViewHolder> {
+public class confirmAdapter extends RecyclerView.Adapter<confirmAdapter.ViewHolder> implements ToastInterface {
     List<Rent> rentList;
     Context context;
-    public void setDataRentListConfirm(Context context, List<Rent> rentList){
+    Activity activity;
+    public void setDataRentListConfirm(Activity activity,Context context, List<Rent> rentList){
+        this.activity = activity;
         this.context = context;
         this.rentList = rentList;
         notifyDataSetChanged();
@@ -77,6 +83,11 @@ public class confirmAdapter extends RecyclerView.Adapter<confirmAdapter.ViewHold
         return rentList != null ? rentList.size() : 0;
     }
 
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(activity, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(context, www.sanju.motiontoast.R.font.helvetica_regular));
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView idRoom,name_rent_confirm,phone_rent;
         ImageView accept,cancel;
@@ -102,19 +113,18 @@ public class confirmAdapter extends RecyclerView.Adapter<confirmAdapter.ViewHold
             public void onResponse(Call<ResponseAll> call, Response<ResponseAll> response) {
                 if (response.isSuccessful()) {
                     ResponseAll responseData = response.body();
-                    Toast.makeText(context, "Chấp Thuận Thành Công", Toast.LENGTH_SHORT).show();
+                    createCustomToast("success 😍", "Chấp Thuận Thành Công!", MotionToastStyle.SUCCESS);
                     NotificationRentLogDeviceOk(rent);
                     Intent intent = ((Activity) context).getIntent();
                     ((Activity) context).finish();
                     ((Activity) context).startActivity(intent);
                 } else {
-                    Toast.makeText(context, "Status update failed", Toast.LENGTH_SHORT).show();
+                    createCustomToast("Failed ☹️", "Status update failed", MotionToastStyle.ERROR);
                     try {
                         String errorBody = response.errorBody().string();
                         JSONObject jsonObject = new JSONObject(errorBody);
                         String errorMessage = jsonObject.getString("message");
-
-                        Toast.makeText(context, "Status update failed: " + errorMessage, Toast.LENGTH_SHORT).show();
+                        createCustomToast("Failed ☹️", "Status update failed: " + errorMessage, MotionToastStyle.ERROR);
                         Log.d("TAG", "api logg: " + errorMessage);
                         Log.d("TAG", "api logg: " + errorBody);
                     } catch (IOException | JSONException e) {

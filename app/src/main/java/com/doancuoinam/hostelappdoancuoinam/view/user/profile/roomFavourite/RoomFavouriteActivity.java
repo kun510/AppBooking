@@ -2,9 +2,11 @@ package com.doancuoinam.hostelappdoancuoinam.view.user.profile.roomFavourite;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -20,6 +22,9 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.RoomFavourite;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
+import com.doancuoinam.hostelappdoancuoinam.empty.EmptyActivity;
+import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
+import com.doancuoinam.hostelappdoancuoinam.view.user.profile.myroom.MyRoom;
 
 
 import java.util.List;
@@ -27,8 +32,10 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import www.sanju.motiontoast.MotionToast;
+import www.sanju.motiontoast.MotionToastStyle;
 
-public class RoomFavouriteActivity extends AppCompatActivity {
+public class RoomFavouriteActivity extends AppCompatActivity implements ToastInterface {
 
     RecyclerView recyclerRoomFavourite;
     @Override
@@ -40,7 +47,6 @@ public class RoomFavouriteActivity extends AppCompatActivity {
         setToolbar(toolbar,nameTitle);
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         long userID = sharedPreferences.getLong("userId", 0);
-        Toast.makeText(this, ""+userID, Toast.LENGTH_SHORT).show();
         recyclerRoomFavourite = findViewById(R.id.recyclerRoomFavourite);
         recyclerRoomFavourite.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,false));
         RoomFavouriteAdapter roomFavouriteAdapter = new RoomFavouriteAdapter();
@@ -53,9 +59,16 @@ public class RoomFavouriteActivity extends AppCompatActivity {
             public void onResponse(Call<List<RoomFavourite>> call, Response<List<RoomFavourite>> response) {
                 if (response.isSuccessful()) {
                     List<RoomFavourite> rooms = response.body();
-                    roomFavouriteAdapter.setRoomsFavouriteList(rooms);
+                    if (rooms.isEmpty()){
+                        Intent intent = new Intent(RoomFavouriteActivity.this, EmptyActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }else {
+                        roomFavouriteAdapter.setRoomsFavouriteList(rooms,RoomFavouriteActivity.this);
+                    }
                 } else {
-                    Toast.makeText(RoomFavouriteActivity.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
+                    createCustomToast("Bạn Chưa Thích Phòng Nào Cả!", "", MotionToastStyle.INFO);
+                   // Toast.makeText(RoomFavouriteActivity.this, "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -81,5 +94,10 @@ public class RoomFavouriteActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void createCustomToast(String message, String description, MotionToastStyle style) {
+        MotionToast.Companion.createToast(this, message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(this, www.sanju.motiontoast.R.font.helvetica_regular));
     }
 }
