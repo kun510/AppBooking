@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="250dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/rounded_background"
@@ -84,9 +84,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_weight="5"
+            android:layout_weight="2"
             android:textStyle="bold"
-            android:gravity="left"
+            android:gravity="center"
             android:layout_gravity="left"
             android:id="@+id/btnClose"
             android:layout_width="80dp"
@@ -94,9 +94,19 @@
             android:layout_height="wrap_content"
             android:text="Đóng" />
         <TextView
-            android:layout_weight="5"
+            android:layout_weight="3"
             android:textStyle="bold"
-            android:gravity="right"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:id="@+id/cancelRent"
+            android:layout_width="80dp"
+            android:textColor="@color/mauchuxanh"
+            android:layout_height="wrap_content"
+            android:text="Hết Thuê" />
+        <TextView
+            android:layout_weight="4"
+            android:textStyle="bold"
+            android:gravity="center"
             android:layout_gravity="right"
             android:id="@+id/btnAddBill"
             android:layout_width="80dp"

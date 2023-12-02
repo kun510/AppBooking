@@ -127,8 +127,6 @@ fapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/room/roomList/
 `app/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/host/fragment/list/ListFragment.java,3\3\33f4bb65b86c84650b91fd88ae5cde50d54d6aef
 ì
 capp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/host/addRoom/AddRoomByHostActivity.java,c\b\cbeb46f8c6a05e3aa52caf4fd3a87a621b38828f
-ã
-[app/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/room/AddListImgByRoom.java,6\4\64192d8d75b10c7ae98eb8c7cb18f7b0b8c358a9
 Ö
 Uapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/Model/Request/AddBoarding.java,6\8\685bb6dbc44f107d66ccd2d2e8bddd31f4d15377
 ≠
@@ -230,10 +228,6 @@ eapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/room/roomListS
 bapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/profile/myroom/myRoomAdapter.java,b\e\be2bf2cb9666c9a423e2a857117a6b0032b842d9
 ®
 xapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/profile/myroom/overviewMyyRoom/ChoseOverviewMyRoom.java,e\e\eea39d070f0231ee657ce4ba7dff71071fd13a00
-Å
-Qapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/rating/RatingActivity.java,7\5\757d91470940980a592c6c538214004a64ed0313
-ú
-lapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/rating/ListReviewInRoom/ListReviewInRoomActivity.java,c\b\cb1741eb7bb96aef56bd876794726ca74fb49d59
 ã
 [app/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/rating/RatingActivity.java,d\7\d72a61c379807a9fa930b50ae8e51a00e4bf468f
 ö

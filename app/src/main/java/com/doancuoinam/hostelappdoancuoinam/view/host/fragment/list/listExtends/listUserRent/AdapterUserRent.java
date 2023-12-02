@@ -1,24 +1,37 @@
 package com.doancuoinam.hostelappdoancuoinam.view.host.fragment.list.listExtends.listUserRent;
 
+import static java.security.AccessController.getContext;
+
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
+import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseAll;
 import com.doancuoinam.hostelappdoancuoinam.R;
+import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
+import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
 import com.doancuoinam.hostelappdoancuoinam.view.host.addBill.AddBillActivity;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AdapterUserRent extends RecyclerView.Adapter<AdapterUserRent.ViewHolder>{
     List<Rent> rentList;
@@ -95,6 +108,7 @@ public class AdapterUserRent extends RecyclerView.Adapter<AdapterUserRent.ViewHo
         ImageView imgAvtDialog= customLayout.findViewById(R.id.imgAvtDialog);
         TextView btnClose = customLayout.findViewById(R.id.btnClose);
         TextView btnAddBill = customLayout.findViewById(R.id.btnAddBill);
+        TextView cancelRent = customLayout.findViewById(R.id.cancelRent);
         nameUser.setText(rent.getUser().getName());
         phoneDialog.setText(rent.getUser().getPhone());
         NumberRoom.setText(String.valueOf(rent.getRoom().getId()));
@@ -108,6 +122,32 @@ public class AdapterUserRent extends RecyclerView.Adapter<AdapterUserRent.ViewHo
                 alertDialog.dismiss();
             }
         });
+        cancelRent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setTitle("Xác nhận");
+                builder.setMessage("Bạn có chắc chắn đã hết thuê chưa?");
+                builder.setPositiveButton("Xác nhận", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        long idRent = rent.getId();
+                        long idRoom =Long.valueOf(idRoomRent);
+                        EndRent(idRoom,idRent);
+                        dialog.dismiss();
+                        alertDialog.dismiss();
+                    }
+                });
+                builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
         btnAddBill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,5 +159,24 @@ public class AdapterUserRent extends RecyclerView.Adapter<AdapterUserRent.ViewHo
             }
         });
         alertDialog.show();
+    }
+    private void EndRent(long idRoom, long idRent){
+        ApiService apiService = ApiClient.getClient().create(ApiService.class);
+        Call<ResponseAll> call = apiService.endRent(idRoom,idRent);
+        call.enqueue(new Callback<ResponseAll>() {
+            @Override
+            public void onResponse(Call<ResponseAll> call, Response<ResponseAll> response) {
+                if (response.isSuccessful()) {
+                    ResponseAll result = response.body();
+                    Toast.makeText(context, result.getMessage(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(context, "Huỷ Thuê Thất bại", Toast.LENGTH_SHORT).show();
+                }
+            }
+            @Override
+            public void onFailure(Call<ResponseAll> call, Throwable t) {
+                Toast.makeText(context, "Lỗi HTTP", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

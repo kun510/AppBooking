@@ -1,7 +1,5 @@
 package com.doancuoinam.hostelappdoancuoinam.view.user.profile;
 
-import static java.security.AccessController.getContext;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -16,24 +14,22 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Users;
 import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseOtp;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
-import com.doancuoinam.hostelappdoancuoinam.changePassword.OtpConfirmChangePasswordActivity;
+import com.doancuoinam.hostelappdoancuoinam.account.Login;
+import com.doancuoinam.hostelappdoancuoinam.account.changePassword.OtpConfirmChangePasswordActivity;
 import com.doancuoinam.hostelappdoancuoinam.updateUser.UpdateUser;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.squareup.picasso.Picasso;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SettingProfile extends AppCompatActivity {
-    LinearLayout editProfile,changePass,TurnNoti,about,privacy,terms;
+    LinearLayout editProfile,changePass,TurnNoti,about,privacy,terms,logout;
     ShapeableImageView avt;
     TextView nameUser;
     ProgressBar progress_otp;
@@ -45,13 +41,22 @@ public class SettingProfile extends AppCompatActivity {
         changePass = findViewById(R.id.changePass);
         avt = findViewById(R.id.avtProfile);
         nameUser = findViewById(R.id.nameUser);
+        logout = findViewById(R.id.logout);
         progress_otp = findViewById(R.id.progress_otp);
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String imageUrl = sharedPreferences.getString("avt", "");
         Picasso.get().load(imageUrl).into(avt);
         String name = sharedPreferences.getString("name","");
         nameUser.setText(name);
-
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingProfile.this, Login.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

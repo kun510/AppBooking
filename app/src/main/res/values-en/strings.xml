@@ -162,4 +162,5 @@
     <string name="Rate">Rate The Service</string>
     <string name="phản_hồi">Please give me feedback</string>
     <string name="review">Review</string>
+    <string name="logout">Logout</string>
 </resources>

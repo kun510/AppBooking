@@ -163,4 +163,5 @@
     <string name="Rate">评价服务</string>
     <string name="phản_hồi">请给我反馈</string>
     <string name="review">登记</string>
+    <string name="logout">忘记</string>
 </resources>

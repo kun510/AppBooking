@@ -32,22 +32,11 @@
             android:name=".view.host.fragment.list.listExtends.listRoom.ListRoomActivity"
             android:exported="false" />
         <activity
-            android:name=".view.user.report.reportBoardingHostel.ReportBoardingActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.user.report.reportRoom.ReportRoomActivity"
             android:exported="false" />
         <activity
             android:name=".view.user.rating.ListReviewInRoom.ListReviewInRoomActivity"
-            android:exported="true">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".view.user.rating.RatingActivity"
             android:exported="false" />
@@ -64,10 +53,10 @@
             android:name=".chatSupport.ChatSupportActivity"
             android:exported="false" />
         <activity
-            android:name=".changePassword.OtpConfirmChangePasswordActivity"
+            android:name=".account.changePassword.OtpConfirmChangePasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".changePassword.ChangePasswordActivity"
+            android:name=".account.changePassword.ChangePasswordActivity"
             android:exported="false" />
         <activity
             android:name=".updateUser.UpdateUser"

@@ -156,7 +156,6 @@ public class Map extends Fragment implements OnMapReadyCallback{
     }
 
 
-
     @Override
     public void onResume() {
         super.onResume();

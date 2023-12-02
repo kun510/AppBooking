@@ -37,6 +37,7 @@ import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
 import com.doancuoinam.hostelappdoancuoinam.view.host.addRoom.AddRoomByHostActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.user.fragment.message.searchMsg.SearchMessageActivity;
 import com.doancuoinam.hostelappdoancuoinam.view.user.map.GeocodingTask;
+import com.doancuoinam.hostelappdoancuoinam.view.user.rating.ListReviewInRoom.ListReviewInRoomActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -115,7 +116,15 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
         review.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = getIntent();
+                String  idRoom = intent.getStringExtra("idRoom");
+                String  numberStar = intent.getStringExtra("numberStar");
+                String imageUrl = getIntent().getStringExtra("selected_image_url");
+                Intent intentReview = new Intent(OverviewRoom.this, ListReviewInRoomActivity.class);
+                intentReview.putExtra("idRoom",idRoom);
+                intentReview.putExtra("numberStar",numberStar);
+                intentReview.putExtra("selected_image_url",imageUrl);
+                startActivity(intentReview);
             }
         });
     }

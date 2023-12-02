@@ -25,14 +25,10 @@ import com.doancuoinam.hostelappdoancuoinam.Model.Response.ResponseOtp;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
-import com.doancuoinam.hostelappdoancuoinam.changePassword.OtpConfirmChangePasswordActivity;
+import com.doancuoinam.hostelappdoancuoinam.account.Login;
+import com.doancuoinam.hostelappdoancuoinam.account.changePassword.OtpConfirmChangePasswordActivity;
 import com.doancuoinam.hostelappdoancuoinam.chatSupport.ChatSupportActivity;
 import com.doancuoinam.hostelappdoancuoinam.updateUser.UpdateUser;
-import com.doancuoinam.hostelappdoancuoinam.view.user.profile.Help;
-import com.doancuoinam.hostelappdoancuoinam.view.user.profile.SettingProfile;
-import com.doancuoinam.hostelappdoancuoinam.view.user.profile.language.Language;
-import com.doancuoinam.hostelappdoancuoinam.view.user.profile.myroom.MyRoom;
-import com.doancuoinam.hostelappdoancuoinam.view.user.profile.roomFavourite.RoomFavouriteActivity;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.squareup.picasso.Picasso;
 
@@ -48,14 +44,13 @@ public class ProfileHost extends Fragment {
     SwipeRefreshLayout swipeRefreshLayout ;
     ShapeableImageView avt;
     TextView nameUser;
-    LinearLayout editProfile,changePass,TurnNoti,about,help;
+    LinearLayout editProfile,changePass,TurnNoti,about,help,logout;
     ProgressBar progress_otp;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile_host, container, false);
         Mapping(view);
-
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
         SharedPreferences sharedPreferences = view.getContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
         long userID = sharedPreferences.getLong("userId", 0);
@@ -101,6 +96,7 @@ public class ProfileHost extends Fragment {
         progress_otp = view.findViewById(R.id.progress_otp);
         swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);
         help = view.findViewById(R.id.help);
+        logout = view.findViewById(R.id.logout);
     }
     private void eventChangePass(){
         changePass.setOnClickListener(new View.OnClickListener() {
@@ -178,6 +174,14 @@ public class ProfileHost extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ChatSupportActivity.class);
                 getContext().startActivity(intent);
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), Login.class);
+                getContext().startActivity(intent);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             }
         });
     }

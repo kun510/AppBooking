@@ -163,4 +163,5 @@
     <string name="Rate">サービスを評価する</string>
     <string name="phản_hồi">フィードバックをお聞かせください</string>
     <string name="review">フラグ</string>
+    <string name="logout">忘记</string>
 </resources>

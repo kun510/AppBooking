@@ -163,4 +163,5 @@
     <string name="Rate">Đánh giá dịch vụ</string>
     <string name="phản_hồi">Hãy cho tôi xin phản hồi</string>
     <string name="review">Đánh Giá</string>
+    <string name="logout">Đăng Xuất</string>
 </resources>

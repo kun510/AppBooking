@@ -266,6 +266,30 @@
                 android:layout_weight="1"
                 android:src="@drawable/back" />
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size30dp"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:gravity="left"
+                android:text="@string/logout"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/back" />
+        </LinearLayout>
         <ProgressBar
             android:visibility="gone"
             android:layout_marginTop="10dp"

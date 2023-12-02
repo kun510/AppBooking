@@ -6,6 +6,7 @@ import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ListandCoutRoom;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationApp;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.NotificationMessaging;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Rent;
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Review;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.ReviewRq;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.RoomFavourite;
@@ -72,6 +73,8 @@ public interface ApiService {
 
     @GET("/user/getallroom")
     Call<List<Room>> getRoomMap();
+    @GET("/user/allBoardingMap")
+    Call<List<Boarding_host>> getBoardingMap();
 
     @GET("/user/getusercurrent")
     Call<List<Users>> getUserCurrent(@Query("idUser") long idUser);
@@ -93,6 +96,8 @@ public interface ApiService {
 
     @GET("/host/RoomByHost")
     Call<List<Room>> getRoomByHost(@Query("hostId") long hostId);
+    @GET("user/getReview")
+    Call<List<Review>> getReviewByRoom(@Query("roomId") long roomId);
 
     @GET("/host/AllRoomByHost")
     Call<List<Room>> AllRoomByHost(@Query("hostId") long hostId,@Query("boardingId") long boardingId);
@@ -183,6 +188,11 @@ public interface ApiService {
     );
     @PUT("/host/cancelUserInRoomMobile")
     Call<ResponseAll> cancelUserInRoomMobile(
+            @Query("roomId") long roomId,
+            @Query("rentId") long rentId
+    );
+    @PUT("/host/rentOver")
+    Call<ResponseAll> endRent(
             @Query("roomId") long roomId,
             @Query("rentId") long rentId
     );
