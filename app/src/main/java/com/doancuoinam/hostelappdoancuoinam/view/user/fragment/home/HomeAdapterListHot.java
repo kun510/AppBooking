@@ -68,6 +68,7 @@ public class HomeAdapterListHot extends RecyclerView.Adapter<HomeAdapterListHot.
               String tiendien = String.valueOf(itemObject.getElectricBill());
               String tiennuoc = String.valueOf(itemObject.getWaterBill());;
               String songuoi =itemObject.getPeople();
+              String SPhone = itemObject.getUser().getPhone();
               String idHost = String.valueOf(itemObject.getUser().getId());
                 Intent intent = new Intent(view.getContext(), OverviewRoom.class);
                 intent.putExtra("selected_image_url", imageUrl);
@@ -80,6 +81,7 @@ public class HomeAdapterListHot extends RecyclerView.Adapter<HomeAdapterListHot.
                 intent.putExtra("tiennuocne",tiennuoc);
                 intent.putExtra("songuoine",songuoi);
                 intent.putExtra("idHost",idHost);
+                intent.putExtra("phoneHost",SPhone);
                 view.getContext().startActivity(intent);
             }
         });

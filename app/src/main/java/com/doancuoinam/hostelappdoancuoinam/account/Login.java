@@ -275,7 +275,8 @@ public class Login extends AppCompatActivity implements ToastInterface {
                             createCustomToast("Chờ Xác Nhận", "", MotionToastStyle.WARNING);
                             break;
                         case "User is banned":
-                            Toast.makeText(Login.this, "Chờ mở lệnh cấm", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "tài khoản của bạn đang bị hạn chế", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(Login.this, BaseActivityHost.class));
                             break;
                         default:
                             createCustomToast("Failed ☹️", "Unknown role or error!", MotionToastStyle.ERROR);

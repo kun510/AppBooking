@@ -212,10 +212,11 @@ public class AddListImgByRoom extends AppCompatActivity {
         }
     }
     private void sendApiRequest() {
-
-        long idRoomValue = 3;
-        long hostIdValue = 1;
-
+       // long idRoomValue = 3;
+     //   long hostIdValue = 1;
+        Intent intent = getIntent();
+        String idRoomValue = intent.getStringExtra("idRoom");
+        String hostIdValue = intent.getStringExtra("idHost");
         RequestBody idRoom = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(idRoomValue));
         RequestBody hostId = RequestBody.create(MediaType.parse("text/plain"), String.valueOf(hostIdValue));
 
@@ -256,6 +257,7 @@ public class AddListImgByRoom extends AppCompatActivity {
                     if (response.isSuccessful()) {
                         Log.d("API", "Success");
                         Toast.makeText(AddListImgByRoom.this, "Success", Toast.LENGTH_SHORT).show();
+                        onBackPressed();
                     } else {
                         try {
                             String errorBodyString = response.errorBody().string();

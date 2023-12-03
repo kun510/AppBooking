@@ -69,7 +69,7 @@ public class ListRoomActivity extends AppCompatActivity {
                     }else {
                         listRoom.setVisibility(View.VISIBLE);
                         empty.setVisibility(View.GONE);
-                        listRoomAdapter.setRooms(rooms);
+                        listRoomAdapter.setRooms(rooms,ListRoomActivity.this);
                     }
                 } else {
                     listRoom.setVisibility(View.GONE);

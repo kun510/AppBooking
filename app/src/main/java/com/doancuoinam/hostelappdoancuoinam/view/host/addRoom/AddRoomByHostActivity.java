@@ -63,7 +63,7 @@ public class AddRoomByHostActivity extends AppCompatActivity implements ToastInt
         Intent intent = getIntent();
         idBoardingIntent = intent.getStringExtra("boardingId");
         long boardingId = Long.parseLong(idBoardingIntent);
-        Toast.makeText(this, "aaa: "+boardingId, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "aaa: "+boardingId, Toast.LENGTH_SHORT).show();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this, android.R.layout.simple_spinner_item, listType
         );
@@ -229,7 +229,7 @@ public class AddRoomByHostActivity extends AppCompatActivity implements ToastInt
                     try {
                         String errorBodyString = response.errorBody().string();
                         Log.e("TAG", "Error Response Body: " + errorBodyString);
-                        createCustomToast("Fail", "Lỗi !"+ errorBodyString, MotionToastStyle.ERROR);
+                        Toast.makeText(AddRoomByHostActivity.this, "Tài khoản Bạn đang bị cấm", Toast.LENGTH_SHORT).show();
                         progressBar.setVisibility(View.GONE);
                     } catch (IOException e) {
                         Log.e("TAG", "Error Response error response body", e);

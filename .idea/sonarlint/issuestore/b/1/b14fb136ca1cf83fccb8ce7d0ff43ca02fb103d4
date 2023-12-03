@@ -1,16 +1,25 @@
 
-r	java:S117^"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÎÂ¢ùÿÿÿÿ8ùµ–™À1
+r	java:S117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÎÂ¢ùÿÿÿÿ8€ó¡ÏÂ1
 E
-java:S1604*"(Make this anonymous inner class a lambda(Ö¹™º8ùµ–™À1
+java:S16047"(Make this anonymous inner class a lambda(Ö¹™º8ó¡ÏÂ1
 E
-java:S1604i"(Make this anonymous inner class a lambda(íá‹û8ùµ–™À1
+java:S1604w"(Make this anonymous inner class a lambda(íá‹û8ó¡ÏÂ1
+F
+java:S1604ƒ"(Make this anonymous inner class a lambda(Üá¢š8ó¡ÏÂ1
+F
+java:S1604"(Make this anonymous inner class a lambda(±º€ü8ó¡ÏÂ1
 J
-java:S1604o"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8ùµ–™À1
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®¬áøÿÿÿÿ8üµ–™À1
-o	java:S116<"SRename this field "UserRent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûëö8µ¶–™À1
-q	java:S116<"URename this field "IdRoomRent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûëö8µ¶–™À1
-r	java:S116?"QRename this field "RentId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢»ùÿÿÿÿ8µ¶–™À1
+java:S1604}"(Make this anonymous inner class a lambda(¯Û“Ïúÿÿÿÿ8ó¡ÏÂ1
+K
+java:S1604—"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8éôºÏÂ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®¬áøÿÿÿÿ8ƒó¡ÏÂ1
+o	java:S116I"SRename this field "UserRent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûëö8¶ô¡ÏÂ1
+q	java:S116I"URename this field "IdRoomRent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûëö8¶ô¡ÏÂ1
+r	java:S116L"QRename this field "RentId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢»ùÿÿÿÿ8¶ô¡ÏÂ1
 t
-java:S1845A"XRename field "idRoomRent" to prevent any misunderstanding/clash with field "IdRoomRent".(áİÖ8¸¶–™À1
+java:S1845N"XRename field "idRoomRent" to prevent any misunderstanding/clash with field "IdRoomRent".(áİÖ8»ô¡ÏÂ1
 d
-java:S1659<"GDeclare "IdRoomRent" and all following declarations on a separate line.(ûëö8¹¶–™À1
+java:S1659I"GDeclare "IdRoomRent" and all following declarations on a separate line.(ûëö8»ô¡ÏÂ1
+V
+java:S2130‡"8Use "Long.parseLong" for this string-to-long conversion.(ß˜½8Êô¡ÏÂ1
+k	java:S100£"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ì±8ØõºÏÂ1

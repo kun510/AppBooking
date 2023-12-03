@@ -159,10 +159,6 @@ bapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/host/fragment/profi
 Qapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/updateUser/UpdateUser.java,b\3\b37ddb6f4864f08195ca4f12b7edde44640596b0
 Ü
 Vapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/Model/Response/ResponseOtp.java,3\9\39537aa295353413b3a1184ffd5aae9216ae33dc
-õ
-kapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/changePassword/OtpConfirmChangePasswordActivity.java,5\9\59de0833e1c46dc5ffceab3f6e6cef8b01c53bbb
-ë
-aapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/changePassword/ChangePasswordActivity.java,3\6\366521e884b594810e7b8dd921d429ed4eaf8f6a
 ã
 [app/src/main/java/com/doancuoinam/hostelappdoancuoinam/chatSupport/ChatSupportActivity.java,6\c\6c4f8536d3e1cc1c85f85080caab966116570637
 }
@@ -236,3 +232,13 @@ japp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/report/reportR
 ^app/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/host/addRoom/AddListImgByRoom.java,e\c\ec69ac4f8373bb837d29e43e3050c5ad8e0c40ab
 ©
 yapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/host/fragment/list/listExtends/listRoom/ListRoomActivity.java,4\0\4065491401efef0b836e9a5df26f4b379f0e4f8d
+Å
+Qapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/Model/ModelApi/Review.java,a\8\a8e448eaa4e7c340bfd98c8323dd84183f666bce
+ü
+oapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/rating/ListReviewInRoom/listReviewAdapter.java,4\d\4d932bd45a8db1a4547884a9015712f152c8ff32
+£
+sapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/account/changePassword/OtpConfirmChangePasswordActivity.java,0\8\084fd16a63dc7a7a40e4b5a4a973b5b8a5ab207a
+ô
+iapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/account/changePassword/ChangePasswordActivity.java,4\a\4a491c90cbe696a540f8527941f3b7032c58c40b
+¶
+vapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/rating/ListReviewInRoom/ListReviewInRoomActivity.java,5\7\57bcb53947d83e121da52449ae003d658510ed6e

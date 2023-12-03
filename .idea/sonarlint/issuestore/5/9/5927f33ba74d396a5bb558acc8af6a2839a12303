@@ -1,4 +1,4 @@
 
 {	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãœŞŠüÿÿÿÿ8òßá²¿1
-_	java:S107œ"=Method has 10 parameters, which is greater than 7 authorized.(óÅºúüÿÿÿÿ8ÂÉŠß¿1
-i	java:S100b"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚©ø8ÄÒèØ¿1
+_	java:S107¡"=Method has 10 parameters, which is greater than 7 authorized.(óÅºúüÿÿÿÿ8ÂÉŠß¿1
+i	java:S100g"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚©ø8ÄÒèØ¿1

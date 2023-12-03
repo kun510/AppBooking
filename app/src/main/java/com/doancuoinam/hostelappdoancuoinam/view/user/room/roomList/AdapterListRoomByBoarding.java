@@ -98,7 +98,6 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
                 if (isFavourite) {
                     holder.favourite.setSelected(false);
                     editor.putBoolean("isFavourite" + room.getId(), false).apply();
-                    Toast.makeText(view.getContext(), "bat", Toast.LENGTH_SHORT).show();
                     AlertDialog.Builder alertThongBao = new AlertDialog.Builder(view.getContext());
                     alertThongBao.setMessage(R.string.bancochac);
                     alertThongBao.setTitle(R.string.thongbao);
@@ -115,7 +114,6 @@ public class AdapterListRoomByBoarding extends RecyclerView.Adapter<AdapterListR
                 } else {
                     holder.favourite.setSelected(true);
                     editor.putBoolean("isFavourite" + room.getId(), true).apply();
-                    Toast.makeText(view.getContext(), "tat", Toast.LENGTH_SHORT).show();
                     SharedPreferences sharedPreferences = view.getContext().getSharedPreferences("MyPrefs", MODE_PRIVATE);
                     long userID = sharedPreferences.getLong("userId", 0);
                     long idRoom = holder.idRoom;

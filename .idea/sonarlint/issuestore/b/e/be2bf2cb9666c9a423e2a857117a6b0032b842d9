@@ -1,12 +1,12 @@
 
 E
-java:S1604+"(Make this anonymous inner class a lambda(ÆÊ®î8©÷†–Â1
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(÷¯Èš8ª÷†–Â1
+java:S1604+"(Make this anonymous inner class a lambda(ÆÊ®î8§÷¹ğÂ1
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(÷¯Èš8§÷¹ğÂ1
 S
-java:S1153["1Directly append the argument of String.valueOf().(ëó–”ùÿÿÿÿ8ª÷†–Â1
+java:S1153]"1Directly append the argument of String.valueOf().(ëó–”ùÿÿÿÿ8¨÷¹ğÂ1
 S
-java:S1153\"1Directly append the argument of String.valueOf().(©•Ëşÿÿÿÿ8ª÷†–Â1
-]	java:S1250"<This block of commented-out lines of code should be removed.(õıÿÿÿÿ8Õ÷†–Â1
-r	java:S116C"VRename this field "btn_manager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¼“Ù8í÷†–Â1
+java:S1153^"1Directly append the argument of String.valueOf().(©•Ëşÿÿÿÿ8¨÷¹ğÂ1
+]	java:S1250"<This block of commented-out lines of code should be removed.(õıÿÿÿÿ8Ò÷¹ğÂ1
+r	java:S116E"VRename this field "btn_manager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¼“Ù8×÷¹ğÂ1
 f
-java:S1659B"IDeclare "numberPeople" and all following declarations on a separate line.(˜ãÈ–8ï÷†–Â1
+java:S1659D"IDeclare "numberPeople" and all following declarations on a separate line.(˜ãÈ–8Ø÷¹ğÂ1

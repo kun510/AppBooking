@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.view.user.rating.RatingActivity;
@@ -18,6 +19,7 @@ import com.squareup.picasso.Picasso;
 public class ChoseOverviewMyRoom extends AppCompatActivity {
     LinearLayout BillMyRoomLayout,Rate,ReportRoomLayout;
     ShapeableImageView avt;
+    TextView nameUser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +28,13 @@ public class ChoseOverviewMyRoom extends AppCompatActivity {
         Rate = findViewById(R.id.Rate);
         ReportRoomLayout = findViewById(R.id.ReportRoomLayout);
         avt = findViewById(R.id.avtProfile);
+        nameUser = findViewById(R.id.nameUser);
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         String imageUrl = sharedPreferences.getString("avt", "");
         Intent intent = getIntent();
         String idRoom = intent.getStringExtra("idMyroom");
-
+        String nameRent = intent.getStringExtra("nameRent");
+        nameUser.setText(nameRent);
         Picasso.get().load(imageUrl).into(avt);
         BillMyRoomLayout.setOnClickListener(new View.OnClickListener() {
             @Override

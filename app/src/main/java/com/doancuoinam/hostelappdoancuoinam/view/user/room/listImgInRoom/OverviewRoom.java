@@ -155,9 +155,17 @@ public class OverviewRoom extends AppCompatActivity implements OnMapReadyCallbac
                         if (response.isSuccessful()) {
                             ResponseToken responseData = response.body();
                             if (responseData != null) {
+                                Intent intent = getIntent();
+                                String songuoine = intent.getStringExtra("songuoine");
                                 String numberEmpty = number.getText().toString();
+                                int PeopleReal = Integer.parseInt(songuoine);
+                                int PeopleCheck = Integer.parseInt(numberEmpty);
                                 if (numberEmpty.trim().isEmpty()){
                                     createCustomToast("Failed ☹️", "Điền Đẩy đủ", MotionToastStyle.ERROR);
+                                    return;
+                                }
+                                if (PeopleCheck > PeopleReal){
+                                    createCustomToast("Failed ☹️", "Điền thấp hơn số người tối đa", MotionToastStyle.ERROR);
                                     return;
                                 }
                               int numberPeople = Integer.parseInt(numberEmpty) ;

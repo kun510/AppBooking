@@ -1,11 +1,19 @@
 
+m	java:S117N"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é³®±8Ï°¨ğÂ1
 E
-java:S1604?"(Make this anonymous inner class a lambda(ù¶ëÇ8¤™—‹Â1
+java:S1604@"(Make this anonymous inner class a lambda(ù¶ëÇ8¤™—‹Â1
 E
-java:S1604\"(Make this anonymous inner class a lambda(Ì‹ç8¥™—‹Â1
+java:S1604u"(Make this anonymous inner class a lambda(Ì‹ç8¥™—‹Â1
 J
-java:S1604F"(Make this anonymous inner class a lambda(‚ûßÄúÿÿÿÿ8¥™—‹Â1
+java:S1604_"(Make this anonymous inner class a lambda(‚ûßÄúÿÿÿÿ8¥™—‹Â1
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ú‚Ûñ
-{	java:S116ƒ"YRename this field "btn_selectRoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ‹¬öşÿÿÿÿ8€š—‹Â1
+_
+java:S1854C"CRemove this useless assignment to local variable "clickedPosition".(ˆÂíh8©Ü¸ïÂ1
+P
+java:S1481C"4Remove this unused "clickedPosition" local variable.(ˆÂíh8ªÜ¸ïÂ1
+]	java:S125D"<This block of commented-out lines of code should be removed.(¡™ğ üÿÿÿÿ8ªÜ¸ïÂ1
+>
+java:S1116L"Remove this empty statement.(‡¼ªõüÿÿÿÿ8±¨ğÂ1
+{	java:S116œ"YRename this field "btn_selectRoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ‹¬öşÿÿÿÿ8€š—‹Â1
 D
-java:S1659‚"&Declare "dateRoom" on a separate line.(œİ½Ş8ƒš—‹Â1
+java:S1659›"&Declare "dateRoom" on a separate line.(œİ½Ş8ƒš—‹Â1

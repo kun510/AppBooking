@@ -206,7 +206,7 @@ public class AddBoardingActivity extends AppCompatActivity implements ToastInter
                     }, 2000);
                     progressBar.setVisibility(View.GONE);
                 } else {
-                    showError("Failed to add boarding");
+                    showError("Bạn đang bị ban");
                     progressBar.setVisibility(View.GONE);
                 }
             }

@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -69,4 +70,5 @@ public class Notifications extends Fragment implements ToastInterface {
     public void createCustomToast(String message, String description, MotionToastStyle style) {
         MotionToast.Companion.createToast(getActivity(), message, description, style, MotionToast.GRAVITY_BOTTOM, MotionToast.LONG_DURATION, ResourcesCompat.getFont(getContext(), www.sanju.motiontoast.R.font.helvetica_regular));
     }
+   
 }

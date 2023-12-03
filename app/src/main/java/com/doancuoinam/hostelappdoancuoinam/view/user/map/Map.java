@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.Manifest;
 import android.widget.Toast;
 
+import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Boarding_host;
 import com.doancuoinam.hostelappdoancuoinam.Model.ModelApi.Room;
 import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
@@ -73,19 +74,19 @@ public class Map extends Fragment implements OnMapReadyCallback{
         }
         map.setMyLocationEnabled(true);
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
-        Call<List<Room>> call = apiService.getRoomMap();
-        call.enqueue(new Callback<List<Room>>() {
+        Call<List<Boarding_host>> call = apiService.getBoardingMap();
+        call.enqueue(new Callback<List<Boarding_host>>() {
             @Override
-            public void onResponse(Call<List<Room>> call, Response<List<Room>> response) {
+            public void onResponse(Call<List<Boarding_host>> call, Response<List<Boarding_host>> response) {
                 if (response.isSuccessful()) {
-                    List<Room> rooms = response.body();
-                    for (Room room : rooms) {
-                        String address = room.getBoardingHostel().getAddress();
-                        String area = room.getBoardingHostel().getArea();
+                    List<Boarding_host> rooms = response.body();
+                    for (Boarding_host room : rooms) {
+                        String address = room.getAddress();
+                        String area = room.getArea();
                         String geoCo = address + "," + area;
                         String imageUrl = room.getImg();
-                        String price = room.getPrice();
-                        String numberRoom = room.getNumberRoom();
+                        String price = String.valueOf(room.getNumberOfStars());
+                        String numberRoom = String.valueOf(room.getNumberRoom());
                         try {
                             GeocodingTask geocodingTask = new GeocodingTask(getContext(), new GeocodingTask.GeocodingListener() {
                                 @Override
@@ -117,7 +118,7 @@ public class Map extends Fragment implements OnMapReadyCallback{
             }
 
             @Override
-            public void onFailure(Call<List<Room>> call, Throwable t) {
+            public void onFailure(Call<List<Boarding_host>> call, Throwable t) {
                 Toast.makeText(getContext(), "Lỗi kết nối", Toast.LENGTH_SHORT).show();
                 Log.e("TAG", "onFailureListRoomHot: " + t.getMessage());
             }
@@ -137,7 +138,7 @@ public class Map extends Fragment implements OnMapReadyCallback{
                 public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                     Bitmap resizedBitmap = Bitmap.createScaledBitmap(bitmap, targetWidth, targetHeight, false);
                     BitmapDescriptor bitmapDescriptor = BitmapDescriptorFactory.fromBitmap(resizedBitmap);
-                    addMarker(map, position," Price: "+price," Number Room: "+numberRoom ,title, bitmapDescriptor,targetWidth,targetHeight);
+                    addMarker(map, position," Star: "+price," Number Room: "+numberRoom ,title, bitmapDescriptor,targetWidth,targetHeight);
                 }
 
                 @Override

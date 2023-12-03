@@ -62,7 +62,7 @@ public class ListRoomEmpty extends Fragment {
                         startActivity(intent);
                         getActivity().finish();
                     }else {
-                        listRoomAdapter.setRooms(rooms);
+                        listRoomAdapter.setRooms(rooms,getContext());
                     }
                 } else {
                     Toast.makeText(getContext(), "Lỗi khi tải dữ liệu", Toast.LENGTH_SHORT).show();

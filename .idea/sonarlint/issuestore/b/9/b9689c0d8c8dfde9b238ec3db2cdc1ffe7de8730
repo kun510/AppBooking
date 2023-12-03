@@ -6,7 +6,7 @@ java:S1192T"NDefine a constant instead of duplicating this literal "Failed â˜¹ï
 k
 java:S1192ˆ"MDefine a constant instead of duplicating this literal "success ğŸ˜" 3 times.(Ş‚×¦8ş§áŒÂ1
 r
-java:S1192Ë"OUse already-defined constant 'ChannelID' instead of duplicating its value here.(•ú±×ıÿÿÿÿ8ş§áŒÂ1
+java:S1192Ì"OUse already-defined constant 'ChannelID' instead of duplicating its value here.(•ú±×ıÿÿÿÿ8ş§áŒÂ1
 Q
 java:S1066x"/Merge this if statement with the enclosing one.(½ÿÂ„üÿÿÿÿ8ş§áŒÂ1
 J
@@ -36,6 +36,6 @@ h
 java:S1874Ş"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ8©áŒÂ1
 D	java:S131á""Add a default case to this switch.(×ö³–úÿÿÿÿ8©áŒÂ1
 K	java:S108ã")Either remove or fill this block of code.(–Ë—Ğûÿÿÿÿ8©áŒÂ1
-^	java:S125¢"<This block of commented-out lines of code should be removed.(Ê¨à®ıÿÿÿÿ8¢©áŒÂ1
-Y	java:S125À"<This block of commented-out lines of code should be removed.(“Ò‰¶8¤©áŒÂ1
-Y	java:S125Ã"<This block of commented-out lines of code should be removed.(ÆĞä±8¤©áŒÂ1
+^	java:S125£"<This block of commented-out lines of code should be removed.(Ê¨à®ıÿÿÿÿ8¢©áŒÂ1
+Y	java:S125Á"<This block of commented-out lines of code should be removed.(“Ò‰¶8¤©áŒÂ1
+Y	java:S125Ä"<This block of commented-out lines of code should be removed.(ÆĞä±8¤©áŒÂ1

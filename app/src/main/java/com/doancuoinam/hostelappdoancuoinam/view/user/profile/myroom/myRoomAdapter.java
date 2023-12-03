@@ -48,8 +48,10 @@ public class myRoomAdapter extends RecyclerView.Adapter<myRoomAdapter.RoomViewHo
 //                    String message = "Nút được nhấn ở vị trí: " + clickedPosition;
 //                    Toast.makeText(v.getContext(), message, Toast.LENGTH_SHORT).show();
                     String idMyRoom = String.valueOf(holder.roomId);
+                    String name = room.getUser().getName();
                     Intent intent =new Intent(v.getContext(), ChoseOverviewMyRoom.class);
                     intent.putExtra("idMyroom",idMyRoom);
+                    intent.putExtra("nameRent",name);
                     v.getContext().startActivity(intent);
                 }
             }

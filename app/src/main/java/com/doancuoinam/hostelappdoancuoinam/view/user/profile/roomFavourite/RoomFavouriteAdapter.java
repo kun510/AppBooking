@@ -26,6 +26,7 @@ import com.doancuoinam.hostelappdoancuoinam.R;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiClient;
 import com.doancuoinam.hostelappdoancuoinam.Service.ApiService;
 import com.doancuoinam.hostelappdoancuoinam.toast.ToastInterface;
+import com.doancuoinam.hostelappdoancuoinam.view.user.room.listImgInRoom.OverviewRoom;
 import com.squareup.picasso.Picasso;
 
 import java.time.Instant;
@@ -64,7 +65,31 @@ public class RoomFavouriteAdapter extends RecyclerView.Adapter<RoomFavouriteAdap
             @Override
             public void onClick(View view) {
                 int clickedPosition = holder.getBindingAdapterPosition();
-                Toast.makeText(view.getContext(), ""+ clickedPosition, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(view.getContext(), ""+ clickedPosition, Toast.LENGTH_SHORT).show();
+                String imageUrl = room.getRoom().getImg();
+                String idRoom =String.valueOf(room.getRoom().getId());
+                String addressRoom =room.getRoom().getBoardingHostel().getAddress();
+                String area =room.getRoom().getBoardingHostel().getArea();
+                String numberStar =room.getRoom().getNumberOfStars();
+                String tienphong =room.getRoom().getPrice();
+                String tiendien = String.valueOf(room.getRoom().getElectricBill());
+                String tiennuoc = String.valueOf(room.getRoom().getWaterBill());;
+                String songuoi =room.getRoom().getPeople();
+                String SPhone = room.getRoom().getUser().getPhone();
+                String idHost = String.valueOf(room.getRoom().getUser().getId());
+                Intent intent = new Intent(view.getContext(), OverviewRoom.class);
+                intent.putExtra("selected_image_url", imageUrl);
+                intent.putExtra("idRoom",idRoom);
+                intent.putExtra("addressRoom",addressRoom);
+                intent.putExtra("area",area);
+                intent.putExtra("numberStar",numberStar);
+                intent.putExtra("tienphong",tienphong);
+                intent.putExtra("tiendienne",tiendien);
+                intent.putExtra("tiennuocne",tiennuoc);
+                intent.putExtra("songuoine",songuoi);
+                intent.putExtra("idHost",idHost);
+                intent.putExtra("phoneHost",SPhone);
+                view.getContext().startActivity(intent);
             }
         });
         holder.favourite.setOnClickListener(new View.OnClickListener() {
