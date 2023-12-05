@@ -1,0 +1,15 @@
+
+E
+java:S1604'"(Make this anonymous inner class a lambda(ÔİÄ8ï¨¶´½1
+v	java:S116"URename this field "btn_select" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÅÛøÿÿÿÿ8’©¶´½1
+B
+java:S1659"%Declare "edtType" on a separate line.(Ç¼Íú8™©¶´½1
+C
+java:S1659"&Declare "edtPrice" on a separate line.(óìÛŒ8™©¶´½1
+G
+java:S1197"*Move the array designators [] to the type.(øú‡Î8œ©¶´½1
+G
+java:S1197"*Move the array designators [] to the type.(ıÅÂÉ8©¶´½1
+j	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã–å¿8¦©¶´½1
+j	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼Œ…8§©¶´½1
+o	java:S100K"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ïü›ùÿÿÿÿ8‡©Ä´½1

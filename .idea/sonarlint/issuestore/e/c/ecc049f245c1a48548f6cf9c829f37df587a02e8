@@ -1,0 +1,12 @@
+
+r	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÎÂ¢ùÿÿÿÿ8Šü¡ä¿1
+E
+java:S1604)"(Make this anonymous inner class a lambda(Ö¹™º8Šü¡ä¿1
+E
+java:S1604a"(Make this anonymous inner class a lambda(íá‹û8Šü¡ä¿1
+J
+java:S1604g"(Make this anonymous inner class a lambda(óÉ˜“ÿÿÿÿÿ8Šü¡ä¿1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®¬áøÿÿÿÿ8‹ü¡ä¿1
+r	java:S116;"QRename this field "RentId" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢»ùÿÿÿÿ8Æü¡ä¿1
+k
+java:S1659:"IDeclare "nameUserRent" and all following declarations on a separate line.(ÒíëĞÿÿÿÿÿ8Çü¡ä¿1

@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background"
+    android:padding="16dp"
+    android:layout_gravity="center"
+    android:radius="4dp"
+    android:elevation="4dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mauchuxanh"
+        android:textSize="18sp"
+        android:text="Tên"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:id="@+id/NameUserDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/mauchuxanh"
+        android:textSize="18sp"
+        android:text="TRAN CUONG"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mauchuxanh"
+            android:textSize="18sp"
+            android:text="SDT: "
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/phoneDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mauchuxanh"
+            android:textSize="18sp"
+            android:text="0358838507"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="@dimen/size10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/intro2"
+        android:id="@+id/imgAvtDialog"
+        android:layout_width="@dimen/size80dp"
+        android:layout_height="@dimen/size80dp"/>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="@dimen/size10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:text="Số Phòng: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mauchuxanh"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/NumberRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mauchuxanh"
+            android:text="1"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/size20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="2"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:id="@+id/btnClose"
+            android:layout_width="80dp"
+            android:textColor="@color/mauchuxanh"
+            android:layout_height="wrap_content"
+            android:text="Đóng" />
+        <TextView
+            android:layout_weight="3"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:id="@+id/cancelRent"
+            android:layout_width="80dp"
+            android:textColor="@color/mauchuxanh"
+            android:layout_height="wrap_content"
+            android:text="Hết Thuê" />
+        <TextView
+            android:layout_weight="4"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:id="@+id/btnAddBill"
+            android:layout_width="80dp"
+            android:textColor="@color/mauchuxanh"
+            android:layout_height="wrap_content"
+            android:text="Thêm Hoá Đơn" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+
+v
+java:S2293L"YReplace the type specification in this constructor call with the diamond operator ("<>").(ï€³İ8©£«Â1
+M
+java:S1066Û"/Merge this if statement with the enclosing one.(ùãû±8Œ·¬Â1
+r	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦Üç¢ıÿÿÿÿ8ª£«Â1
+J
+java:S1604Q"(Make this anonymous inner class a lambda(¹øÌúÿÿÿÿÿ8ª£«Â1
+F
+java:S1604Ê"(Make this anonymous inner class a lambda(ØŞÓÜ8·¬Â1
+K
+java:S16591")Declare "recyclerHot" on a separate line.(³üÊ÷øÿÿÿÿ8¥¤«Â1
+N
+java:S16595",Declare "progressBarHot" on a separate line.(øçãÿÿÿÿÿ8¦¤«Â1
+L
+java:S1197;"*Move the array designators [] to the type.(Ö½ÔÇüÿÿÿÿ8­¤«Â1
+t
+java:S3776>"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(ËÄ•åûÿÿÿÿ8¹¤«Â1
+]	java:S125B"<This block of commented-out lines of code should be removed.(’û–ûÿÿÿÿ8»¤«Â1
+]	java:S125i"<This block of commented-out lines of code should be removed.(ÑµÍïúÿÿÿÿ8Ä¤«Â1
+^	java:S125"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8×·¬Â1
+Y	java:S125ˆ"<This block of commented-out lines of code should be removed.(¡ôÍ8×·¬Â1
+Y	java:S125“"<This block of commented-out lines of code should be removed.(Õ™Šö8Ø·¬Â1
+^	java:S125–"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8Ø·¬Â1
+Y	java:S125"<This block of commented-out lines of code should be removed.(¡ôÍ8Ø·¬Â1
+¤
+java:S1186Ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(öÙ½¹ûÿÿÿÿ8Ø·¬Â1
+^	java:S125·"<This block of commented-out lines of code should be removed.(Ÿü†ùÿÿÿÿ8Ù·¬Â1
+Y	java:S125¾"<This block of commented-out lines of code should be removed.(¡ôÍ8Ú·¬Â1
+m
+java:S1874Ù"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8Û·¬Â1
+Y	java:S125â"<This block of commented-out lines of code should be removed.(¶¯“Â8Û·¬Â1
+F	java:S108ë")Either remove or fill this block of code.(á¢–¬8Û·¬Â1

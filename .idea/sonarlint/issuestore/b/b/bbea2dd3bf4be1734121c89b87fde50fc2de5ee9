@@ -1,0 +1,13 @@
+
+n
+java:S2095$"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(—ÖíÖüÿÿÿÿ8²çÿÀ1
+k
+java:S2095"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(µåƒã8²çÿÀ1
+n
+java:S20955"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(—ÖíÖüÿÿÿÿ8’æ¬ÿÀ1
+k
+java:S2095"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(æô›8¢§­ÿÀ1
+\
+java:S1118":Add a private constructor to hide the implicit public one.(àÏÜ«ùÿÿÿÿ8²çÿÀ1
+Z
+java:S1128"8Remove this unused import 'java.io.BufferedInputStream'.(Š—€åûÿÿÿÿ8ÁçÿÀ1

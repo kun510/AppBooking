@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/NotificationLiner"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/cnhat_boca"
+        android:backgroundTint="@color/purple_nhat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_alignParentTop="true"
+            android:layout_width="30dp"
+            android:layout_margin="5dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/baseline_turned_in_24"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgavt"
+            android:layout_width="70dp"
+            android:scaleType="centerCrop"
+            app:strokeWidth="5dp"
+            app:shapeAppearanceOverlay="@style/circular"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="4dp"
+            android:src="@drawable/peopleinroom" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/imgavt"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/mauchuxanh"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone"
+                android:id="@+id/titleNotification"
+                android:fontFamily="@font/aldrich"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/contentNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0985664533"
+                android:fontFamily="@font/aldrich"
+                android:textSize="15sp"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

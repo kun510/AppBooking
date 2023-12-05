@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.doancuoinam.hostelappdoancuoinam">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.NOTIFICATION_LISTENER_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/hostel"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/hostel"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".account.RegisterHost"
+            android:exported="false" />
+        <activity
+            android:name=".account.ChoseTyAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.fragment.list.listExtends.listRoom.ListRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.report.reportRoom.ReportRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.rating.ListReviewInRoom.ListReviewInRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.rating.RatingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".empty.EmptyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.fragment.message.searchMsg.SearchMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.fragment.message.chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chatSupport.ChatSupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".account.changePassword.OtpConfirmChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".account.changePassword.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".updateUser.UpdateUser"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.addBoarding.AddBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.addBill.AddBillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.addRoom.AddRoomByHostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.profile.myroom.billInRoom.BillMyRoom"
+            android:exported="false" />
+        <activity
+            android:name=".account.test"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.room.listImgInRoom.OverviewRoom"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.addRoom.AddListImgByRoom"
+            android:exported="true" />
+        <activity
+            android:name=".view.user.profile.myroom.overviewMyyRoom.ChoseOverviewMyRoom"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.intro.ChoseAreaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.room.roomList.RoomListByBoarding"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.profile.language.Language"
+            android:configChanges="locale|layoutDirection|screenSize"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.profile.Help"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.profile.myroom.MyRoom"
+            android:exported="false"
+            android:label="@string/title_activity_my_room"
+            android:theme="@style/Theme.HostelAppDoanCuoiNam" />
+        <activity
+            android:name=".view.user.profile.roomFavourite.RoomFavouriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.user.profile.SettingProfile"
+            android:exported="false" />
+        <activity
+            android:name=".view.host.confirmRent.ConfirmRentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".account.OtpRegister"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".view.user.room.roomListSearch.RoomListSearch"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".view.user.intro.ScreenIntro4"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".view.user.intro.ScreenIntro3"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".view.user.intro.ScreenIntro2"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".view.user.intro.ScreenIntro1"
+            android:exported="true"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".view.host.BaseActivityHost"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".account.Register"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".account.Login"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".test.testAtc"
+            android:exported="false" />
+        <activity
+            android:name=".test.OtpPhone"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".test.LoginSmS"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".test.ChooseLoginType"
+            android:exported="false"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".test.LoaddingHome"
+            android:exported="true"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.firebase.messaging.HostelAppDoanCuoiNam"
+            android:value="HostelAppDoanCuoiNam" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDSLTUWBXLrMdx4RcEgV7FZ-4ci4k_pwfg" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <service
+            android:name=".account.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/size10dp"
+    android:padding="@dimen/size10dp"
+    android:layout_marginBottom="@dimen/size20dp"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imgsearch"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/white"
+        app:shapeAppearanceOverlay="@style/circular"
+        android:id="@+id/avtProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/nameUser"
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold"
+                android:text="Tran Cuong"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginEnd="@dimen/size10dp"
+                android:id="@+id/contentReview"
+                android:textSize="@dimen/size18dp"
+                android:text="Tran Cuong"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/timeReview"
+                android:textSize="@dimen/size18dp"
+                android:text="2023-12-01 08:17:19.767"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

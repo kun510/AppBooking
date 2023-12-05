@@ -1,0 +1,10 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(àæÏ¦ùÿÿÿÿ8åÇ†È¹1
+m	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Èˆè8åÇ†È¹1
+r	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ ÛÂÿÿÿÿÿ8åÇ†È¹1
+J
+java:S1604&"(Make this anonymous inner class a lambda(õßØµüÿÿÿÿ8±¨œÏº1
+W	java:S125!"<This block of commented-out lines of code should be removed.(™‡ãY8ïŞ¾È¼1
+m
+java:S1874&"KRemove this use of "setOnNavigationItemSelectedListener"; it is deprecated.(õßØµüÿÿÿÿ8Ê¨œÏº1
+C	java:S131*""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8Ö¨œÏº1

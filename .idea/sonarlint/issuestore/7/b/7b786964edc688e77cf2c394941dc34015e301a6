@@ -1,0 +1,16 @@
+
+k
+java:S1192Q"IDefine a constant instead of duplicating this literal "API Call" 3 times.(Ές­ύÿÿÿÿ8ννπΒ1
+m	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Σευί8―ιμΒ1
+D
+java:S16046"(Make this anonymous inner class a lambda(‘Ό48―ιμΒ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.( „Ό8±ιμΒ1
+p	java:S116#"TRename this field "name_rent" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΖρΠ8νιμΒ1
+u	java:S116$"YRename this field "electric_hotel" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Α‰ί§8νιμΒ1
+D
+java:S1659#"'Declare "name_rent" on a separate line.(ΖρΠ8σιμΒ1
+H
+java:S1659$"+Declare "costsIncurred" on a separate line.(Α‰ί§8σιμΒ1
+e
+java:S1659%"HDeclare "nameRentGet" and all following declarations on a separate line.(ΣΞµ³8σιμΒ1
+o	java:S100d"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ψ›τγωÿÿÿÿ8―ξπΒ1

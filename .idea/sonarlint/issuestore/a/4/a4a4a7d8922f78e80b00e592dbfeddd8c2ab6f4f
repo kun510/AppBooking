@@ -1,0 +1,21 @@
+
+e
+java:S11927"HDefine a constant instead of duplicating this literal "MyPrefs" 4 times.(Öß¯®8¿ŒéÍÂ1
+m	java:S117z"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ã¼ó8ÀŒéÍÂ1
+E
+java:S1604m"(Make this anonymous inner class a lambda(Õä8ÀŒéÍÂ1
+K
+java:S1604—"(Make this anonymous inner class a lambda(çÄİöøÿÿÿÿ8ÀŒéÍÂ1
+J
+java:S1604f"(Make this anonymous inner class a lambda(„û…‡ùÿÿÿÿ8ÀŒéÍÂ1
+K
+java:S1604¥"(Make this anonymous inner class a lambda(˜ß³ûÿÿÿÿ8ÀŒéÍÂ1
+F
+java:S1604¬"(Make this anonymous inner class a lambda(Åúİ‹8ÀŒéÍÂ1
+K
+java:S1604³"(Make this anonymous inner class a lambda(±¿º®şÿÿÿÿ8ÁŒéÍÂ1
+t	java:S116/"SRename this field "TurnNoti" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ“›ºÿÿÿÿÿ8ıŒéÍÂ1
+s	java:S1160"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹8ıŒéÍÂ1
+i
+java:S1659/"GDeclare "changePass" and all following declarations on a separate line.(Ğ“›ºÿÿÿÿÿ8éÍÂ1
+j	java:S100["NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã–å¿8¥éÍÂ1

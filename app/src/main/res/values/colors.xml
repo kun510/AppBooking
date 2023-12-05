@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="aa">#64CCC5</color>
+    <color name="purple_nhat">#DBD7EF</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="xammmm">#CACACA</color>
+    <color name="lanhat">#F5F9F9</color>
+    <color name="lightgray">#D8D9DA</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whitexam">#F5F5F5</color>
+    <color name="mauchusearch">#999999</color>
+    <color name="maunensearch">#393939</color>
+    <color name="nau">#611515</color>
+    <color name="clr_otp_bg">#535288</color>
+    <color name="clr_otp_btn_yellow">#F8CD06</color>
+    <color name="clr_white_text">#FFFFFF</color>
+    <color name="clr_grey_text">#D3D3D3</color>
+    <color name="clr_grey_text_transparent">#80D3D3D3</color>
+    <color name="theme_color">#2176FF</color>
+    <color name="theme_color_80">#CC2176FF</color>
+    <color name="theme_color_8">#142176FF</color>
+<!--    -&#45;&#45;-->
+
+    <color name="btn_xanh">#1B9C85</color>
+    <color name="btn_xanhnhat">#86CEC1</color>
+    <color name="stard_vang">#FFD600</color>
+    <color name="red">#FA2F22</color>
+    <color name="white_xam">#F5F5F5F5</color>
+    <color name="hong">#FFC7A7</color>
+    <color name="camnhat">#FFD579</color>
+    <color name="xam">#D9D9D9</color>
+    <color name="den">#000000</color>
+    <color name="hongdam">#E5386D</color>
+    <color name="mauchu">#625D5D</color>
+    <color name="mauchuxanh">#1B9C85</color>
+    <color name="blue">#2196F3</color>
+    <color name="xamne">#999999</color>
+    <color name="menu">#FFC7A7</color>
+    <color name="start_color">#FFE8A7</color>
+    <color name="end_color">#FFD579</color>
+    <color name="search">#393939</color>
+    <color name="grayy">#DFDEDE</color>
+    <color name="grayyy">#4C4949</color>
+
+
+<!--    folding-->
+    <color name="bgBackSideColor">#f4f0ff</color>
+    <color name="bgTitleLeft">#594691</color>
+    <color name="bgTitleRight">#ffffff</color>
+    <color name="bgContentTop">#594691</color>
+    <color name="bgContent">#ffffff</color>
+    <color name="contentDividerLine">#e0e0e0</color>
+    <color name="contentBadgeTitle">#a9a9a9</color>
+    <color name="titleBadgeTitle">#adafb1</color>
+    <color name="titleBadgeText">#adafb1</color>
+    <color name="mainTextColor">#343d43</color>
+    <color name="btnRequest">#ffbf12</color>
+</resources>

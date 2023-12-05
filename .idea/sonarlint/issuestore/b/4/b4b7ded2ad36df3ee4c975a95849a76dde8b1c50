@@ -1,0 +1,11 @@
+
+E
+java:S1604:"(Make this anonymous inner class a lambda(ù¶ëÇ8Æšğ¾»1
+E
+java:S1604W"(Make this anonymous inner class a lambda(Ì‹ç8Ïû¾»1
+J
+java:S1604A"(Make this anonymous inner class a lambda(‚ûßÄúÿÿÿÿ8Çšğ¾»1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨Óâ£8Èšğ¾»1
+z	java:S116|"YRename this field "btn_selectRoom" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ‹¬öşÿÿÿÿ8…›ğ¾»1
+C
+java:S1659{"&Declare "dateRoom" on a separate line.(œİ½Ş8‡›ğ¾»1

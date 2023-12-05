@@ -1,0 +1,34 @@
+
+l
+java:S1192´"NDefine a constant instead of duplicating this literal "Failed â˜¹ï¸" 3 times.(¤Ã·û8¢×²ïÂ1
+W
+java:S1141t"5Extract this nested try block into a separate method.(´Ûõ“ûÿÿÿÿ8£×²ïÂ1
+n	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÇ—¨8£×²ïÂ1
+s	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°×™€ûÿÿÿÿ8£×²ïÂ1
+E
+java:S1604H"(Make this anonymous inner class a lambda(Š‘œÎ8£×²ïÂ1
+D
+java:S1604N"(Make this anonymous inner class a lambda(‘¼48£×²ïÂ1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Õàï¤ùÿÿÿÿ8¥×²ïÂ1
+b
+java:S2583Å"DChange this condition so that it does not always evaluate to "false"(à¶“Ç8¼Ø²ïÂ1
+x	java:S1164"WRename this field "ElectricBill" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çã¨”ÿÿÿÿÿ8½Ø²ïÂ1
+u	java:S1164"TRename this field "WaterBill" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(çã¨”ÿÿÿÿÿ8½Ø²ïÂ1
+D
+java:S16591"'Declare "imgInsert" on a separate line.(•Ì‹8ÃØ²ïÂ1
+i
+java:S16594"GDeclare "numberRoom" and all following declarations on a separate line.(çã¨”ÿÿÿÿÿ8ÄØ²ïÂ1
+G
+java:S11973"*Move the array designators [] to the type.(ıÅÂÉ8ÇØ²ïÂ1
+`
+java:S1854A">Remove this useless assignment to local variable "boardingId".(êõÀ¤úÿÿÿÿ8…ÇµïÂ1
+Q
+java:S1481A"/Remove this unused "boardingId" local variable.(êõÀ¤úÿÿÿÿ8‡ÇµïÂ1
+W	java:S125B"<This block of commented-out lines of code should be removed.(²Ø˜8’ÇµïÂ1
+`
+java:S1874[">Remove this use of "startActivityForResult"; it is deprecated.(“Œñ¬ÿÿÿÿÿ8ÓØ²ïÂ1
+f
+java:S1874^"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8ÓØ²ïÂ1
+L
+java:S1874û".Remove this use of "create"; it is deprecated.(Õı“8äØ²ïÂ1
+p	java:S100ş"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø›ôãùÿÿÿÿ8äØ²ïÂ1

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="10dp">
+
+            <LinearLayout
+                android:id="@+id/MyBoarding"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/boderbox"
+                android:gravity="center"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/boarding" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/roomFavourite"
+                    android:layout_width="@dimen/size50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="Dãy Trọ"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="106dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/MyRoomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/boderbox"
+                android:gravity="center"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/myroomhost" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/myRoom"
+                    android:layout_width="@dimen/size50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="Phòng"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="106dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/RentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/boderbox"
+                android:gravity="center"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rent" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/help"
+                    android:layout_width="@dimen/size50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="Danh Sách Thuê"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="106dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/RoomEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2.5"
+                android:background="@drawable/boderbox"
+                android:gravity="center"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/emptyroom" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/language"
+                    android:layout_width="@dimen/size50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:fontFamily="@font/aldrich"
+                    android:gravity="center|left"
+                    android:paddingLeft="20dp"
+                    android:text="Phòng trống"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="106dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

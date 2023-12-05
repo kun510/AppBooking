@@ -1,0 +1,9 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼·ûà8ÇàµÌÂ1
+y	java:S116'"XRename this field "rating_number" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÊôÆûÿÿÿÿ8ßàµÌÂ1
+x	java:S116'"WRename this field "total_rating" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÊôÆûÿÿÿÿ8ßàµÌÂ1
+L
+java:S1659'"*Declare "total_rating" on a separate line.(ÍÊôÆûÿÿÿÿ8òàµÌÂ1
+g
+java:S1659)"EDeclare "seekBar4" and all following declarations on a separate line.(Ã¥—¦úÿÿÿÿ8óàµÌÂ1
+o	java:S100\"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø›ôãùÿÿÿÿ8‹áµÌÂ1

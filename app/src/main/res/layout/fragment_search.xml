@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="-10dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/imgsearch"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:letterSpacing="-0.02"
+            android:text="@string/find_a_perfect_place_to_stay"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="409dp"
+        android:layout_height="476dp"
+        android:background="@drawable/backgroudconstrain"
+        android:orientation="vertical"
+        android:paddingTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="@dimen/size10dp"
+                android:layout_weight="7"
+                android:background="@drawable/edit_text"
+                android:gravity="center|start"
+                android:hint="@string/txt_people"
+                android:paddingStart="10dp"
+                android:textColor="@color/mauchu"
+                android:textColorHint="@color/mauchu"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp">
+
+                <EditText
+                    android:id="@+id/guests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/txt_guest"
+                    android:textColor="@color/mauchu"
+                    android:textColorHint="@color/mauchu" />
+
+                <ImageView
+                    android:id="@+id/imgGuests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/arrow_down_float" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="@dimen/size10dp"
+                android:layout_weight="7"
+                android:background="@drawable/edit_text"
+                android:gravity="center|start"
+                android:hint="@string/txt_price"
+                android:paddingStart="10dp"
+                android:textColor="@color/mauchu"
+                android:textColorHint="@color/mauchu"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp">
+
+                <EditText
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/edt_price"
+                    android:textColor="@color/mauchu"
+                    android:textColorHint="@color/mauchu" />
+
+                <ImageView
+                    android:id="@+id/imgPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/arrow_down_float" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_marginStart="@dimen/size10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="7"
+                android:background="@drawable/edit_text"
+                android:gravity="center|start"
+                android:hint="@string/txt_area"
+                android:paddingStart="10dp"
+                android:textColor="@color/mauchu"
+                android:textColorHint="@color/mauchu"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp">
+
+                <Spinner
+                    android:id="@+id/area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/edt_area"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+
+                <ImageView
+                    android:id="@+id/imgArea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_marginEnd="-5dp"
+                    android:src="@android:drawable/arrow_down_float" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_marginStart="@dimen/size10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="7"
+                android:background="@drawable/edit_text"
+                android:gravity="center|start"
+                android:hint="@string/txt_type"
+                android:paddingStart="10dp"
+                android:textColor="@color/mauchu"
+                android:textColorHint="@color/mauchu"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text"
+                android:paddingStart="10dp">
+
+                <Spinner
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="@string/edt_type"
+                    android:textColor="@color/mauchu"
+                    android:textColorHint="@color/mauchu" />
+
+                <ImageView
+                    android:id="@+id/imgType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_marginEnd="10dp"
+                    android:src="@android:drawable/arrow_down_float" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="336dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/radius_btn"
+            android:text="@string/btnselect"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

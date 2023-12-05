@@ -1,0 +1,13 @@
+
+D
+java:S1604."(Make this anonymous inner class a lambda(­×­8ş³ÊÉÃ1
+E
+java:S16047"(Make this anonymous inner class a lambda(¨ŠÀë8ş³ÊÉÃ1
+K
+java:S1604µ"(Make this anonymous inner class a lambda(¥íîŸÿÿÿÿÿ8€´ÊÉÃ1
+s	java:S116""WRename this field "btn_register" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áçû¡8©´ÊÉÃ1
+s	java:S116'"WRename this field "progress_otp" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÎÅ‹8©´ÊÉÃ1
+^
+java:S1659#"ADeclare "pass" and all following declarations on a separate line.(ƒ¥÷î8³´ÊÉÃ1
+X	java:S125S"<This block of commented-out lines of code should be removed.(ÀÜŞ8Ò´ÊÉÃ1
+o	java:S100\"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(——ùÿÿÿÿ8Ó´ÊÉÃ1
