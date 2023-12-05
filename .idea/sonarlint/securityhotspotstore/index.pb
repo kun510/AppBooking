@@ -242,3 +242,9 @@ sapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/account/changePassword/O
 iapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/account/changePassword/ChangePasswordActivity.java,4\a\4a491c90cbe696a540f8527941f3b7032c58c40b
 ¦
 vapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/view/user/rating/ListReviewInRoom/ListReviewInRoomActivity.java,5\7\57bcb53947d83e121da52449ae003d658510ed6e
+x
+Happ/src/main/java/com/doancuoinam/hostelappdoancuoinam/account/test.java,9\4\94b4f08a0c6e2aa7d2e7df926478b31a487f0690
+Š
+Zapp/src/main/java/com/doancuoinam/hostelappdoancuoinam/account/ChoseTyAccountActivity.java,f\0\f0b306765122f670083782f9e5ef1e540cbcaddb
+€
+Papp/src/main/java/com/doancuoinam/hostelappdoancuoinam/account/RegisterHost.java,3\8\38412af3c1dcd1a6be4bd6587714286e4faf1a35

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="false"
+    tools:context=".account.Login">
+
+    <ImageView
+        android:id="@+id/imgBackGround"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:src="@drawable/background" />
+    <TextView
+        android:text="Host"
+        android:textColor="@color/mauchuxanh"
+       android:gravity="center"
+        android:textSize="@dimen/size20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/size20dp"
+        android:id="@+id/Host"
+        android:background="@drawable/boderboxhost"
+        android:layout_below="@id/imgBackGround"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp"/>
+    <TextView
+        android:text="User"
+        android:textColor="@color/mauchuxanh"
+        android:gravity="center"
+        android:textSize="@dimen/size20sp"
+        android:textStyle="bold"
+        android:id="@+id/user"
+        android:background="@drawable/boderboxhost"
+        android:layout_below="@id/Host"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp"/>
+</RelativeLayout>

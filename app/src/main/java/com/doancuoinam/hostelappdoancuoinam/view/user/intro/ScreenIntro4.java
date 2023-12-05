@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.doancuoinam.hostelappdoancuoinam.R;
+import com.doancuoinam.hostelappdoancuoinam.account.ChoseTyAccountActivity;
 import com.doancuoinam.hostelappdoancuoinam.account.Register;
 
 public class ScreenIntro4 extends AppCompatActivity {
@@ -25,7 +26,7 @@ public class ScreenIntro4 extends AppCompatActivity {
         btn_intro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ScreenIntro4.this, Register.class);
+                Intent intent = new Intent(ScreenIntro4.this, ChoseTyAccountActivity.class);
                 startActivity(intent);
                 finish();
             }

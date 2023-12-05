@@ -29,6 +29,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".account.RegisterHost"
+            android:exported="false" />
+        <activity
+            android:name=".account.ChoseTyAccountActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.host.fragment.list.listExtends.listRoom.ListRoomActivity"
             android:exported="false" />
         <activity
@@ -36,7 +42,7 @@
             android:exported="false" />
         <activity
             android:name=".view.user.rating.ListReviewInRoom.ListReviewInRoomActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".view.user.rating.RatingActivity"
             android:exported="false" />

@@ -29,7 +29,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
 
-public class Register extends AppCompatActivity {
+public class RegisterHost extends AppCompatActivity {
+
     TextView doHave;
     Button btn_register;
     EditText phone,pass,confirmPass,email,nameUser;
@@ -40,13 +41,13 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register_host);
         AnhXa();
         progress_otp.setVisibility(View.INVISIBLE);
         doHave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Register.this,Login.class);
+                Intent intent = new Intent(RegisterHost.this,Login.class);
                 startActivity(intent);
                 finish();
             }
@@ -62,19 +63,19 @@ public class Register extends AppCompatActivity {
                 String confirm = confirmPass.getText().toString();
 
                 if (numberPhone.trim().isEmpty() || password.trim().isEmpty()) {
-                    Toast.makeText(Register.this, R.string.nhapdaydu, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterHost.this, R.string.nhapdaydu, Toast.LENGTH_SHORT).show();
                     progress_otp.setVisibility(View.INVISIBLE);
                     btn_register.setVisibility(View.VISIBLE);
                     return;
                 }
                 if(!isStrongPassword(password)){
-                    Toast.makeText(Register.this, R.string.nhapformat, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterHost.this, R.string.nhapformat, Toast.LENGTH_SHORT).show();
                     progress_otp.setVisibility(View.INVISIBLE);
                     btn_register.setVisibility(View.VISIBLE);
                     return;
                 }
                 if (!confirm.equals(password)) {
-                    Toast.makeText(Register.this, R.string.nhaplai, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterHost.this, R.string.nhaplai, Toast.LENGTH_SHORT).show();
                     progress_otp.setVisibility(View.INVISIBLE);
                     btn_register.setVisibility(View.VISIBLE);
                     return;
@@ -143,7 +144,7 @@ public class Register extends AppCompatActivity {
                                 Log.e("LoginSmS", "onVerificationFailed", e);
                                 progress_otp.setVisibility(View.INVISIBLE);
                                 btn_register.setVisibility(View.VISIBLE);
-                                Toast.makeText(Register.this, "Verification FailedD", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterHost.this, "Verification FailedD", Toast.LENGTH_SHORT).show();
                             }
                             @Override
                             public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
@@ -158,7 +159,7 @@ public class Register extends AppCompatActivity {
                                 mVerificationId = verificationId;
                                 resendToken = forceResendingToken;
                                 if (confirm.equals(password)){
-                                    Intent intent = new Intent(Register.this, OtpRegister.class);
+                                    Intent intent = new Intent(RegisterHost.this, OtpRegister.class);
                                     String avt = "https://res.cloudinary.com/dmf3si8zv/image/upload/v1701184258/Hostel/User/profileeee.png.png";
                                     setupFirebase(numberPhone,nameUsers,avt);
                                     intent.putExtra("numberphone",numberPhone);
@@ -169,7 +170,7 @@ public class Register extends AppCompatActivity {
                                     startActivity(intent);
                                 }
                                 else {
-                                    Toast.makeText(Register.this, R.string.nhaplai, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(RegisterHost.this, R.string.nhaplai, Toast.LENGTH_SHORT).show();
                                 }
                             }
                         })
@@ -182,10 +183,10 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(Register.this, "Verification successful!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterHost.this, "Verification successful!", Toast.LENGTH_SHORT).show();
 
                         } else {
-                            Toast.makeText(Register.this, "Verification failed!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterHost.this, "Verification failed!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
